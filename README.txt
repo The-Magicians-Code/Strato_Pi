@@ -19,5 +19,9 @@ Kui vaja kasutatada brauseris localhosti, ss saab
 127.0.0.1:5000
 
 How to use github:
-olete Strato_Pi kaustas, seej2rel:
+cd Strato_Pi
+git add *
+git commit -m "siia kirjutad, mida tegid"
+git push origin "main"
+
 
