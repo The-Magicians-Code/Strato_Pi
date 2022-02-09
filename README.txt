@@ -18,10 +18,11 @@ Kuidas scripte k2ima panna:
 Kui vaja kasutatada brauseris localhosti, ss saab
 127.0.0.1:5000
 
-How to use github:
-cd Strato_Pi
-git add *
-git commit -m "siia kirjutad, mida tegid"
-git push origin "main"
+How to use github: 
+ehk kuidas laadida yles ja/v6i alla oma senist romantikat
+Desktopil on fail nimega manage_git.sh
+double-click ja Execute in terminals
 
-Github ei tunnista tyhjasid kaustasid!! Neid ei laeta yles!!
+Github ei tunnista tyhjasid kaustasid! Neid ei laeta yles!
+Selleks puhuks v6ib panna kausta tyhja faili v tekstidokumendi
+
