@@ -12,8 +12,12 @@ M6lemal kaunis kena dokumentatsioon olemas
 
 Kuidas scripte k2ima panna:
 1. Avage terminal
-2. cd /stratopi
+2. cd /Strato_Pi
 3. python skriptinimi.py n2iteks python temps.py
 
 Kui vaja kasutatada brauseris localhosti, ss saab
 127.0.0.1:5000
+
+How to use github:
+olete Strato_Pi kaustas, seej2rel:
+
