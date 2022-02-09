@@ -24,4 +24,4 @@ git add *
 git commit -m "siia kirjutad, mida tegid"
 git push origin "main"
 
-
+Github ei tunnista tyhjasid kaustasid!! Neid ei laeta yles!!
