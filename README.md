@@ -14,7 +14,7 @@ M6lemal kaunis kena dokumentatsioon olemas
 
 ## Kuidas scripte käima panna:
 1. Avage terminal
-2. cd /Strato_Pi
+2. cd /Strato_Pi ning kaust kus Teie materjalid nt cd /Strato_Pi/Frontend
 3. python skriptinimi.py n2iteks python temps.py
 
 Kui vaja kasutatada brauseris localhosti, ss saab
