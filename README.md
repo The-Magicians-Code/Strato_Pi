@@ -21,9 +21,9 @@ Kui vaja kasutatada brauseris localhosti, ss saab
 127.0.0.1:5000
 
 # How to use github:
-cd Strato_Pi
-git add *
-git commit -m "siia kirjutad, mida tegid"
-git push origin "main"
+cd Strato_Pi  
+git add *  
+git commit -m "siia kirjutad, mida tegid"  
+git push origin "main"  
 
 Github ei tunnista tyhjasid kaustasid!! Neid ei laeta yles!!
