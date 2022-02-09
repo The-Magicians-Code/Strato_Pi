@@ -22,8 +22,11 @@ Kui vaja kasutatada brauseris localhosti, ss saab
 
 ## How to use github:
 ehk kuidas laadida yles ja/v6i alla oma senist romantikat
+
 Desktopil on fail nimega manage_git.sh
+
 double-click ja Execute in terminal
 
 Github ei tunnista tyhjasid kaustasid!! Neid ei laeta yles!!
+
 Selleks puhuks v6ib panna kausta tyhja faili v tekstidokumendi
