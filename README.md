@@ -14,7 +14,7 @@ M6lemal kaunis kena dokumentatsioon olemas
 
 ## Kuidas scripte käima panna:
 1. Avage terminal
-2. cd /Strato_Pi ning kaust kus Teie materjalid nt cd /Strato_Pi/Frontend
+2. ´´´cd /Strato_Pi´´´ ning kaust kus Teie materjalid nt ´´´cd /Strato_Pi/Frontend´´´
 3. python skriptinimi.py n2iteks python temps.py
 
 Kui vaja kasutatada brauseris localhosti, ss saab
@@ -27,6 +27,6 @@ Desktopil on fail nimega manage_git.sh
 
 double-click ja Execute in terminal
 
-Github ei tunnista tyhjasid kaustasid!! Neid ei laeta yles!!
+***Github ei tunnista tyhjasid kaustasid!! Neid ei laeta yles!!***
 
-Selleks puhuks v6ib panna kausta tyhja faili v tekstidokumendi
+>Selleks puhuks v6ib panna kausta tyhja faili v tekstidokumendi
