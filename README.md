@@ -14,10 +14,7 @@ M6lemal kaunis kena dokumentatsioon olemas
 
 ## Kuidas scripte käima panna:
 1. Avage terminal
-2. 
-````
-pi@raspberrypi~ $ cd /Strato_Pi
-````
+2. ````pi@raspberrypi~ $ cd /Strato_Pi````
 ning kaust kus Teie materjalid nt 
 ````
 pi@raspberrypi~ $ cd /Strato_Pi/Frontend
