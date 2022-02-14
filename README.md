@@ -1,6 +1,6 @@
 # Strato_Pi
 
-Kasutage Visual Studio Code, see on Desktopil
+Kasutage *Visual Studio Code*, see on Desktopil
 
 Siia kausta lükkame koodi, backend, frontend ja riistvara
 Templates kaustas html, muidu asi ei taha jooksma hakata
@@ -23,14 +23,9 @@ pi@raspberrypi~ $ cd /Strato_Pi/Frontend
 ````
 pi@raspberrypi~/Strato_Pi $ python temps.py
 ````
-Kui vaja kasutatada brauseris localhosti, ss saab
-````
-127.0.0.1:5000
-````
-või
-````
-localhost:5000
-````
+Kui vaja kasutatada brauseris localhosti, ss saab ````127.0.0.1:5000````
+või ````localhost:5000````
+
 ## How to use github:
 ehk kuidas laadida yles ja/v6i alla oma senist romantikat
 
