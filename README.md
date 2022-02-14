@@ -14,7 +14,7 @@ M6lemal kaunis kena dokumentatsioon olemas
 
 ## Kuidas scripte käima panna:
 1. Avage terminal
-2. ````pi@raspberrypi~ $ cd /Strato_Pi```` 
+2. ````pi@raspberrypi:~ $ cd /Strato_Pi```` 
 
 ````cd```` - Change Directory ````cd ..```` - tagasi eelmisesse kausta
 
@@ -22,11 +22,11 @@ M6lemal kaunis kena dokumentatsioon olemas
 
 ning kaust kus Teie materjalid nt 
 ````
-pi@raspberrypi~ $ cd /Strato_Pi/Frontend
+pi@raspberrypi:~ $ cd /Strato_Pi/Frontend
 ````
 3. python skriptinimi.py n2iteks 
 ````
-pi@raspberrypi~/Strato_Pi $ python temps.py
+pi@raspberrypi:~/Strato_Pi $ python temps.py
 ````
 Kui vaja kasutatada brauseris localhosti, ss saab ````127.0.0.1:5000````
 või ````localhost:5000````
