@@ -16,8 +16,9 @@ M6lemal kaunis kena dokumentatsioon olemas
 1. Avage terminal
 2. 
 ````diff 
-+ pi@raspberrypi@@~ $ cd /Strato_Pi
-```` 
++ pi@raspberrypi```` @@~ $ ```` cd /Strato_Pi
+````
+ 
 ning kaust kus Teie materjalid nt 
 ````diff
 + pi@raspberrypi@@~ $ cd /Strato_Pi/Frontend
