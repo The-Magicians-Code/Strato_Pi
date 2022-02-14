@@ -21,11 +21,15 @@ pi@raspberrypi~ $ cd /Strato_Pi/Frontend
 ````
 3. python skriptinimi.py n2iteks 
 ````
-python temps.py
+pi@raspberrypi~/Strato_Pi $ python temps.py
 ````
 Kui vaja kasutatada brauseris localhosti, ss saab
 ````
 127.0.0.1:5000
+````
+või
+````
+localhost:5000
 ````
 ## How to use github:
 ehk kuidas laadida yles ja/v6i alla oma senist romantikat
