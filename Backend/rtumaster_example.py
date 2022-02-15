@@ -27,8 +27,8 @@ import modbus_tk
 import modbus_tk.defines as cst
 from modbus_tk import modbus_rtu
 
-PORT = 1
-#PORT = '/dev/ttyp5'
+#PORT = 1
+PORT = '/dev/ttyAMA0'
 
 def main():
     """main"""
