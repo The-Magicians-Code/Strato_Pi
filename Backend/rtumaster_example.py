@@ -7,6 +7,18 @@
  (C)2009 - Apidev - http://www.apidev.fr
 
  This is distributed under GNU LGPL license, see license.txt
+ 
+ DO THIS BEFORE TESTING CODE!!!!
+ 
+ On Raspberry Pi 3 and 4, the main UART (ttyAMA0) is used by default for Bluetooth, and
+the TX/RX pins on the GPIO connector are controlled by a limited function Mini UART
+(ttyS0).
+To route the main UART to the RX/TX pins that are connected to the Strato Pi serial ports
+you could disable Bluetooth. Edit /boot/config.txt and add these lines at the end of the file:
+# Disable Bluetooth
+dtoverlay=pi3-disable-bt
+You may also run the following command to disable the Bluetooth HCI UART driver:
+sudo systemctl disable hciuart
 """
 
 import serial
