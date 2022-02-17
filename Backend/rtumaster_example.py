@@ -21,7 +21,9 @@ You may also run the following command to disable the Bluetooth HCI UART driver:
 sudo systemctl disable hciuart
 """
 
-from curses import delay_output
+# importing module
+import time
+
 import serial
 
 import modbus_tk
@@ -56,17 +58,17 @@ def main():
         #logger.info(master.execute(1, cst.WRITE_SINGLE_COIL, 7, output_value=1))
 
         logger.info(master.execute(1, cst.WRITE_SINGLE_REGISTER, 8501, output_value=0x0006)) #oige reziimi lulitamine, shutdown
-        delay_output(3000)
+        time.sleep(3)
         logger.info(master.execute(1, cst.WRITE_SINGLE_REGISTER, 8501, output_value=0x000F)) #oige reziimi lulitamine, enable operation
-        logger.info(master.execute(1, cst.WRITE_SINGLE_REGISTER, 8502, output_value=40)) #Sageduse seadistamine prg 1 Hz
-        delay_output(3000)
+        logger.info(master.execute(1, cst.WRITE_SINGLE_REGISTER, 8502, output_value=20)) #Sageduse seadistamine prg 1 Hz
+        time.sleep(3)
 
         logger.info(master.execute(1, cst.WRITE_SINGLE_REGISTER, 8501, output_value=0x0006)) #oige reziimi lulitamine, shutdown
-        delay_output(3000)
+        time.sleep(3)
         logger.info(master.execute(1, cst.WRITE_SINGLE_REGISTER, 8501, output_value=0x080F)) #oige reziimi lulitamine, enable operation
         logger.info(master.execute(1, cst.WRITE_SINGLE_REGISTER, 8502, output_value=40)) #Sageduse seadistamine prg 1 Hz
-        delay_output(3000)
-
+        time.sleep(3)
+        logger.info(master.execute(1, cst.WRITE_SINGLE_REGISTER, 8501, output_value=0x0006)) #oige reziimi lulitamine, shutdown
         
         #logger.info(master.execute(1, cst.WRITE_SINGLE_REGISTER, 8602, output_value=200)) #Kiiruse seadistamine prg 200 rpm
         #logger.info(master.execute(1, cst.WRITE_SINGLE_REGISTER, 8505, output_value=150)) #momendi seadistus 15%
