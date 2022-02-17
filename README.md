@@ -3,6 +3,7 @@
 Kasutage *Visual Studio Code*, see on Desktopil
 
 Siia kausta lükkame koodi, backend, frontend ja riistvara
+
 Templates kaustas html, muidu asi ei taha jooksma hakata
 
 Proovige teha võimalikult funktsioonides koodi või klassidena,
