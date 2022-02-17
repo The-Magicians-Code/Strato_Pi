@@ -44,3 +44,15 @@ double-click ja Execute in terminal
 ***Github ei tunnista tyhjasid kaustasid!! Neid ei laeta yles!!***
 
 >Selleks puhuks v6ib panna kausta tyhja faili v tekstidokumendi
+
+## Modbus demo
+Ma tegin lühikese demo mootori juhtimisest. Demos pöörleb mootor 3 sekundit päripäeva ning 3 sekundit vastupäeva. 
+
+Demo käivitamiseks ava terminal, mine Backend kausta ning käivita Pythoni skript:
+
+````
+cd /Strato_Pi/Backend
+pyhton3 rtumaster_example.py
+````
+
+
