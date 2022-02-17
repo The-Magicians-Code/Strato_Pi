@@ -12,7 +12,7 @@ then
 
 	git add *
 	read -p 'Please write a short description of changes that you made:' changes
-	git commit -m $changes
+	git commit -m "$changes"
 	git push origin "main"
 
 	echo 'Upload complete!'

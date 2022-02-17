@@ -53,7 +53,7 @@ def main():
         #logger.info(master.execute(1, cst.READ_INPUT_REGISTERS, 100, 3))
         #logger.info(master.execute(1, cst.READ_HOLDING_REGISTERS, 100, 12))
         #logger.info(master.execute(1, cst.WRITE_SINGLE_COIL, 7, output_value=1))
-        logger.info(master.execute(1, cst.WRITE_SINGLE_REGISTER, 11951, output_value=5))
+        logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 11951, output_value=15))
         #logger.info(master.execute(1, cst.WRITE_MULTIPLE_COILS, 0, output_value=[1, 1, 0, 1, 1, 0, 1, 1]))
         #logger.info(master.execute(1, cst.WRITE_MULTIPLE_REGISTERS, 100, output_value=xrange(12)))
 
