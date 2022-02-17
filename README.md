@@ -16,7 +16,7 @@ Veebi jaoks Flaski testitud
 M6lemal kaunis kena dokumentatsioon olemas
 
 ## Kuidas scripte käima panna:
-1. Avage terminal
+1. Avage terminal `````Ctrl + Alt + T````
 2. ````pi@raspberrypi:~ $ cd /Strato_Pi```` 
 
 ````cd```` - Change Directory ````cd ..```` - tagasi eelmisesse kausta
