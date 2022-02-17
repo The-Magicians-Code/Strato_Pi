@@ -21,6 +21,7 @@ You may also run the following command to disable the Bluetooth HCI UART driver:
 sudo systemctl disable hciuart
 """
 
+from curses import delay_output
 import serial
 
 import modbus_tk
@@ -43,9 +44,9 @@ def main():
         master.set_verbose(True)
         logger.info("connected")
 
-        logger.info(master.execute(1, cst.READ_HOLDING_REGISTERS, 3207, 1))
-        logger.info(master.execute(2, cst.READ_HOLDING_REGISTERS, 3207, 1))
-        logger.info(master.execute(3, cst.READ_HOLDING_REGISTERS, 3207, 1))
+        #logger.info(master.execute(1, cst.READ_HOLDING_REGISTERS, 3207, 1)) #andmete lugemine
+        #logger.info(master.execute(2, cst.READ_HOLDING_REGISTERS, 3207, 1))
+        #logger.info(master.execute(1, cst.READ_HOLDING_REGISTERS, 8603, 2))
 
         #send some queries
         #logger.info(master.execute(1, cst.READ_COILS, 0, 10))
@@ -53,7 +54,23 @@ def main():
         #logger.info(master.execute(1, cst.READ_INPUT_REGISTERS, 100, 3))
         #logger.info(master.execute(1, cst.READ_HOLDING_REGISTERS, 100, 12))
         #logger.info(master.execute(1, cst.WRITE_SINGLE_COIL, 7, output_value=1))
-        logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 11951, output_value=15))
+
+        logger.info(master.execute(1, cst.WRITE_SINGLE_REGISTER, 8501, output_value=0x0006)) #oige reziimi lulitamine, shutdown
+        delay_output(3000)
+        logger.info(master.execute(1, cst.WRITE_SINGLE_REGISTER, 8501, output_value=0x000F)) #oige reziimi lulitamine, enable operation
+        logger.info(master.execute(1, cst.WRITE_SINGLE_REGISTER, 8502, output_value=40)) #Sageduse seadistamine prg 1 Hz
+        delay_output(3000)
+
+        logger.info(master.execute(1, cst.WRITE_SINGLE_REGISTER, 8501, output_value=0x0006)) #oige reziimi lulitamine, shutdown
+        delay_output(3000)
+        logger.info(master.execute(1, cst.WRITE_SINGLE_REGISTER, 8501, output_value=0x080F)) #oige reziimi lulitamine, enable operation
+        logger.info(master.execute(1, cst.WRITE_SINGLE_REGISTER, 8502, output_value=40)) #Sageduse seadistamine prg 1 Hz
+        delay_output(3000)
+
+        
+        #logger.info(master.execute(1, cst.WRITE_SINGLE_REGISTER, 8602, output_value=200)) #Kiiruse seadistamine prg 200 rpm
+        #logger.info(master.execute(1, cst.WRITE_SINGLE_REGISTER, 8505, output_value=150)) #momendi seadistus 15%
+
         #logger.info(master.execute(1, cst.WRITE_MULTIPLE_COILS, 0, output_value=[1, 1, 0, 1, 1, 0, 1, 1]))
         #logger.info(master.execute(1, cst.WRITE_MULTIPLE_REGISTERS, 100, output_value=xrange(12)))
 
