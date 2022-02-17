@@ -10,7 +10,9 @@ Proovige teha võimalikult funktsioonides koodi või klassidena,
 siis kõigil kergem importida kui vaja
 
 Kaamera jaoks cv2 ehk OpenCV on olemas
+
 Veebi jaoks Flaski testitud
+
 M6lemal kaunis kena dokumentatsioon olemas
 
 ## Kuidas scripte käima panna:
