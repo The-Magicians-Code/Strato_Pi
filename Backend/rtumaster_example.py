@@ -45,7 +45,7 @@ def main():
         logger.info("connected")
        
         # Template registrite lugemiseks sagedusmuundurilt. Esimene parameeter on slave aadress, teine parameeter on tehtav operatsioon (lugemine või kirjutamine), 
-        # kolmas parameeter on loetav registri aadress, neljas parameeter mitu registrit loetakse
+        # kolmas parameeter on loetav registri aadress, neljas parameeter mitu registrit loetakse või andmed mida registrisse kirjutada tuleb
         
         #logger.info(master.execute(1, cst.READ_HOLDING_REGISTERS, 3207, 1)) #andmete lugemine
         #logger.info(master.execute(2, cst.READ_HOLDING_REGISTERS, 3207, 1))
