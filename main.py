@@ -6,4 +6,4 @@ from Backend.params import *
 tempstat()
 
 # Control motors and view their status
-print(control(1, READ, 3207, 1)[0])
+print(control(1, READ, MAINS_VOLTAGE, 1)[0])

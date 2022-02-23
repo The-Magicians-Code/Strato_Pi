@@ -24,4 +24,4 @@ def control(slave_number, operation, reg_address, control_code):
         master.execute(slave_number, WRITE, reg_address, output_value=control_code)
     
 # Example usage for function
-#print(control(1, READ, 3207, 1))
+#print(control(1, READ, MAINS_VOLTAGE, 1))

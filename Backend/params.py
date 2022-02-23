@@ -14,3 +14,6 @@ BYTESIZE = 8
 PARITY = 'N'
 STOPBITS = 1
 XONXOFF = 0
+
+# Register values
+MAINS_VOLTAGE = 3207
