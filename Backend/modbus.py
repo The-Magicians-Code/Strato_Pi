@@ -1,36 +1,55 @@
-#!/usr/bin/env python
-# -*- coding: utf_8 -*-
-import time
-import serial
-import modbus_tk
-import modbus_tk.defines as cst
-from modbus_tk import modbus_rtu
-#import params as ps
-
-PORT = '/dev/ttyAMA0'
+from params import *
 
 class Controller:
-    def __init__(self, motor_number, reg_aadress, control_code):
-        self.motor_number=motor_number
-        self.reg_aadress=reg_aadress
+    """
+    Controller class:
+    arguments:
+    - slave number: integer
+    - register address: integer
+    - control code: instruction value
+    - delay: value for register write task, default=3
+    """
+    def __init__(self, slave_number, reg_address, control_code, delay=3):
+        self.slave_number=slave_number
+        self.reg_address=reg_address
         self.control_code=control_code
-        
-        #logger = modbus_tk.utils.create_logger("console")
+        self.delay=delay
+
         master = modbus_rtu.RtuMaster(
-            serial.Serial(port='/dev/ttyAMA0', baudrate=9600, bytesize=8, parity='N', stopbits=1, xonxoff=0)
+            serial.Serial(
+                port=PORT, baudrate=BAUDRATE, bytesize=BYTESIZE, 
+                parity=PARITY, stopbits=STOPBITS, xonxoff=XONXOFF
+            )
         )
         master.set_timeout(5.0)
         master.set_verbose(True)
-        #logger.info("connected")
-
+        
         self.master=master
-        #self.logger=logger
 
     def read_value(self):
-        v = self.master.execute(self.motor_number, cst.READ_HOLDING_REGISTERS, self.reg_aadress, self.control_code)
-        print(v[0]/10.0)
-    #def write_value(self):
-    #    logger.info(master.execute(1, cst.WRITE_SINGLE_REGISTER, 8501, output_value=0x0006))
+        value = self.master.execute(self.slave_number, READ, self.reg_address, self.control_code)
+        #print(v[0]/10.0)
+        return value[0]
+    def write_value(self):
+        v = self.master.execute(self.slave_number, WRITE, self.reg_address, output_value=self.control_code)
+        time.sleep(self.delay)
 
+# Example usage
 motor_1 = Controller(1, 3207, 1)
-motor_1.read_value()
+print(motor_1.read_value())
+
+# Function based method for reading/writing into registers
+def control(slave_number, operation, reg_address, control_code):
+    master = modbus_rtu.RtuMaster(
+        serial.Serial(
+            port=PORT, baudrate=BAUDRATE, bytesize=BYTESIZE, parity=PARITY, 
+        stopbits=STOPBITS, xonxoff=XONXOFF
+        )
+    )
+    master.set_timeout(5.0)
+    master.set_verbose(True)
+
+    value = master.execute(slave_number, operation, reg_address, control_code)
+    return value[0]
+
+#print(control(1, READ, 3207, 1))
