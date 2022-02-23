@@ -5,7 +5,7 @@ import modbus_tk
 import modbus_tk.defines as cst
 from modbus_tk import modbus_rtu
 
-# Setup modbus 
+# Setup modbus master/slave communication
 WRITE = cst.WRITE_SINGLE_REGISTER
 READ = cst.READ_HOLDING_REGISTERS
 PORT = '/dev/ttyAMA0'
