@@ -31,7 +31,7 @@ from modbus_tk import modbus_rtu
 #PORT = 1
 PORT = '/dev/ttyAMA0'
 
-def main():
+def control():
     """main"""
     logger = modbus_tk.utils.create_logger("console")
 
@@ -90,4 +90,4 @@ def main():
     except modbus_tk.modbus.ModbusError as exc:
         logger.error("%s- Code=%d", exc, exc.get_exception_code())
 
-main()
+control()
