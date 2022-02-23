@@ -90,5 +90,4 @@ def main():
     except modbus_tk.modbus.ModbusError as exc:
         logger.error("%s- Code=%d", exc, exc.get_exception_code())
 
-if __name__ == "__main__":
-    main()
+main()
