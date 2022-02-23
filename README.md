@@ -52,7 +52,7 @@ Demo käivitamiseks ava terminal, mine Backend kausta ning käivita Pythoni skri
 
 ````
 cd /Strato_Pi/Backend
-pyhton3 rtumaster_example.py
+python3 rtumaster_example.py
 ````
 
 
