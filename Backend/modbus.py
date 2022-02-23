@@ -1,6 +1,12 @@
 # All imports are in params.py file
-from params import *
 
+# Uncomment if this file is being run
+#from params import *
+
+# This is needed only for running the main.py
+from Backend.params import *
+
+# Setup master/slave connection
 master = modbus_rtu.RtuMaster(
     serial.Serial(
         port=PORT, baudrate=BAUDRATE, bytesize=BYTESIZE, 
@@ -14,8 +20,8 @@ def control(slave_number, operation, reg_address, control_code):
     if operation == READ:
         value = master.execute(slave_number, READ, reg_address, control_code)
         return value
-    else
+    else:
         master.execute(slave_number, WRITE, reg_address, output_value=control_code)
     
 # Example usage for function
-control(1, READ, 3207, 1)
+#print(control(1, READ, 3207, 1))

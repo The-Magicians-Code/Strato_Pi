@@ -1,5 +1,6 @@
 # All imports are in params.py file
 from params import *
+import time
 
 class Controller:
     """
@@ -58,9 +59,11 @@ def control(slave_number, operation, reg_address, control_code):
     
 # Example usage for function
 control(1, READ, 3207, 1)
-control(1, WRITE, 8501, 0x0006)
-#control(1, WRITE, 8501, 0x000F)
-control(1, WRITE, 8502, 10)
-control(3, WRITE, 8501, 0x0006)
-#control(3, WRITE, 8501, 0x000F)
-control(3, WRITE, 8502, 50)
+control(3, WRITE, 8601, 0x0080)
+control(3, WRITE, 8601, 0x0006)
+control(3, WRITE, 8601, 0x000F)
+
+
+time.sleep(10)
+control(1, WRITE, 8601, 0x0006)
+control(3, WRITE, 8601, 0x0006)
