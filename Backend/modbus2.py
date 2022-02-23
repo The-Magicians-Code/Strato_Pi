@@ -58,12 +58,20 @@ def control(slave_number, operation, reg_address, control_code):
         master.execute(slave_number, WRITE, reg_address, output_value=control_code)
     
 # Example usage for function
-control(1, READ, 3207, 1)
-control(3, WRITE, 8601, 0x0080)
-control(3, WRITE, 8601, 0x0006)
-control(3, WRITE, 8601, 0x000F)
+#print(control(1, READ, 8411, 1))
+#control(1, WRITE, 8411, 97)
+#print(control(2, READ, 8411, 1))
+#control(2, WRITE, 8411, 97)
+#print(control(3, READ, 8411, 1))
+#control(3, WRITE, 8411, 97)
+
+print(control(2, READ, 5212, 1))
+control(2, WRITE, 5212, 0b01)
+#print(control(2, READ, 5212, 1))
+#control(3, WRITE, 8601, 0x0006)
+#control(3, WRITE, 8601, 0x000F)
 
 
-time.sleep(10)
-control(1, WRITE, 8601, 0x0006)
-control(3, WRITE, 8601, 0x0006)
+#time.sleep(10)
+#control(1, WRITE, 8601, 0x0006)
+#control(3, WRITE, 8601, 0x0006)
