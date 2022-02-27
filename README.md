@@ -72,3 +72,4 @@ Kui vaja muuta:
 ````
 sudo code index.html
 ````
+**Ilma sudo käsuta pole võimalik seda salvestada**
