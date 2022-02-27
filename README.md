@@ -59,7 +59,14 @@ python3 rtumaster_example.py
 Kus see asub:
 ````
 cd /
-cd /var/www/html
+````
+Ehk tulemuseks on:
+````
+pi@raspberrypi:/ $
+````
+Mis on root kaust ning edasi:
+````
+cd /var/www/html/
 ````
 Kui vaja muuta:
 ````
