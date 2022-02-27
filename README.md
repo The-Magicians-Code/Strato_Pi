@@ -55,4 +55,13 @@ cd /Strato_Pi/Backend
 python3 rtumaster_example.py
 ````
 
-
+## Nginx server
+Kus see asub:
+````
+cd /
+cd /var/www/html
+````
+Kui vaja muuta:
+````
+sudo code index.html
+````
