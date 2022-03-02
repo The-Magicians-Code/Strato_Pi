@@ -1,0 +1,16 @@
+vi /home/pi/fan_setup.service
+
+[Unit]
+Description=Setup fans
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash ./fan_setup.sh
+WorkingDirectory=/home/pi/Strato_Pi
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
