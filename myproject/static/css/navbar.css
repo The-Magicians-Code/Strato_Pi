@@ -1,0 +1,35 @@
+.navbar .navbar-brand {
+	margin: 0;
+	color: #f2591b !important;
+	font-weight: 500;
+	font-size: 1.3em;
+}
+
+.navbar .nav-item {
+	position: relative;
+	padding: 0 15px;
+}
+
+.navbar .nav-item a {
+	position: relative;
+	color: #1b1b1b !important;
+}
+
+.navbar .nav-item a:hover {
+	color: #ff976c !important;
+}
+
+.navbar a:after {
+	content: "";
+	position: absolute;
+	background-color: #ff976c;
+	height: 3px;
+	width: 0%;
+	left: 0;
+	bottom: -3px;
+	transition: 0.3s;
+}
+
+.navbar a:hover:after {
+	width:100%;
+}
