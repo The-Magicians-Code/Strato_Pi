@@ -1657,3 +1657,1000 @@ spawned uWSGI worker 2 (pid: 942183, cores: 1)
 spawned uWSGI worker 3 (pid: 942184, cores: 1)
 spawned uWSGI worker 4 (pid: 942185, cores: 1)
 spawned uWSGI worker 5 (pid: 942186, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 942186|app: -1|req: -1/1] 127.0.0.1 () {62 vars in 1190 bytes} [Mon Mar  7 00:30:39 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.0 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 942182|app: -1|req: -1/2] 127.0.0.1 () {64 vars in 1221 bytes} [Mon Mar  7 00:30:42 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.0 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 942186|app: -1|req: -1/3] 127.0.0.1 () {64 vars in 1221 bytes} [Mon Mar  7 00:30:45 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.0 500) 2 headers in 83 bytes (0 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket myproject.sock removed.
+*** Starting uWSGI 2.0.20 (64bit) on [Mon Mar  7 00:31:03 2022] ***
+compiled with version: 10.2.1 20210110 on 06 March 2022 19:10:01
+os: Linux-5.10.92-v8+ #1514 SMP PREEMPT Mon Jan 17 17:39:38 GMT 2022
+nodename: raspberrypi
+machine: aarch64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/pi/Strato_Pi/myproject
+detected binary path: /home/pi/Strato_Pi/myproject/myprojectenv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 13677
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address myproject.sock fd 3
+Python version: 3.9.2 (default, Feb 28 2021, 17:03:44)  [GCC 10.2.1 20210110]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5576499f00
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+Traceback (most recent call last):
+  File "./wsgi.py", line 1, in <module>
+    from myproject import app
+  File "./myproject.py", line 27
+    if not success:
+TabError: inconsistent use of tabs and spaces in indentation
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 942880)
+spawned uWSGI worker 1 (pid: 942881, cores: 1)
+spawned uWSGI worker 2 (pid: 942882, cores: 1)
+spawned uWSGI worker 3 (pid: 942883, cores: 1)
+spawned uWSGI worker 4 (pid: 942884, cores: 1)
+spawned uWSGI worker 5 (pid: 942885, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 942884|app: -1|req: -1/1] 127.0.0.1 () {62 vars in 1190 bytes} [Mon Mar  7 00:31:14 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.0 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 942884|app: -1|req: -1/2] 127.0.0.1 () {64 vars in 1221 bytes} [Mon Mar  7 00:31:17 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.0 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 942884|app: -1|req: -1/3] 127.0.0.1 () {64 vars in 1221 bytes} [Mon Mar  7 00:31:20 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.0 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 942884|app: -1|req: -1/4] 127.0.0.1 () {66 vars in 1243 bytes} [Mon Mar  7 00:31:23 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.0 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 942884|app: -1|req: -1/5] 127.0.0.1 () {62 vars in 1152 bytes} [Mon Mar  7 00:31:23 2022] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.0 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 942884|app: -1|req: -1/6] 127.0.0.1 () {62 vars in 1190 bytes} [Mon Mar  7 00:31:30 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.0 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 942884|app: -1|req: -1/7] 127.0.0.1 () {58 vars in 1099 bytes} [Mon Mar  7 00:31:31 2022] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.0 500) 2 headers in 83 bytes (0 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket myproject.sock removed.
+*** Starting uWSGI 2.0.20 (64bit) on [Mon Mar  7 00:33:49 2022] ***
+compiled with version: 10.2.1 20210110 on 06 March 2022 19:10:01
+os: Linux-5.10.92-v8+ #1514 SMP PREEMPT Mon Jan 17 17:39:38 GMT 2022
+nodename: raspberrypi
+machine: aarch64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/pi/Strato_Pi/myproject
+detected binary path: /home/pi/Strato_Pi/myproject/myprojectenv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 13677
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address myproject.sock fd 3
+Python version: 3.9.2 (default, Feb 28 2021, 17:03:44)  [GCC 10.2.1 20210110]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55a3df8f00
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+Traceback (most recent call last):
+  File "./wsgi.py", line 1, in <module>
+    from myproject import app
+  File "./myproject.py", line 27
+    if not success:
+TabError: inconsistent use of tabs and spaces in indentation
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 943651)
+spawned uWSGI worker 1 (pid: 943652, cores: 1)
+spawned uWSGI worker 2 (pid: 943653, cores: 1)
+spawned uWSGI worker 3 (pid: 943654, cores: 1)
+spawned uWSGI worker 4 (pid: 943655, cores: 1)
+spawned uWSGI worker 5 (pid: 943656, cores: 1)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket myproject.sock removed.
+*** Starting uWSGI 2.0.20 (64bit) on [Mon Mar  7 00:35:24 2022] ***
+compiled with version: 10.2.1 20210110 on 06 March 2022 19:10:01
+os: Linux-5.10.92-v8+ #1514 SMP PREEMPT Mon Jan 17 17:39:38 GMT 2022
+nodename: raspberrypi
+machine: aarch64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/pi/Strato_Pi/myproject
+detected binary path: /home/pi/Strato_Pi/myproject/myprojectenv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 13677
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address myproject.sock fd 3
+Python version: 3.9.2 (default, Feb 28 2021, 17:03:44)  [GCC 10.2.1 20210110]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5576de0f00
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 3 seconds on interpreter 0x5576de0f00 pid: 944101 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 944101)
+spawned uWSGI worker 1 (pid: 944120, cores: 1)
+spawned uWSGI worker 2 (pid: 944121, cores: 1)
+spawned uWSGI worker 3 (pid: 944122, cores: 1)
+spawned uWSGI worker 4 (pid: 944123, cores: 1)
+spawned uWSGI worker 5 (pid: 944125, cores: 1)
+[pid: 944120|app: 0|req: 1/1] 127.0.0.1 () {64 vars in 1221 bytes} [Mon Mar  7 00:36:02 2022] GET / => generated 9282 bytes in 75 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 1/2] 127.0.0.1 () {60 vars in 1110 bytes} [Mon Mar  7 00:36:02 2022] GET /static/js/script.js => generated 634 bytes in 27 msecs via sendfile() (HTTP/1.0 200) 6 headers in 250 bytes (0 switches on core 0)
+[pid: 944120|app: 0|req: 2/3] 127.0.0.1 () {60 vars in 1102 bytes} [Mon Mar  7 00:36:03 2022] GET /static/query.js => generated 1195 bytes in 20 msecs via sendfile() (HTTP/1.0 200) 6 headers in 250 bytes (0 switches on core 0)
+[pid: 944125|app: 0|req: 1/4] 127.0.0.1 () {60 vars in 1136 bytes} [Mon Mar  7 00:36:03 2022] GET /static/css/test_style.css => generated 1728 bytes in 27 msecs via sendfile() (HTTP/1.0 200) 6 headers in 242 bytes (0 switches on core 0)
+[pid: 944125|app: 0|req: 2/5] 127.0.0.1 () {60 vars in 1128 bytes} [Mon Mar  7 00:36:04 2022] GET /static/css/navbar.css => generated 528 bytes in 2 msecs via sendfile() (HTTP/1.0 200) 6 headers in 237 bytes (0 switches on core 0)
+[pid: 944125|app: 0|req: 3/6] 127.0.0.1 () {58 vars in 1099 bytes} [Mon Mar  7 00:36:04 2022] GET /favicon.ico => generated 232 bytes in 2 msecs (HTTP/1.0 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 4/7] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:36:05 2022] GET /api => generated 226 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (2 switches on core 0)
+[pid: 944125|app: 0|req: 5/8] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:36:06 2022] GET /api => generated 223 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (2 switches on core 0)
+[pid: 944125|app: 0|req: 6/9] 127.0.0.1 () {62 vars in 1230 bytes} [Mon Mar  7 00:36:06 2022] GET /live_feed => generated 3094 bytes in 25 msecs (HTTP/1.0 200) 2 headers in 81 bytes (2 switches on core 0)
+[pid: 944121|app: 0|req: 2/10] 127.0.0.1 () {60 vars in 1119 bytes} [Mon Mar  7 00:36:07 2022] GET /static/js/script.js => generated 0 bytes in 5 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+[pid: 944125|app: 0|req: 7/11] 127.0.0.1 () {60 vars in 1137 bytes} [Mon Mar  7 00:36:07 2022] GET /static/css/navbar.css => generated 0 bytes in 3 msecs (HTTP/1.0 304) 3 headers in 141 bytes (0 switches on core 0)
+[pid: 944123|app: 0|req: 1/12] 127.0.0.1 () {60 vars in 1145 bytes} [Mon Mar  7 00:36:07 2022] GET /static/css/test_style.css => generated 0 bytes in 52 msecs (HTTP/1.0 304) 3 headers in 145 bytes (0 switches on core 0)
+[pid: 944123|app: 0|req: 2/13] 127.0.0.1 () {58 vars in 1106 bytes} [Mon Mar  7 00:36:08 2022] GET /video_feed => generated 609484989 bytes in 241661 msecs (HTTP/1.0 200) 1 headers in 76 bytes (5301 switches on core 0)
+[pid: 944125|app: 0|req: 8/14] 127.0.0.1 () {64 vars in 1261 bytes} [Mon Mar  7 00:40:39 2022] GET /live_feed => generated 3094 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 9/15] 127.0.0.1 () {60 vars in 1119 bytes} [Mon Mar  7 00:40:39 2022] GET /static/js/script.js => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+[pid: 944125|app: 0|req: 10/16] 127.0.0.1 () {60 vars in 1145 bytes} [Mon Mar  7 00:40:40 2022] GET /static/css/test_style.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 145 bytes (0 switches on core 0)
+[pid: 944125|app: 0|req: 11/17] 127.0.0.1 () {60 vars in 1137 bytes} [Mon Mar  7 00:40:40 2022] GET /static/css/navbar.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 141 bytes (0 switches on core 0)
+[pid: 944123|app: 0|req: 3/18] 127.0.0.1 () {62 vars in 1221 bytes} [Mon Mar  7 00:42:11 2022] GET / => generated 9282 bytes in 45 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 1/19] 127.0.0.1 () {60 vars in 1110 bytes} [Mon Mar  7 00:42:11 2022] GET /static/js/script.js => generated 0 bytes in 42 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+[pid: 944121|app: 0|req: 3/20] 127.0.0.1 () {60 vars in 1136 bytes} [Mon Mar  7 00:42:12 2022] GET /static/css/test_style.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 145 bytes (0 switches on core 0)
+Mon Mar  7 00:42:12 2022 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /video_feed (ip 127.0.0.1) !!!
+Mon Mar  7 00:42:12 2022 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 429] during GET /video_feed (127.0.0.1)
+OSError: write error
+[pid: 944125|app: 0|req: 12/21] 127.0.0.1 () {58 vars in 1106 bytes} [Mon Mar  7 00:40:40 2022] GET /video_feed => generated 237447131 bytes in 91635 msecs (HTTP/1.0 200) 1 headers in 76 bytes (2000 switches on core 0)
+[pid: 944125|app: 0|req: 13/22] 127.0.0.1 () {60 vars in 1102 bytes} [Mon Mar  7 00:42:12 2022] GET /static/query.js => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 139 bytes (0 switches on core 0)
+[pid: 944125|app: 0|req: 14/23] 127.0.0.1 () {60 vars in 1128 bytes} [Mon Mar  7 00:42:13 2022] GET /static/css/navbar.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 141 bytes (0 switches on core 0)
+[pid: 944125|app: 0|req: 15/24] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:42:14 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 16/25] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:42:15 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (2 switches on core 0)
+[pid: 944123|app: 0|req: 4/26] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:42:16 2022] GET /api => generated 225 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (2 switches on core 0)
+[pid: 944123|app: 0|req: 5/27] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:42:17 2022] GET /api => generated 219 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944123|app: 0|req: 6/28] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:42:18 2022] GET /api => generated 224 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944123|app: 0|req: 7/29] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:42:19 2022] GET /api => generated 226 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944123|app: 0|req: 8/30] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:42:20 2022] GET /api => generated 223 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944123|app: 0|req: 9/31] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:42:23 2022] GET /api => generated 227 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944123|app: 0|req: 10/32] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:42:24 2022] GET /api => generated 226 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944123|app: 0|req: 11/33] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:42:26 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944123|app: 0|req: 12/34] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:42:28 2022] GET /api => generated 226 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944123|app: 0|req: 13/35] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:42:31 2022] GET /api => generated 224 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 2/36] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:42:32 2022] GET /api => generated 223 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 3/37] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:42:34 2022] GET /api => generated 225 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 4/38] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:42:36 2022] GET /api => generated 224 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 5/39] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:42:38 2022] GET /api => generated 224 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 3/40] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:42:41 2022] GET /api => generated 227 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 4/41] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:42:42 2022] GET /api => generated 226 bytes in 4 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 5/42] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:42:44 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 4/43] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:42:46 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 5/44] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:42:48 2022] GET /api => generated 222 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 6/45] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:42:51 2022] GET /api => generated 223 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 7/46] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:42:52 2022] GET /api => generated 222 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 8/47] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:42:54 2022] GET /api => generated 224 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 17/48] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:42:56 2022] GET /api => generated 225 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 18/49] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:42:59 2022] GET /api => generated 227 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 19/50] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:01 2022] GET /api => generated 226 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 20/51] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:02 2022] GET /api => generated 224 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 21/52] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:04 2022] GET /api => generated 225 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 22/53] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:06 2022] GET /api => generated 224 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 23/54] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:08 2022] GET /api => generated 223 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 24/55] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:11 2022] GET /api => generated 224 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 6/56] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:12 2022] GET /api => generated 226 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 7/57] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:14 2022] GET /api => generated 225 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 8/58] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:16 2022] GET /api => generated 224 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 9/59] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:18 2022] GET /api => generated 226 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 9/60] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:21 2022] GET /api => generated 223 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944123|app: 0|req: 14/61] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:22 2022] GET /api => generated 223 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 6/62] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:24 2022] GET /api => generated 226 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 10/63] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:26 2022] GET /api => generated 226 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 10/64] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:29 2022] GET /api => generated 226 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 11/65] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:30 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 25/66] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:32 2022] GET /api => generated 226 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 26/67] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:35 2022] GET /api => generated 224 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 27/68] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:36 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 7/69] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:39 2022] GET /api => generated 224 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 8/70] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:40 2022] GET /api => generated 227 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 9/71] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:42 2022] GET /api => generated 225 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 12/72] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:44 2022] GET /api => generated 223 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 28/73] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:46 2022] GET /api => generated 226 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944123|app: 0|req: 15/74] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:49 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944123|app: 0|req: 16/75] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:50 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 11/76] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:52 2022] GET /api => generated 225 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 12/77] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:54 2022] GET /api => generated 224 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 29/78] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:56 2022] GET /api => generated 223 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944123|app: 0|req: 17/79] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:43:58 2022] GET /api => generated 224 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 13/80] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:01 2022] GET /api => generated 227 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 30/81] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:02 2022] GET /api => generated 223 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 31/82] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:04 2022] GET /api => generated 223 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 32/83] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:06 2022] GET /api => generated 227 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 33/84] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:08 2022] GET /api => generated 227 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 34/85] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:11 2022] GET /api => generated 224 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944123|app: 0|req: 18/86] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:12 2022] GET /api => generated 222 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944123|app: 0|req: 19/87] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:14 2022] GET /api => generated 224 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944123|app: 0|req: 20/88] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:16 2022] GET /api => generated 223 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 14/89] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:18 2022] GET /api => generated 225 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (2 switches on core 0)
+[pid: 944123|app: 0|req: 21/90] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:21 2022] GET /api => generated 226 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 15/91] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:22 2022] GET /api => generated 225 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 16/92] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:24 2022] GET /api => generated 224 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944123|app: 0|req: 22/93] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:26 2022] GET /api => generated 227 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944123|app: 0|req: 23/94] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:28 2022] GET /api => generated 226 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 13/95] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:31 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 10/96] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:32 2022] GET /api => generated 224 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 35/97] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:34 2022] GET /api => generated 221 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 36/98] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:36 2022] GET /api => generated 224 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 37/99] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:38 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 14/100] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:41 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 15/101] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:42 2022] GET /api => generated 224 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 38/102] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:44 2022] GET /api => generated 225 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944123|app: 0|req: 24/103] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:46 2022] GET /api => generated 223 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 17/104] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:48 2022] GET /api => generated 224 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 39/105] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:51 2022] GET /api => generated 224 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 11/106] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:52 2022] GET /api => generated 226 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 40/107] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:54 2022] GET /api => generated 224 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944123|app: 0|req: 25/108] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:56 2022] GET /api => generated 223 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 18/109] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:44:59 2022] GET /api => generated 226 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 12/110] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:00 2022] GET /api => generated 225 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 13/111] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:02 2022] GET /api => generated 225 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 14/112] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:04 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 41/113] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:06 2022] GET /api => generated 227 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (2 switches on core 0)
+[pid: 944122|app: 0|req: 19/114] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:09 2022] GET /api => generated 221 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 42/115] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:10 2022] GET /api => generated 221 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 43/116] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:12 2022] GET /api => generated 226 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 16/117] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:14 2022] GET /api => generated 226 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 15/118] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:16 2022] GET /api => generated 226 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 17/119] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:18 2022] GET /api => generated 226 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (2 switches on core 0)
+[pid: 944121|app: 0|req: 16/120] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:21 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 17/121] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:22 2022] GET /api => generated 225 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 18/122] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:24 2022] GET /api => generated 226 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 19/123] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:26 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 20/124] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:28 2022] GET /api => generated 225 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 21/125] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:31 2022] GET /api => generated 223 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 22/126] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:32 2022] GET /api => generated 225 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 23/127] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:34 2022] GET /api => generated 226 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 24/128] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:37 2022] GET /api => generated 225 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 25/129] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:38 2022] GET /api => generated 223 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (2 switches on core 0)
+[pid: 944123|app: 0|req: 26/130] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:41 2022] GET /api => generated 227 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (2 switches on core 0)
+[pid: 944121|app: 0|req: 26/131] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:42 2022] GET /api => generated 227 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 27/132] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:44 2022] GET /api => generated 225 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 28/133] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:46 2022] GET /api => generated 222 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 29/134] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:48 2022] GET /api => generated 224 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 30/135] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:51 2022] GET /api => generated 225 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 31/136] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:52 2022] GET /api => generated 224 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 32/137] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:54 2022] GET /api => generated 225 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 33/138] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:56 2022] GET /api => generated 226 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 34/139] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:45:58 2022] GET /api => generated 224 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 35/140] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:01 2022] GET /api => generated 227 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 36/141] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:02 2022] GET /api => generated 227 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 37/142] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:04 2022] GET /api => generated 223 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 38/143] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:06 2022] GET /api => generated 227 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 39/144] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:09 2022] GET /api => generated 225 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 40/145] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:10 2022] GET /api => generated 227 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 41/146] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:12 2022] GET /api => generated 226 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 42/147] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:14 2022] GET /api => generated 220 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 43/148] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:16 2022] GET /api => generated 224 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 44/149] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:18 2022] GET /api => generated 225 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 20/150] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:21 2022] GET /api => generated 224 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 18/151] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:23 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 44/152] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:24 2022] GET /api => generated 226 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 21/153] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:26 2022] GET /api => generated 227 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 22/154] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:29 2022] GET /api => generated 221 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 45/155] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:30 2022] GET /api => generated 223 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 45/156] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:32 2022] GET /api => generated 224 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 19/157] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:34 2022] GET /api => generated 222 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 46/158] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:36 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (2 switches on core 0)
+[pid: 944121|app: 0|req: 46/159] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:39 2022] GET /api => generated 224 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944123|app: 0|req: 27/160] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:40 2022] GET /api => generated 225 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 23/161] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:42 2022] GET /api => generated 225 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 24/162] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:44 2022] GET /api => generated 222 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 20/163] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:46 2022] GET /api => generated 226 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (2 switches on core 0)
+[pid: 944125|app: 0|req: 47/164] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:48 2022] GET /api => generated 226 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 47/165] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:51 2022] GET /api => generated 225 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 48/166] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:52 2022] GET /api => generated 226 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 49/167] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:54 2022] GET /api => generated 222 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 50/168] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:56 2022] GET /api => generated 226 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 51/169] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:46:59 2022] GET /api => generated 226 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 52/170] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:47:00 2022] GET /api => generated 226 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 21/171] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:47:02 2022] GET /api => generated 224 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 22/172] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:47:04 2022] GET /api => generated 225 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 48/173] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:47:06 2022] GET /api => generated 224 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 49/174] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:47:09 2022] GET /api => generated 224 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 50/175] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:47:10 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 51/176] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:47:12 2022] GET /api => generated 224 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 52/177] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:47:14 2022] GET /api => generated 227 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 53/178] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:47:16 2022] GET /api => generated 226 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 53/179] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:47:19 2022] GET /api => generated 223 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 23/180] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:47:54 2022] GET /api => generated 224 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 54/181] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:48:54 2022] GET /api => generated 226 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 54/182] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:49:54 2022] GET /api => generated 222 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 55/183] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:50:54 2022] GET /api => generated 224 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (2 switches on core 0)
+[pid: 944120|app: 0|req: 24/184] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:51:54 2022] GET /api => generated 226 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 25/185] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:53:06 2022] GET /api => generated 224 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 55/186] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:53:54 2022] GET /api => generated 221 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 56/187] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:54:54 2022] GET /api => generated 223 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 25/188] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:55:54 2022] GET /api => generated 224 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 26/189] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:56:54 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944123|app: 0|req: 28/190] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:57:54 2022] GET /api => generated 225 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 56/191] 127.0.0.1 () {58 vars in 1067 bytes} [Mon Mar  7 00:58:30 2022] GET / => generated 9282 bytes in 25 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 57/192] 127.0.0.1 () {58 vars in 1029 bytes} [Mon Mar  7 00:58:30 2022] GET /static/js/script.js => generated 634 bytes in 4 msecs via sendfile() (HTTP/1.0 200) 6 headers in 250 bytes (0 switches on core 0)
+[pid: 944125|app: 0|req: 58/193] 127.0.0.1 () {58 vars in 1021 bytes} [Mon Mar  7 00:58:31 2022] GET /static/query.js => generated 1195 bytes in 3 msecs via sendfile() (HTTP/1.0 200) 6 headers in 250 bytes (0 switches on core 0)
+[pid: 944125|app: 0|req: 59/194] 127.0.0.1 () {58 vars in 1047 bytes} [Mon Mar  7 00:58:32 2022] GET /static/css/navbar.css => generated 528 bytes in 5 msecs via sendfile() (HTTP/1.0 200) 6 headers in 237 bytes (0 switches on core 0)
+[pid: 944125|app: 0|req: 60/195] 127.0.0.1 () {58 vars in 1055 bytes} [Mon Mar  7 00:58:32 2022] GET /static/css/test_style.css => generated 1728 bytes in 3 msecs via sendfile() (HTTP/1.0 200) 6 headers in 242 bytes (0 switches on core 0)
+[pid: 944125|app: 0|req: 61/196] 127.0.0.1 () {56 vars in 938 bytes} [Mon Mar  7 00:58:33 2022] GET /api => generated 226 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 26/197] 127.0.0.1 () {56 vars in 938 bytes} [Mon Mar  7 00:58:34 2022] GET /api => generated 226 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944123|app: 0|req: 29/198] 127.0.0.1 () {56 vars in 938 bytes} [Mon Mar  7 00:58:35 2022] GET /api => generated 222 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 27/199] 127.0.0.1 () {60 vars in 1149 bytes} [Mon Mar  7 00:58:35 2022] GET /live_feed => generated 3094 bytes in 31 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 27/200] 127.0.0.1 () {58 vars in 1038 bytes} [Mon Mar  7 00:58:36 2022] GET /static/js/script.js => generated 0 bytes in 4 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+[pid: 944122|app: 0|req: 28/201] 127.0.0.1 () {58 vars in 1064 bytes} [Mon Mar  7 00:58:36 2022] GET /static/css/test_style.css => generated 0 bytes in 6 msecs (HTTP/1.0 304) 3 headers in 145 bytes (0 switches on core 0)
+[pid: 944123|app: 0|req: 30/202] 127.0.0.1 () {58 vars in 1056 bytes} [Mon Mar  7 00:58:36 2022] GET /static/css/navbar.css => generated 0 bytes in 5 msecs (HTTP/1.0 304) 3 headers in 141 bytes (0 switches on core 0)
+[pid: 944125|app: 0|req: 62/203] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:58:54 2022] GET /api => generated 221 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 29/204] 127.0.0.1 () {60 vars in 1148 bytes} [Mon Mar  7 00:59:03 2022] GET /docs => generated 8857 bytes in 43 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 63/205] 127.0.0.1 () {58 vars in 1033 bytes} [Mon Mar  7 00:59:03 2022] GET /static/js/script.js => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+[pid: 944121|app: 0|req: 57/206] 127.0.0.1 () {58 vars in 1059 bytes} [Mon Mar  7 00:59:03 2022] GET /static/css/test_style.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 145 bytes (0 switches on core 0)
+Mon Mar  7 00:59:03 2022 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /video_feed (ip 127.0.0.1) !!!
+Mon Mar  7 00:59:03 2022 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 429] during GET /video_feed (127.0.0.1)
+OSError: write error
+[pid: 944120|app: 0|req: 28/207] 127.0.0.1 () {56 vars in 1025 bytes} [Mon Mar  7 00:58:36 2022] GET /video_feed => generated 68977185 bytes in 27082 msecs (HTTP/1.0 200) 1 headers in 76 bytes (578 switches on core 0)
+[pid: 944120|app: 0|req: 29/208] 127.0.0.1 () {58 vars in 1051 bytes} [Mon Mar  7 00:59:04 2022] GET /static/css/navbar.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 141 bytes (0 switches on core 0)
+[pid: 944120|app: 0|req: 30/209] 127.0.0.1 () {60 vars in 1153 bytes} [Mon Mar  7 00:59:05 2022] GET /live_feed => generated 3094 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 31/210] 127.0.0.1 () {58 vars in 1056 bytes} [Mon Mar  7 00:59:05 2022] GET /static/css/navbar.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 141 bytes (0 switches on core 0)
+[pid: 944120|app: 0|req: 32/211] 127.0.0.1 () {58 vars in 1038 bytes} [Mon Mar  7 00:59:05 2022] GET /static/js/script.js => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+[pid: 944120|app: 0|req: 33/212] 127.0.0.1 () {58 vars in 1064 bytes} [Mon Mar  7 00:59:05 2022] GET /static/css/test_style.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 145 bytes (0 switches on core 0)
+[pid: 944125|app: 0|req: 64/213] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 00:59:54 2022] GET /api => generated 226 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 65/214] 127.0.0.1 () {60 vars in 1140 bytes} [Mon Mar  7 00:59:57 2022] GET / => generated 9282 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 66/215] 127.0.0.1 () {58 vars in 1029 bytes} [Mon Mar  7 00:59:57 2022] GET /static/js/script.js => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+[pid: 944125|app: 0|req: 67/216] 127.0.0.1 () {58 vars in 1055 bytes} [Mon Mar  7 00:59:57 2022] GET /static/css/test_style.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 145 bytes (0 switches on core 0)
+[pid: 944121|app: 0|req: 58/217] 127.0.0.1 () {58 vars in 1047 bytes} [Mon Mar  7 00:59:57 2022] GET /static/css/navbar.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 141 bytes (0 switches on core 0)
+Mon Mar  7 00:59:57 2022 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /video_feed (ip 127.0.0.1) !!!
+Mon Mar  7 00:59:57 2022 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 429] during GET /video_feed (127.0.0.1)
+OSError: write error
+[pid: 944120|app: 0|req: 34/218] 127.0.0.1 () {56 vars in 1025 bytes} [Mon Mar  7 00:59:06 2022] GET /video_feed => generated 133906261 bytes in 51499 msecs (HTTP/1.0 200) 1 headers in 76 bytes (1107 switches on core 0)
+[pid: 944120|app: 0|req: 35/219] 127.0.0.1 () {58 vars in 1021 bytes} [Mon Mar  7 00:59:57 2022] GET /static/query.js => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 139 bytes (0 switches on core 0)
+[pid: 944120|app: 0|req: 36/220] 127.0.0.1 () {56 vars in 938 bytes} [Mon Mar  7 00:59:59 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 37/221] 127.0.0.1 () {56 vars in 938 bytes} [Mon Mar  7 01:00:00 2022] GET /api => generated 224 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 38/222] 127.0.0.1 () {56 vars in 938 bytes} [Mon Mar  7 01:00:01 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 39/223] 127.0.0.1 () {56 vars in 938 bytes} [Mon Mar  7 01:00:02 2022] GET /api => generated 223 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 68/224] 127.0.0.1 () {56 vars in 938 bytes} [Mon Mar  7 01:00:03 2022] GET /api => generated 226 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 69/225] 127.0.0.1 () {56 vars in 938 bytes} [Mon Mar  7 01:00:04 2022] GET /api => generated 226 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 70/226] 127.0.0.1 () {56 vars in 938 bytes} [Mon Mar  7 01:00:05 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 71/227] 127.0.0.1 () {56 vars in 938 bytes} [Mon Mar  7 01:00:06 2022] GET /api => generated 226 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 72/228] 127.0.0.1 () {56 vars in 938 bytes} [Mon Mar  7 01:00:07 2022] GET /api => generated 226 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (2 switches on core 0)
+[pid: 944121|app: 0|req: 59/229] 127.0.0.1 () {56 vars in 938 bytes} [Mon Mar  7 01:00:08 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 60/230] 127.0.0.1 () {56 vars in 938 bytes} [Mon Mar  7 01:00:10 2022] GET /api => generated 227 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 61/231] 127.0.0.1 () {56 vars in 938 bytes} [Mon Mar  7 01:00:10 2022] GET /api => generated 226 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944123|app: 0|req: 31/232] 127.0.0.1 () {56 vars in 938 bytes} [Mon Mar  7 01:00:11 2022] GET /api => generated 220 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 62/233] 127.0.0.1 () {60 vars in 1153 bytes} [Mon Mar  7 01:00:12 2022] GET /sys_control => generated 7497 bytes in 29 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 63/234] 127.0.0.1 () {56 vars in 938 bytes} [Mon Mar  7 01:00:12 2022] GET /api => generated 224 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 64/235] 127.0.0.1 () {56 vars in 1021 bytes} [Mon Mar  7 01:00:12 2022] GET /static/css/roundslider.min.css => generated 4810 bytes in 2 msecs via sendfile() (HTTP/1.0 200) 6 headers in 247 bytes (0 switches on core 0)
+[pid: 944121|app: 0|req: 65/236] 127.0.0.1 () {58 vars in 1066 bytes} [Mon Mar  7 01:00:13 2022] GET /static/css/test_style.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 145 bytes (0 switches on core 0)
+[pid: 944121|app: 0|req: 66/237] 127.0.0.1 () {58 vars in 1058 bytes} [Mon Mar  7 01:00:13 2022] GET /static/css/navbar.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 141 bytes (0 switches on core 0)
+[pid: 944122|app: 0|req: 30/238] 127.0.0.1 () {56 vars in 985 bytes} [Mon Mar  7 01:00:13 2022] GET /static/js/inputs.js => generated 2275 bytes in 2 msecs via sendfile() (HTTP/1.0 200) 6 headers in 251 bytes (0 switches on core 0)
+[pid: 944123|app: 0|req: 32/239] 127.0.0.1 () {56 vars in 985 bytes} [Mon Mar  7 01:00:13 2022] GET /static/js/slider.js => generated 1128 bytes in 2 msecs via sendfile() (HTTP/1.0 200) 6 headers in 251 bytes (0 switches on core 0)
+[pid: 944121|app: 0|req: 67/240] 127.0.0.1 () {58 vars in 1040 bytes} [Mon Mar  7 01:00:13 2022] GET /static/js/script.js => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+Data:b'{"motor":1,"value":"0"}'
+1 0
+[pid: 944121|app: 0|req: 68/241] 127.0.0.1 () {62 vars in 1101 bytes} [Mon Mar  7 01:00:13 2022] POST /api => generated 2 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 78 bytes (1 switches on core 0)
+Data:b'{"motor":1,"value":"0.11"}'
+1 0.11
+[pid: 944121|app: 0|req: 69/242] 127.0.0.1 () {62 vars in 1101 bytes} [Mon Mar  7 01:00:16 2022] POST /api => generated 2 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 78 bytes (1 switches on core 0)
+Data:b'{"motor":1,"value":"0.16"}'
+1 0.16
+[pid: 944121|app: 0|req: 70/243] 127.0.0.1 () {62 vars in 1101 bytes} [Mon Mar  7 01:00:17 2022] POST /api => generated 2 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 78 bytes (1 switches on core 0)
+Data:b'{"motor":1,"value":"0.28"}'
+1 0.28
+[pid: 944121|app: 0|req: 71/244] 127.0.0.1 () {62 vars in 1101 bytes} [Mon Mar  7 01:00:18 2022] POST /api => generated 2 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 78 bytes (1 switches on core 0)
+Data:b'{"motor":1,"value":"0.28"}'
+1 0.28
+[pid: 944121|app: 0|req: 72/245] 127.0.0.1 () {62 vars in 1101 bytes} [Mon Mar  7 01:00:19 2022] POST /api => generated 2 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 78 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 73/246] 127.0.0.1 () {60 vars in 1142 bytes} [Mon Mar  7 01:00:23 2022] GET / => generated 9282 bytes in 15 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 74/247] 127.0.0.1 () {58 vars in 1029 bytes} [Mon Mar  7 01:00:24 2022] GET /static/js/script.js => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+[pid: 944121|app: 0|req: 75/248] 127.0.0.1 () {58 vars in 1055 bytes} [Mon Mar  7 01:00:24 2022] GET /static/css/test_style.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 145 bytes (0 switches on core 0)
+[pid: 944121|app: 0|req: 76/249] 127.0.0.1 () {58 vars in 1047 bytes} [Mon Mar  7 01:00:24 2022] GET /static/css/navbar.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 141 bytes (0 switches on core 0)
+[pid: 944121|app: 0|req: 77/250] 127.0.0.1 () {58 vars in 1021 bytes} [Mon Mar  7 01:00:24 2022] GET /static/query.js => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 139 bytes (0 switches on core 0)
+[pid: 944121|app: 0|req: 78/251] 127.0.0.1 () {56 vars in 938 bytes} [Mon Mar  7 01:00:26 2022] GET /api => generated 226 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 79/252] 127.0.0.1 () {56 vars in 938 bytes} [Mon Mar  7 01:00:27 2022] GET /api => generated 227 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 80/253] 127.0.0.1 () {56 vars in 938 bytes} [Mon Mar  7 01:00:28 2022] GET /api => generated 227 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 81/254] 127.0.0.1 () {56 vars in 938 bytes} [Mon Mar  7 01:00:29 2022] GET /api => generated 223 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 31/255] 127.0.0.1 () {56 vars in 938 bytes} [Mon Mar  7 01:00:30 2022] GET /api => generated 223 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 73/256] 127.0.0.1 () {56 vars in 938 bytes} [Mon Mar  7 01:00:31 2022] GET /api => generated 226 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 74/257] 127.0.0.1 () {60 vars in 1153 bytes} [Mon Mar  7 01:00:31 2022] GET /sys_control => generated 7497 bytes in 17 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 75/258] 127.0.0.1 () {56 vars in 938 bytes} [Mon Mar  7 01:00:32 2022] GET /api => generated 222 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 76/259] 127.0.0.1 () {58 vars in 1076 bytes} [Mon Mar  7 01:00:32 2022] GET /static/css/roundslider.min.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 150 bytes (0 switches on core 0)
+[pid: 944125|app: 0|req: 77/260] 127.0.0.1 () {58 vars in 1066 bytes} [Mon Mar  7 01:00:32 2022] GET /static/css/test_style.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 145 bytes (0 switches on core 0)
+[pid: 944122|app: 0|req: 32/261] 127.0.0.1 () {58 vars in 1040 bytes} [Mon Mar  7 01:00:32 2022] GET /static/js/slider.js => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+[pid: 944122|app: 0|req: 33/262] 127.0.0.1 () {58 vars in 1040 bytes} [Mon Mar  7 01:00:32 2022] GET /static/js/inputs.js => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+[pid: 944122|app: 0|req: 34/263] 127.0.0.1 () {58 vars in 1040 bytes} [Mon Mar  7 01:00:32 2022] GET /static/js/script.js => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+[pid: 944122|app: 0|req: 35/264] 127.0.0.1 () {58 vars in 1058 bytes} [Mon Mar  7 01:00:32 2022] GET /static/css/navbar.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 141 bytes (0 switches on core 0)
+Data:b'{"motor":1,"value":"0"}'
+1 0
+[pid: 944122|app: 0|req: 36/265] 127.0.0.1 () {62 vars in 1101 bytes} [Mon Mar  7 01:00:33 2022] POST /api => generated 2 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 78 bytes (1 switches on core 0)
+Data:b'{"motor":1,"value":"0.28"}'
+1 0.28
+[pid: 944122|app: 0|req: 37/266] 127.0.0.1 () {62 vars in 1101 bytes} [Mon Mar  7 01:00:38 2022] POST /api => generated 2 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 78 bytes (1 switches on core 0)
+Data:b'{"motor":1,"value":"0.11"}'
+1 0.11
+[pid: 944122|app: 0|req: 38/267] 127.0.0.1 () {62 vars in 1101 bytes} [Mon Mar  7 01:00:43 2022] POST /api => generated 2 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 78 bytes (1 switches on core 0)
+Data:b'{"motor":1,"value":"0.11"}'
+1 0.11
+[pid: 944122|app: 0|req: 39/268] 127.0.0.1 () {62 vars in 1101 bytes} [Mon Mar  7 01:00:44 2022] POST /api => generated 2 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 78 bytes (1 switches on core 0)
+Data:b'{"motor":1,"value":"0.11"}'
+1 0.11
+[pid: 944120|app: 0|req: 40/269] 127.0.0.1 () {62 vars in 1101 bytes} [Mon Mar  7 01:00:44 2022] POST /api => generated 2 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 78 bytes (1 switches on core 0)
+Data:b'{"motor":1,"value":"0.11"}'
+1 0.11
+[pid: 944120|app: 0|req: 41/270] 127.0.0.1 () {62 vars in 1101 bytes} [Mon Mar  7 01:00:44 2022] POST /api => generated 2 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 78 bytes (1 switches on core 0)
+Data:b'{"motor":1,"value":"0"}'
+1 0
+[pid: 944120|app: 0|req: 42/271] 127.0.0.1 () {62 vars in 1101 bytes} [Mon Mar  7 01:00:46 2022] POST /api => generated 2 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 78 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 43/272] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:00:54 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 44/273] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:01:54 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944123|app: 0|req: 33/274] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:02:54 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 78/275] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:03:54 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 79/276] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:04:54 2022] GET /api => generated 224 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 45/277] 127.0.0.1 () {34 vars in 391 bytes} [Mon Mar  7 01:05:36 2022] GET / => generated 9282 bytes in 2 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 80/278] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:05:54 2022] GET /api => generated 224 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 46/279] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:06:54 2022] GET /api => generated 225 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 47/280] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:07:54 2022] GET /api => generated 224 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 48/281] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:08:54 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 49/282] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:09:54 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 50/283] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:10:54 2022] GET /api => generated 227 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 51/284] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:11:54 2022] GET /api => generated 224 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 52/285] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:12:54 2022] GET /api => generated 224 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944123|app: 0|req: 34/286] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:13:54 2022] GET /api => generated 224 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 40/287] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:14:54 2022] GET /api => generated 223 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 53/288] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:15:54 2022] GET /api => generated 222 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 81/289] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:16:54 2022] GET /api => generated 225 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (2 switches on core 0)
+[pid: 944120|app: 0|req: 54/290] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:17:54 2022] GET /api => generated 226 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 55/291] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:18:54 2022] GET /api => generated 223 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 56/292] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:19:54 2022] GET /api => generated 223 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 57/293] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:20:54 2022] GET /api => generated 225 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 58/294] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:21:54 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 82/295] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:22:54 2022] GET /api => generated 224 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944123|app: 0|req: 35/296] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:23:54 2022] GET /api => generated 225 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 82/297] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:24:54 2022] GET /api => generated 225 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 83/298] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:25:54 2022] GET /api => generated 226 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 59/299] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:26:54 2022] GET /api => generated 226 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 60/300] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:27:54 2022] GET /api => generated 224 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 61/301] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:28:54 2022] GET /api => generated 223 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944120|app: 0|req: 62/302] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:29:54 2022] GET /api => generated 225 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 84/303] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:30:54 2022] GET /api => generated 225 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 85/304] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:31:54 2022] GET /api => generated 224 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 86/305] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:33:06 2022] GET /api => generated 223 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 87/306] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:33:54 2022] GET /api => generated 225 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 88/307] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:34:54 2022] GET /api => generated 224 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 89/308] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:35:54 2022] GET /api => generated 223 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 90/309] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:36:54 2022] GET /api => generated 223 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 91/310] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:37:54 2022] GET /api => generated 225 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 92/311] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:38:54 2022] GET /api => generated 222 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 93/312] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:39:54 2022] GET /api => generated 224 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 94/313] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:40:54 2022] GET /api => generated 224 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 95/314] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:41:54 2022] GET /api => generated 226 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 96/315] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:42:54 2022] GET /api => generated 223 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 97/316] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:43:54 2022] GET /api => generated 226 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 98/317] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:44:54 2022] GET /api => generated 225 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944123|app: 0|req: 36/318] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:45:54 2022] GET /api => generated 227 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944121|app: 0|req: 83/319] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:46:54 2022] GET /api => generated 224 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 99/320] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:47:54 2022] GET /api => generated 225 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 100/321] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:48:54 2022] GET /api => generated 226 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 101/322] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:49:54 2022] GET /api => generated 224 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 102/323] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:50:54 2022] GET /api => generated 225 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944125|app: 0|req: 103/324] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:51:54 2022] GET /api => generated 225 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 944122|app: 0|req: 41/325] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:52:54 2022] GET /api => generated 226 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket myproject.sock removed.
+*** Starting uWSGI 2.0.20 (64bit) on [Mon Mar  7 01:53:46 2022] ***
+compiled with version: 10.2.1 20210110 on 06 March 2022 19:10:01
+os: Linux-5.10.92-v8+ #1514 SMP PREEMPT Mon Jan 17 17:39:38 GMT 2022
+nodename: raspberrypi
+machine: aarch64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/pi/Strato_Pi/myproject
+detected binary path: /home/pi/Strato_Pi/myproject/myprojectenv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 13677
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address myproject.sock fd 3
+Python version: 3.9.2 (default, Feb 28 2021, 17:03:44)  [GCC 10.2.1 20210110]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x558db96f00
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x558db96f00 pid: 973977 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 973977)
+spawned uWSGI worker 1 (pid: 974001, cores: 1)
+spawned uWSGI worker 2 (pid: 974002, cores: 1)
+spawned uWSGI worker 3 (pid: 974003, cores: 1)
+spawned uWSGI worker 4 (pid: 974004, cores: 1)
+spawned uWSGI worker 5 (pid: 974005, cores: 1)
+[pid: 974002|app: 0|req: 1/1] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:53:54 2022] GET /api => generated 225 bytes in 17 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 974003|app: 0|req: 1/2] 127.0.0.1 () {62 vars in 1190 bytes} [Mon Mar  7 01:53:55 2022] GET / => generated 9282 bytes in 85 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 974003|app: 0|req: 2/3] 127.0.0.1 () {60 vars in 1110 bytes} [Mon Mar  7 01:53:56 2022] GET /static/js/script.js => generated 0 bytes in 18 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+[pid: 974003|app: 0|req: 3/4] 127.0.0.1 () {60 vars in 1136 bytes} [Mon Mar  7 01:53:56 2022] GET /static/css/test_style.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 145 bytes (0 switches on core 0)
+[pid: 974003|app: 0|req: 4/5] 127.0.0.1 () {60 vars in 1128 bytes} [Mon Mar  7 01:53:57 2022] GET /static/css/navbar.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 141 bytes (0 switches on core 0)
+Mon Mar  7 01:53:57 2022 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api (ip 127.0.0.1) !!!
+Mon Mar  7 01:53:57 2022 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET /api (127.0.0.1)
+OSError: write error
+[pid: 974003|app: 0|req: 5/6] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:53:57 2022] GET /api => generated 0 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 0 bytes (0 switches on core 0)
+[pid: 974003|app: 0|req: 6/7] 127.0.0.1 () {60 vars in 1102 bytes} [Mon Mar  7 01:53:58 2022] GET /static/query.js => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 139 bytes (0 switches on core 0)
+[pid: 974001|app: 0|req: 1/8] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:53:59 2022] GET /api => generated 225 bytes in 7 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 974001|app: 0|req: 2/9] 127.0.0.1 () {62 vars in 1230 bytes} [Mon Mar  7 01:54:00 2022] GET /live_feed => generated 3415 bytes in 27 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 974001|app: 0|req: 3/10] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:54:00 2022] GET /api => generated 224 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 974001|app: 0|req: 4/11] 127.0.0.1 () {60 vars in 1145 bytes} [Mon Mar  7 01:54:00 2022] GET /static/css/test_style.css => generated 0 bytes in 18 msecs (HTTP/1.0 304) 3 headers in 145 bytes (0 switches on core 0)
+[pid: 974001|app: 0|req: 5/12] 127.0.0.1 () {60 vars in 1119 bytes} [Mon Mar  7 01:54:00 2022] GET /static/js/script.js => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+[pid: 974003|app: 0|req: 7/13] 127.0.0.1 () {60 vars in 1137 bytes} [Mon Mar  7 01:54:01 2022] GET /static/css/navbar.css => generated 0 bytes in 5 msecs (HTTP/1.0 304) 3 headers in 141 bytes (0 switches on core 0)
+[pid: 974003|app: 0|req: 8/14] 127.0.0.1 () {60 vars in 1095 bytes} [Mon Mar  7 01:54:01 2022] GET /home/pi/Videos/info.mp4 => generated 232 bytes in 3 msecs (HTTP/1.0 404) 2 headers in 87 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+Mon Mar  7 01:56:52 2022 - worker 3 (pid: 974003) is taking too much time to die...NO MERCY !!!
+worker 3 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket myproject.sock removed.
+*** Starting uWSGI 2.0.20 (64bit) on [Mon Mar  7 01:56:53 2022] ***
+compiled with version: 10.2.1 20210110 on 06 March 2022 19:10:01
+os: Linux-5.10.92-v8+ #1514 SMP PREEMPT Mon Jan 17 17:39:38 GMT 2022
+nodename: raspberrypi
+machine: aarch64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/pi/Strato_Pi/myproject
+detected binary path: /home/pi/Strato_Pi/myproject/myprojectenv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 13677
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address myproject.sock fd 3
+Python version: 3.9.2 (default, Feb 28 2021, 17:03:44)  [GCC 10.2.1 20210110]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55bc282f00
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55bc282f00 pid: 974865 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 974865)
+spawned uWSGI worker 1 (pid: 974886, cores: 1)
+spawned uWSGI worker 2 (pid: 974887, cores: 1)
+spawned uWSGI worker 3 (pid: 974888, cores: 1)
+spawned uWSGI worker 4 (pid: 974889, cores: 1)
+spawned uWSGI worker 5 (pid: 974890, cores: 1)
+[pid: 974887|app: 0|req: 1/1] 127.0.0.1 () {62 vars in 1190 bytes} [Mon Mar  7 01:57:11 2022] GET / => generated 9282 bytes in 76 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 974887|app: 0|req: 2/2] 127.0.0.1 () {60 vars in 1136 bytes} [Mon Mar  7 01:57:12 2022] GET /static/css/test_style.css => generated 0 bytes in 52 msecs (HTTP/1.0 304) 3 headers in 145 bytes (0 switches on core 0)
+[pid: 974886|app: 0|req: 1/3] 127.0.0.1 () {60 vars in 1110 bytes} [Mon Mar  7 01:57:12 2022] GET /static/js/script.js => generated 0 bytes in 58 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+[pid: 974888|app: 0|req: 1/4] 127.0.0.1 () {60 vars in 1128 bytes} [Mon Mar  7 01:57:12 2022] GET /static/css/navbar.css => generated 0 bytes in 57 msecs (HTTP/1.0 304) 3 headers in 141 bytes (0 switches on core 0)
+[pid: 974886|app: 0|req: 2/5] 127.0.0.1 () {60 vars in 1102 bytes} [Mon Mar  7 01:57:12 2022] GET /static/query.js => generated 0 bytes in 5 msecs (HTTP/1.0 304) 3 headers in 139 bytes (0 switches on core 0)
+[pid: 974886|app: 0|req: 3/6] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:57:14 2022] GET /api => generated 227 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 974886|app: 0|req: 4/7] 127.0.0.1 () {62 vars in 1234 bytes} [Mon Mar  7 01:57:14 2022] GET /sys_control => generated 7497 bytes in 29 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 974886|app: 0|req: 5/8] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:57:15 2022] GET /api => generated 224 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 974888|app: 0|req: 2/9] 127.0.0.1 () {60 vars in 1157 bytes} [Mon Mar  7 01:57:15 2022] GET /static/css/roundslider.min.css => generated 4810 bytes in 2 msecs via sendfile() (HTTP/1.0 200) 6 headers in 247 bytes (0 switches on core 0)
+[pid: 974887|app: 0|req: 3/10] 127.0.0.1 () {60 vars in 1147 bytes} [Mon Mar  7 01:57:15 2022] GET /static/css/test_style.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 145 bytes (0 switches on core 0)
+[pid: 974887|app: 0|req: 4/11] 127.0.0.1 () {60 vars in 1121 bytes} [Mon Mar  7 01:57:15 2022] GET /static/js/script.js => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+[pid: 974890|app: 0|req: 1/12] 127.0.0.1 () {60 vars in 1139 bytes} [Mon Mar  7 01:57:15 2022] GET /static/css/navbar.css => generated 0 bytes in 28 msecs (HTTP/1.0 304) 3 headers in 141 bytes (0 switches on core 0)
+[pid: 974887|app: 0|req: 5/13] 127.0.0.1 () {60 vars in 1121 bytes} [Mon Mar  7 01:57:15 2022] GET /static/js/slider.js => generated 1128 bytes in 2 msecs via sendfile() (HTTP/1.0 200) 6 headers in 251 bytes (0 switches on core 0)
+[pid: 974886|app: 0|req: 6/14] 127.0.0.1 () {60 vars in 1121 bytes} [Mon Mar  7 01:57:16 2022] GET /static/js/inputs.js => generated 2275 bytes in 2 msecs via sendfile() (HTTP/1.0 200) 6 headers in 251 bytes (0 switches on core 0)
+Data:b'{"motor":1,"value":"0"}'
+1 0
+[pid: 974886|app: 0|req: 7/15] 127.0.0.1 () {64 vars in 1182 bytes} [Mon Mar  7 01:57:16 2022] POST /api => generated 2 bytes in 2 msecs (HTTP/1.0 200) 2 headers in 78 bytes (1 switches on core 0)
+[pid: 974887|app: 0|req: 6/16] 127.0.0.1 () {62 vars in 1241 bytes} [Mon Mar  7 01:57:17 2022] GET /live_feed => generated 3417 bytes in 13 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 974887|app: 0|req: 7/17] 127.0.0.1 () {60 vars in 1137 bytes} [Mon Mar  7 01:57:18 2022] GET /static/css/navbar.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 141 bytes (0 switches on core 0)
+[pid: 974886|app: 0|req: 8/18] 127.0.0.1 () {60 vars in 1119 bytes} [Mon Mar  7 01:57:18 2022] GET /static/js/script.js => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+[pid: 974886|app: 0|req: 9/19] 127.0.0.1 () {60 vars in 1145 bytes} [Mon Mar  7 01:57:18 2022] GET /static/css/test_style.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 145 bytes (0 switches on core 0)
+[pid: 974886|app: 0|req: 10/20] 127.0.0.1 () {60 vars in 1095 bytes} [Mon Mar  7 01:57:18 2022] GET /home/pi/Videos/info.mp4 => generated 232 bytes in 1 msecs (HTTP/1.0 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 974888|app: 0|req: 3/21] 127.0.0.1 () {64 vars in 1272 bytes} [Mon Mar  7 01:57:24 2022] GET /live_feed => generated 3417 bytes in 25 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 974888|app: 0|req: 4/22] 127.0.0.1 () {60 vars in 1119 bytes} [Mon Mar  7 01:57:25 2022] GET /static/js/script.js => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+[pid: 974888|app: 0|req: 5/23] 127.0.0.1 () {60 vars in 1145 bytes} [Mon Mar  7 01:57:25 2022] GET /static/css/test_style.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 145 bytes (0 switches on core 0)
+[pid: 974887|app: 0|req: 8/24] 127.0.0.1 () {60 vars in 1137 bytes} [Mon Mar  7 01:57:25 2022] GET /static/css/navbar.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 141 bytes (0 switches on core 0)
+[pid: 974887|app: 0|req: 9/25] 127.0.0.1 () {60 vars in 1095 bytes} [Mon Mar  7 01:57:25 2022] GET /home/pi/Videos/info.mp4 => generated 232 bytes in 1 msecs (HTTP/1.0 404) 2 headers in 87 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket myproject.sock removed.
+*** Starting uWSGI 2.0.20 (64bit) on [Mon Mar  7 01:58:06 2022] ***
+compiled with version: 10.2.1 20210110 on 06 March 2022 19:10:01
+os: Linux-5.10.92-v8+ #1514 SMP PREEMPT Mon Jan 17 17:39:38 GMT 2022
+nodename: raspberrypi
+machine: aarch64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/pi/Strato_Pi/myproject
+detected binary path: /home/pi/Strato_Pi/myproject/myprojectenv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 13677
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address myproject.sock fd 3
+Python version: 3.9.2 (default, Feb 28 2021, 17:03:44)  [GCC 10.2.1 20210110]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5594b7cf00
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5594b7cf00 pid: 975219 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 975219)
+spawned uWSGI worker 1 (pid: 975235, cores: 1)
+spawned uWSGI worker 2 (pid: 975236, cores: 1)
+spawned uWSGI worker 3 (pid: 975237, cores: 1)
+spawned uWSGI worker 4 (pid: 975238, cores: 1)
+spawned uWSGI worker 5 (pid: 975239, cores: 1)
+[pid: 975235|app: 0|req: 1/1] 127.0.0.1 () {64 vars in 1272 bytes} [Mon Mar  7 01:58:11 2022] GET /live_feed => generated 3416 bytes in 65 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 975236|app: 0|req: 1/2] 127.0.0.1 () {60 vars in 1145 bytes} [Mon Mar  7 01:58:12 2022] GET /static/css/test_style.css => generated 0 bytes in 59 msecs (HTTP/1.0 304) 3 headers in 145 bytes (0 switches on core 0)
+[pid: 975238|app: 0|req: 1/3] 127.0.0.1 () {60 vars in 1137 bytes} [Mon Mar  7 01:58:12 2022] GET /static/css/navbar.css => generated 0 bytes in 59 msecs (HTTP/1.0 304) 3 headers in 141 bytes (0 switches on core 0)
+[pid: 975237|app: 0|req: 1/4] 127.0.0.1 () {60 vars in 1119 bytes} [Mon Mar  7 01:58:12 2022] GET /static/js/script.js => generated 0 bytes in 56 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+[pid: 975238|app: 0|req: 2/5] 127.0.0.1 () {60 vars in 1095 bytes} [Mon Mar  7 01:58:13 2022] GET /home/pi/Videos/info.mp4 => generated 232 bytes in 2 msecs (HTTP/1.0 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 975239|app: 0|req: 1/6] 127.0.0.1 () {62 vars in 1221 bytes} [Mon Mar  7 01:58:15 2022] GET / => generated 9282 bytes in 35 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 975239|app: 0|req: 2/7] 127.0.0.1 () {60 vars in 1128 bytes} [Mon Mar  7 01:58:16 2022] GET /static/css/navbar.css => generated 0 bytes in 18 msecs (HTTP/1.0 304) 3 headers in 141 bytes (0 switches on core 0)
+[pid: 975239|app: 0|req: 3/8] 127.0.0.1 () {60 vars in 1110 bytes} [Mon Mar  7 01:58:16 2022] GET /static/js/script.js => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+[pid: 975235|app: 0|req: 2/9] 127.0.0.1 () {60 vars in 1136 bytes} [Mon Mar  7 01:58:16 2022] GET /static/css/test_style.css => generated 0 bytes in 20 msecs (HTTP/1.0 304) 3 headers in 145 bytes (0 switches on core 0)
+[pid: 975238|app: 0|req: 3/10] 127.0.0.1 () {60 vars in 1102 bytes} [Mon Mar  7 01:58:16 2022] GET /static/query.js => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 139 bytes (0 switches on core 0)
+[pid: 975238|app: 0|req: 4/11] 127.0.0.1 () {58 vars in 1019 bytes} [Mon Mar  7 01:58:18 2022] GET /api => generated 226 bytes in 3 msecs (HTTP/1.0 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 975239|app: 0|req: 4/12] 127.0.0.1 () {62 vars in 1230 bytes} [Mon Mar  7 01:58:18 2022] GET /live_feed => generated 3416 bytes in 36 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 975239|app: 0|req: 5/13] 127.0.0.1 () {60 vars in 1145 bytes} [Mon Mar  7 01:58:19 2022] GET /static/css/test_style.css => generated 0 bytes in 4 msecs (HTTP/1.0 304) 3 headers in 145 bytes (1 switches on core 0)
+[pid: 975239|app: 0|req: 6/14] 127.0.0.1 () {60 vars in 1137 bytes} [Mon Mar  7 01:58:19 2022] GET /static/css/navbar.css => generated 0 bytes in 4 msecs (HTTP/1.0 304) 3 headers in 141 bytes (0 switches on core 0)
+[pid: 975239|app: 0|req: 7/15] 127.0.0.1 () {60 vars in 1119 bytes} [Mon Mar  7 01:58:19 2022] GET /static/js/script.js => generated 0 bytes in 4 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+[pid: 975238|app: 0|req: 5/16] 127.0.0.1 () {60 vars in 1095 bytes} [Mon Mar  7 01:58:19 2022] GET /home/pi/Videos/info.mp4 => generated 232 bytes in 2 msecs (HTTP/1.0 404) 2 headers in 87 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket myproject.sock removed.
+*** Starting uWSGI 2.0.20 (64bit) on [Mon Mar  7 02:00:03 2022] ***
+compiled with version: 10.2.1 20210110 on 06 March 2022 19:10:01
+os: Linux-5.10.92-v8+ #1514 SMP PREEMPT Mon Jan 17 17:39:38 GMT 2022
+nodename: raspberrypi
+machine: aarch64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/pi/Strato_Pi/myproject
+detected binary path: /home/pi/Strato_Pi/myproject/myprojectenv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 13677
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address myproject.sock fd 3
+Python version: 3.9.2 (default, Feb 28 2021, 17:03:44)  [GCC 10.2.1 20210110]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55c12b1f00
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55c12b1f00 pid: 975788 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 975788)
+spawned uWSGI worker 1 (pid: 975804, cores: 1)
+spawned uWSGI worker 2 (pid: 975805, cores: 1)
+spawned uWSGI worker 3 (pid: 975806, cores: 1)
+spawned uWSGI worker 4 (pid: 975807, cores: 1)
+spawned uWSGI worker 5 (pid: 975808, cores: 1)
+[pid: 975805|app: 0|req: 1/1] 127.0.0.1 () {64 vars in 1261 bytes} [Mon Mar  7 02:00:09 2022] GET /live_feed => generated 3407 bytes in 71 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 975804|app: 0|req: 1/2] 127.0.0.1 () {60 vars in 1119 bytes} [Mon Mar  7 02:00:10 2022] GET /static/js/script.js => generated 0 bytes in 26 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+[pid: 975805|app: 0|req: 2/3] 127.0.0.1 () {60 vars in 1145 bytes} [Mon Mar  7 02:00:10 2022] GET /static/css/test_style.css => generated 0 bytes in 18 msecs (HTTP/1.0 304) 3 headers in 145 bytes (0 switches on core 0)
+[pid: 975804|app: 0|req: 2/4] 127.0.0.1 () {60 vars in 1137 bytes} [Mon Mar  7 02:00:10 2022] GET /static/css/navbar.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 141 bytes (0 switches on core 0)
+[pid: 975804|app: 0|req: 3/5] 127.0.0.1 () {60 vars in 1079 bytes} [Mon Mar  7 02:00:10 2022] GET /static/info.mp4 => generated 20868946 bytes in 920 msecs (HTTP/1.0 206) 8 headers in 303 bytes (90609 switches on core 0)
+[pid: 975804|app: 0|req: 4/6] 127.0.0.1 () {60 vars in 1086 bytes} [Mon Mar  7 02:00:11 2022] GET /static/info.mp4 => generated 192338 bytes in 8 msecs (HTTP/1.0 206) 8 headers in 308 bytes (636 switches on core 0)
+[pid: 975805|app: 0|req: 3/7] 127.0.0.1 () {60 vars in 1083 bytes} [Mon Mar  7 02:00:14 2022] GET /static/info.mp4 => generated 20836178 bytes in 1004 msecs (HTTP/1.0 206) 8 headers in 307 bytes (90473 switches on core 0)
+[pid: 975806|app: 0|req: 1/8] 127.0.0.1 () {60 vars in 1145 bytes} [Mon Mar  7 02:00:27 2022] GET /static/css/test_style.css => generated 0 bytes in 28 msecs (HTTP/1.0 304) 3 headers in 145 bytes (0 switches on core 0)
+[pid: 975807|app: 0|req: 1/9] 127.0.0.1 () {60 vars in 1137 bytes} [Mon Mar  7 02:00:27 2022] GET /static/css/navbar.css => generated 0 bytes in 27 msecs (HTTP/1.0 304) 3 headers in 141 bytes (0 switches on core 0)
+[pid: 975807|app: 0|req: 2/10] 127.0.0.1 () {58 vars in 1108 bytes} [Mon Mar  7 02:00:51 2022] GET /favicon.ico => generated 232 bytes in 4 msecs (HTTP/1.0 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 975807|app: 0|req: 3/11] 127.0.0.1 () {60 vars in 1079 bytes} [Mon Mar  7 02:00:51 2022] GET /static/info.mp4 => generated 20868946 bytes in 965 msecs (HTTP/1.0 206) 8 headers in 303 bytes (90609 switches on core 0)
+[pid: 975807|app: 0|req: 4/12] 127.0.0.1 () {64 vars in 1261 bytes} [Mon Mar  7 02:02:30 2022] GET /live_feed => generated 3407 bytes in 56 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 975807|app: 0|req: 5/13] 127.0.0.1 () {60 vars in 1119 bytes} [Mon Mar  7 02:02:31 2022] GET /static/js/script.js => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+[pid: 975807|app: 0|req: 6/14] 127.0.0.1 () {60 vars in 1145 bytes} [Mon Mar  7 02:02:31 2022] GET /static/css/test_style.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 145 bytes (0 switches on core 0)
+[pid: 975807|app: 0|req: 7/15] 127.0.0.1 () {60 vars in 1137 bytes} [Mon Mar  7 02:02:31 2022] GET /static/css/navbar.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 141 bytes (0 switches on core 0)
+[pid: 975807|app: 0|req: 8/16] 127.0.0.1 () {62 vars in 1140 bytes} [Mon Mar  7 02:02:31 2022] GET /static/info.mp4 => generated 192338 bytes in 8 msecs (HTTP/1.0 206) 8 headers in 308 bytes (635 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket myproject.sock removed.
+*** Starting uWSGI 2.0.20 (64bit) on [Mon Mar  7 02:04:41 2022] ***
+compiled with version: 10.2.1 20210110 on 06 March 2022 19:10:01
+os: Linux-5.10.92-v8+ #1514 SMP PREEMPT Mon Jan 17 17:39:38 GMT 2022
+nodename: raspberrypi
+machine: aarch64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/pi/Strato_Pi/myproject
+detected binary path: /home/pi/Strato_Pi/myproject/myprojectenv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 13677
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address myproject.sock fd 3
+Python version: 3.9.2 (default, Feb 28 2021, 17:03:44)  [GCC 10.2.1 20210110]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5587bb0f00
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5587bb0f00 pid: 977002 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 977002)
+spawned uWSGI worker 1 (pid: 977017, cores: 1)
+spawned uWSGI worker 2 (pid: 977018, cores: 1)
+spawned uWSGI worker 3 (pid: 977019, cores: 1)
+spawned uWSGI worker 4 (pid: 977020, cores: 1)
+spawned uWSGI worker 5 (pid: 977021, cores: 1)
+[pid: 977017|app: 0|req: 1/1] 127.0.0.1 () {64 vars in 1261 bytes} [Mon Mar  7 02:04:47 2022] GET /live_feed => generated 3415 bytes in 63 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 977018|app: 0|req: 1/2] 127.0.0.1 () {60 vars in 1119 bytes} [Mon Mar  7 02:04:48 2022] GET /static/js/script.js => generated 0 bytes in 69 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+[pid: 977018|app: 0|req: 2/3] 127.0.0.1 () {60 vars in 1145 bytes} [Mon Mar  7 02:04:48 2022] GET /static/css/test_style.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 145 bytes (0 switches on core 0)
+[pid: 977017|app: 0|req: 2/4] 127.0.0.1 () {60 vars in 1137 bytes} [Mon Mar  7 02:04:48 2022] GET /static/css/navbar.css => generated 0 bytes in 18 msecs (HTTP/1.0 304) 3 headers in 141 bytes (0 switches on core 0)
+[pid: 977020|app: 0|req: 1/5] 127.0.0.1 () {60 vars in 1095 bytes} [Mon Mar  7 02:04:48 2022] GET /home/pi/Videos/info.mp4 => generated 232 bytes in 8 msecs (HTTP/1.0 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 977020|app: 0|req: 2/6] 127.0.0.1 () {64 vars in 1261 bytes} [Mon Mar  7 02:04:52 2022] GET /live_feed => generated 3415 bytes in 28 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 977020|app: 0|req: 3/7] 127.0.0.1 () {60 vars in 1119 bytes} [Mon Mar  7 02:04:52 2022] GET /static/js/script.js => generated 0 bytes in 18 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+[pid: 977020|app: 0|req: 4/8] 127.0.0.1 () {60 vars in 1137 bytes} [Mon Mar  7 02:04:52 2022] GET /static/css/navbar.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 141 bytes (0 switches on core 0)
+[pid: 977021|app: 0|req: 1/9] 127.0.0.1 () {60 vars in 1145 bytes} [Mon Mar  7 02:04:52 2022] GET /static/css/test_style.css => generated 0 bytes in 26 msecs (HTTP/1.0 304) 3 headers in 145 bytes (0 switches on core 0)
+[pid: 977021|app: 0|req: 2/10] 127.0.0.1 () {60 vars in 1095 bytes} [Mon Mar  7 02:04:53 2022] GET /home/pi/Videos/info.mp4 => generated 232 bytes in 3 msecs (HTTP/1.0 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 977021|app: 0|req: 3/11] 127.0.0.1 () {60 vars in 1145 bytes} [Mon Mar  7 02:04:56 2022] GET /static/css/test_style.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 145 bytes (0 switches on core 0)
+[pid: 977021|app: 0|req: 4/12] 127.0.0.1 () {60 vars in 1137 bytes} [Mon Mar  7 02:04:56 2022] GET /static/css/navbar.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 141 bytes (0 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+Mon Mar  7 02:07:24 2022 - worker 5 (pid: 977021) is taking too much time to die...NO MERCY !!!
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket myproject.sock removed.
+*** Starting uWSGI 2.0.20 (64bit) on [Mon Mar  7 02:07:25 2022] ***
+compiled with version: 10.2.1 20210110 on 06 March 2022 19:10:01
+os: Linux-5.10.92-v8+ #1514 SMP PREEMPT Mon Jan 17 17:39:38 GMT 2022
+nodename: raspberrypi
+machine: aarch64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/pi/Strato_Pi/myproject
+detected binary path: /home/pi/Strato_Pi/myproject/myprojectenv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 13677
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address myproject.sock fd 3
+Python version: 3.9.2 (default, Feb 28 2021, 17:03:44)  [GCC 10.2.1 20210110]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x559d053f00
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x559d053f00 pid: 977762 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 977762)
+spawned uWSGI worker 1 (pid: 977783, cores: 1)
+spawned uWSGI worker 2 (pid: 977784, cores: 1)
+spawned uWSGI worker 3 (pid: 977785, cores: 1)
+spawned uWSGI worker 4 (pid: 977786, cores: 1)
+spawned uWSGI worker 5 (pid: 977787, cores: 1)
+[pid: 977785|app: 0|req: 1/1] 127.0.0.1 () {64 vars in 1261 bytes} [Mon Mar  7 02:07:39 2022] GET /live_feed => generated 3407 bytes in 34 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 977785|app: 0|req: 2/2] 127.0.0.1 () {60 vars in 1119 bytes} [Mon Mar  7 02:07:39 2022] GET /static/js/script.js => generated 0 bytes in 18 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+[pid: 977785|app: 0|req: 3/3] 127.0.0.1 () {60 vars in 1145 bytes} [Mon Mar  7 02:07:40 2022] GET /static/css/test_style.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 145 bytes (0 switches on core 0)
+[pid: 977783|app: 0|req: 1/4] 127.0.0.1 () {60 vars in 1137 bytes} [Mon Mar  7 02:07:40 2022] GET /static/css/navbar.css => generated 0 bytes in 26 msecs (HTTP/1.0 304) 3 headers in 141 bytes (0 switches on core 0)
+[pid: 977785|app: 0|req: 4/5] 127.0.0.1 () {62 vars in 1141 bytes} [Mon Mar  7 02:07:40 2022] GET /static/info.mp4 => generated 1048576 bytes in 48 msecs (HTTP/1.0 206) 8 headers in 301 bytes (4703 switches on core 0)
+Mon Mar  7 02:07:41 2022 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /static/info.mp4 (ip 127.0.0.1) !!!
+Mon Mar  7 02:07:41 2022 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 429] during GET /static/info.mp4 (127.0.0.1)
+OSError: write error
+[pid: 977784|app: 0|req: 1/6] 127.0.0.1 () {60 vars in 1087 bytes} [Mon Mar  7 02:07:41 2022] GET /static/info.mp4 => generated 19368031 bytes in 975 msecs (HTTP/1.0 206) 8 headers in 303 bytes (84191 switches on core 0)
+[pid: 977787|app: 0|req: 1/7] 127.0.0.1 () {60 vars in 1086 bytes} [Mon Mar  7 02:07:41 2022] GET /static/info.mp4 => generated 192338 bytes in 40 msecs (HTTP/1.0 206) 8 headers in 308 bytes (637 switches on core 0)
+Mon Mar  7 02:07:44 2022 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /static/info.mp4 (ip 127.0.0.1) !!!
+Mon Mar  7 02:07:44 2022 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 429] during GET /static/info.mp4 (127.0.0.1)
+OSError: write error
+[pid: 977787|app: 0|req: 2/8] 127.0.0.1 () {62 vars in 1137 bytes} [Mon Mar  7 02:07:43 2022] GET /static/info.mp4 => generated 19448724 bytes in 852 msecs (HTTP/1.0 206) 8 headers in 307 bytes (84531 switches on core 0)
+[pid: 977787|app: 0|req: 3/9] 127.0.0.1 () {62 vars in 1145 bytes} [Mon Mar  7 02:07:44 2022] GET /static/info.mp4 => generated 16022 bytes in 2 msecs (HTTP/1.0 206) 8 headers in 303 bytes (59 switches on core 0)
+[pid: 977787|app: 0|req: 4/10] 127.0.0.1 () {60 vars in 1092 bytes} [Mon Mar  7 02:07:45 2022] GET /static/info.mp4 => generated 20705106 bytes in 911 msecs (HTTP/1.0 206) 8 headers in 308 bytes (89918 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 2 seconds
+worker 2 buried after 2 seconds
+worker 3 buried after 2 seconds
+worker 4 buried after 2 seconds
+worker 5 buried after 2 seconds
+goodbye to uWSGI.
+VACUUM: unix socket myproject.sock removed.
+*** Starting uWSGI 2.0.20 (64bit) on [Mon Mar  7 02:11:11 2022] ***
+compiled with version: 10.2.1 20210110 on 06 March 2022 19:10:01
+os: Linux-5.10.92-v8+ #1514 SMP PREEMPT Mon Jan 17 17:39:38 GMT 2022
+nodename: raspberrypi
+machine: aarch64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/pi/Strato_Pi/myproject
+detected binary path: /home/pi/Strato_Pi/myproject/myprojectenv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 13677
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address myproject.sock fd 3
+Python version: 3.9.2 (default, Feb 28 2021, 17:03:44)  [GCC 10.2.1 20210110]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5589063f00
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5589063f00 pid: 978757 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 978757)
+spawned uWSGI worker 1 (pid: 978772, cores: 1)
+spawned uWSGI worker 2 (pid: 978773, cores: 1)
+spawned uWSGI worker 3 (pid: 978774, cores: 1)
+spawned uWSGI worker 4 (pid: 978775, cores: 1)
+spawned uWSGI worker 5 (pid: 978776, cores: 1)
+[pid: 978772|app: 0|req: 1/1] 127.0.0.1 () {64 vars in 1261 bytes} [Mon Mar  7 02:11:18 2022] GET /live_feed => generated 3538 bytes in 33 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 978773|app: 0|req: 1/2] 127.0.0.1 () {60 vars in 1119 bytes} [Mon Mar  7 02:11:19 2022] GET /static/js/script.js => generated 0 bytes in 26 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+[pid: 978773|app: 0|req: 2/3] 127.0.0.1 () {60 vars in 1145 bytes} [Mon Mar  7 02:11:19 2022] GET /static/css/test_style.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 145 bytes (1 switches on core 0)
+[pid: 978776|app: 0|req: 1/4] 127.0.0.1 () {60 vars in 1137 bytes} [Mon Mar  7 02:11:19 2022] GET /static/css/navbar.css => generated 0 bytes in 27 msecs (HTTP/1.0 304) 3 headers in 141 bytes (1 switches on core 0)
+[pid: 978776|app: 0|req: 2/5] 127.0.0.1 () {60 vars in 1079 bytes} [Mon Mar  7 02:11:19 2022] GET /static/info.mp4 => generated 20868946 bytes in 920 msecs (HTTP/1.0 206) 8 headers in 303 bytes (90611 switches on core 0)
+[pid: 978775|app: 0|req: 1/6] 127.0.0.1 () {62 vars in 1140 bytes} [Mon Mar  7 02:11:22 2022] GET /static/info.mp4 => generated 192338 bytes in 34 msecs (HTTP/1.0 206) 8 headers in 308 bytes (635 switches on core 0)
+[pid: 978774|app: 0|req: 1/7] 127.0.0.1 () {62 vars in 1143 bytes} [Mon Mar  7 02:11:23 2022] GET /static/info.mp4 => generated 65178 bytes in 30 msecs (HTTP/1.0 206) 8 headers in 301 bytes (284 switches on core 0)
+Mon Mar  7 02:11:24 2022 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /static/info.mp4 (ip 127.0.0.1) !!!
+Mon Mar  7 02:11:24 2022 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 429] during GET /static/info.mp4 (127.0.0.1)
+OSError: write error
+[pid: 978776|app: 0|req: 3/8] 127.0.0.1 () {60 vars in 1091 bytes} [Mon Mar  7 02:11:24 2022] GET /static/info.mp4 => generated 20421407 bytes in 877 msecs (HTTP/1.0 206) 8 headers in 307 bytes (88831 switches on core 0)
+[pid: 978776|app: 0|req: 4/9] 127.0.0.1 () {60 vars in 1084 bytes} [Mon Mar  7 02:11:25 2022] GET /static/info.mp4 => generated 20672338 bytes in 913 msecs (HTTP/1.0 206) 8 headers in 308 bytes (89785 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket myproject.sock removed.
+*** Starting uWSGI 2.0.20 (64bit) on [Mon Mar  7 02:14:07 2022] ***
+compiled with version: 10.2.1 20210110 on 06 March 2022 19:10:01
+os: Linux-5.10.92-v8+ #1514 SMP PREEMPT Mon Jan 17 17:39:38 GMT 2022
+nodename: raspberrypi
+machine: aarch64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/pi/Strato_Pi/myproject
+detected binary path: /home/pi/Strato_Pi/myproject/myprojectenv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 13677
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address myproject.sock fd 3
+Python version: 3.9.2 (default, Feb 28 2021, 17:03:44)  [GCC 10.2.1 20210110]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55a0be5f00
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55a0be5f00 pid: 979526 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 979526)
+spawned uWSGI worker 1 (pid: 979552, cores: 1)
+spawned uWSGI worker 2 (pid: 979553, cores: 1)
+spawned uWSGI worker 3 (pid: 979554, cores: 1)
+spawned uWSGI worker 4 (pid: 979555, cores: 1)
+spawned uWSGI worker 5 (pid: 979556, cores: 1)
+[pid: 979553|app: 0|req: 1/1] 127.0.0.1 () {64 vars in 1261 bytes} [Mon Mar  7 02:14:11 2022] GET /live_feed => generated 3413 bytes in 59 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 979554|app: 0|req: 1/2] 127.0.0.1 () {60 vars in 1145 bytes} [Mon Mar  7 02:14:12 2022] GET /static/css/test_style.css => generated 0 bytes in 27 msecs (HTTP/1.0 304) 3 headers in 145 bytes (0 switches on core 0)
+[pid: 979554|app: 0|req: 2/3] 127.0.0.1 () {60 vars in 1119 bytes} [Mon Mar  7 02:14:12 2022] GET /static/js/script.js => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 140 bytes (0 switches on core 0)
+[pid: 979554|app: 0|req: 3/4] 127.0.0.1 () {60 vars in 1137 bytes} [Mon Mar  7 02:14:12 2022] GET /static/css/navbar.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 141 bytes (0 switches on core 0)
+[pid: 979554|app: 0|req: 4/5] 127.0.0.1 () {62 vars in 1131 bytes} [Mon Mar  7 02:14:12 2022] GET /static/info.mp4 => generated 196608 bytes in 11 msecs (HTTP/1.0 206) 8 headers in 299 bytes (826 switches on core 0)
+[pid: 979554|app: 0|req: 5/6] 127.0.0.1 () {62 vars in 1140 bytes} [Mon Mar  7 02:14:13 2022] GET /static/info.mp4 => generated 192338 bytes in 9 msecs (HTTP/1.0 206) 8 headers in 308 bytes (635 switches on core 0)
+[pid: 979556|app: 0|req: 1/7] 127.0.0.1 () {62 vars in 1143 bytes} [Mon Mar  7 02:14:14 2022] GET /static/info.mp4 => generated 65182 bytes in 30 msecs (HTTP/1.0 206) 8 headers in 301 bytes (285 switches on core 0)
+[pid: 979556|app: 0|req: 2/8] 127.0.0.1 () {60 vars in 1091 bytes} [Mon Mar  7 02:14:15 2022] GET /static/info.mp4 => generated 20836178 bytes in 952 msecs (HTTP/1.0 206) 8 headers in 307 bytes (90474 switches on core 0)
+[pid: 979556|app: 0|req: 3/9] 127.0.0.1 () {64 vars in 1261 bytes} [Mon Mar  7 02:29:37 2022] GET /live_feed => generated 3413 bytes in 63 msecs (HTTP/1.0 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 979556|app: 0|req: 4/10] 127.0.0.1 () {60 vars in 1119 bytes} [Mon Mar  7 02:29:37 2022] GET /static/js/script.js => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 140 bytes (1 switches on core 0)
+[pid: 979556|app: 0|req: 5/11] 127.0.0.1 () {60 vars in 1145 bytes} [Mon Mar  7 02:29:38 2022] GET /static/css/test_style.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 145 bytes (1 switches on core 0)
+[pid: 979556|app: 0|req: 6/12] 127.0.0.1 () {60 vars in 1137 bytes} [Mon Mar  7 02:29:38 2022] GET /static/css/navbar.css => generated 0 bytes in 2 msecs (HTTP/1.0 304) 3 headers in 141 bytes (1 switches on core 0)
+Mon Mar  7 02:29:39 2022 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /static/info.mp4 (ip 127.0.0.1) !!!
+Mon Mar  7 02:29:39 2022 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 429] during GET /static/info.mp4 (127.0.0.1)
+OSError: write error
+[pid: 979556|app: 0|req: 7/13] 127.0.0.1 () {60 vars in 1079 bytes} [Mon Mar  7 02:29:38 2022] GET /static/info.mp4 => generated 20507172 bytes in 866 msecs (HTTP/1.0 206) 8 headers in 303 bytes (89196 switches on core 0)
+[pid: 979556|app: 0|req: 8/14] 127.0.0.1 () {62 vars in 1140 bytes} [Mon Mar  7 02:29:39 2022] GET /static/info.mp4 => generated 192338 bytes in 9 msecs (HTTP/1.0 206) 8 headers in 308 bytes (636 switches on core 0)
+[pid: 979553|app: 0|req: 2/15] 127.0.0.1 () {62 vars in 1143 bytes} [Mon Mar  7 02:29:40 2022] GET /static/info.mp4 => generated 32410 bytes in 24 msecs (HTTP/1.0 206) 8 headers in 301 bytes (143 switches on core 0)
+[pid: 979555|app: 0|req: 1/16] 127.0.0.1 () {60 vars in 1091 bytes} [Mon Mar  7 02:29:40 2022] GET /static/info.mp4 => generated 20836178 bytes in 950 msecs (HTTP/1.0 206) 8 headers in 307 bytes (90473 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket myproject.sock removed.
+*** Starting uWSGI 2.0.20 (64bit) on [Mon Mar  7 02:34:57 2022] ***
+compiled with version: 10.2.1 20210110 on 06 March 2022 19:10:01
+os: Linux-5.10.92-v8+ #1514 SMP PREEMPT Mon Jan 17 17:39:38 GMT 2022
+nodename: raspberrypi
+machine: aarch64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/pi/Strato_Pi/myproject
+detected binary path: /home/pi/Strato_Pi/myproject/myprojectenv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 13677
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address myproject.sock fd 3
+Python version: 3.9.2 (default, Feb 28 2021, 17:03:44)  [GCC 10.2.1 20210110]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55a43fdf00
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55a43fdf00 pid: 984767 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 984767)
+spawned uWSGI worker 1 (pid: 984782, cores: 1)
+spawned uWSGI worker 2 (pid: 984783, cores: 1)
+spawned uWSGI worker 3 (pid: 984784, cores: 1)
+spawned uWSGI worker 4 (pid: 984785, cores: 1)
+spawned uWSGI worker 5 (pid: 984786, cores: 1)

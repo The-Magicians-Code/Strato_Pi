@@ -24,7 +24,7 @@ def gen_frames():
         # Capture frame-by-frame
         success, frame = camera.read()  # read the camera frames
 
-	if not success:
+        if not success:
             break
         else:
             ret, buffer = cv2.imencode('.jpg', frame)
