@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="{{url_for('static', filename='js/script.js')}}" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/test_style.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/navbar.css')}}"/>
+
+    <title>Koormusmasin</title>
+</head>
+<body>
+    <div class="top-bar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <h2 class="navbar-brand">TalTech</h2>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 col-11 justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{url_for('home')}}">Overview</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url_for('control')}}">System control</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url_for('docs')}}">Documentation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url_for('camera')}}">Camera view</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container py-5">
+        <div class="row">
+            <!--First block-->
+            <div class="col-xl-4 col-lg-6 mb-3">
+                <div class="bg-white rounded-lg p-5 shadow">
+                    <h2 class="font-weight-bold text-center mb-4">Motor 1</h2>
+
+                    <!-- Motor 1 -->
+                    <div class="progress mx-auto" data-min="0" data-max="0.75" data-value="0.5">
+                        <span class="progress-left">
+                            <span class="progress-bar border-info"></span>
+                        </span>
+                        <span class="progress-right">
+                            <span class="progress-bar border-info"></span>
+                        </span>
+                        <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                            <div class="h2 font-weight-bold">0.5 <span class="small">kW</span></div>
+                        </div>
+                    </div>
+                    <!-- END -->
+                    <!-- Motor 1 info-->
+                    <div class="row text-center mt-4">
+                        <div class="col-6 border-right first-row">
+                            <div class="h4 font-weight-bold mb-0">10A</div><span class="small text-gray">Current</span>
+                        </div>
+                        <div class="col-6">
+                            <div class="h4 font-weight-bold mb-0">380V</div><span class="small text-gray">Voltage</span>
+                        </div>
+
+                        <div class="col-6 border-right">
+                            <div class="h4 font-weight-bold mb-0">40Hz</div><span class="small text-gray">Frequency</span>
+                        </div>
+                        <div class="col-6">
+                            <div class="h4 font-weight-bold mb-0">1200</div><span class="small text-gray">RPM</span>
+
+                        </div>
+                    </div>
+                    <!-- END -->
+                </div>
+
+            </div>
+            <!--first block end-->
+            <!--Second block-->
+            <div class="col-xl-4 col-lg-6 mb-3">
+                <div class="bg-white rounded-lg p-5 shadow">
+                    <h2 class="font-weight-bold text-center mb-4">Motor 2</h2>
+
+                    <!-- Motor 1 -->
+                    <div class="progress mx-auto" data-value='0.7'>
+                        <span class="progress-left">
+                            <span class="progress-bar border-info"></span>
+                        </span>
+                        <span class="progress-right">
+                            <span class="progress-bar border-info"></span>
+                        </span>
+                        <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                            <div class="h2 font-weight-bold">0.7 <span class="small">kW</span></div>
+                        </div>
+                    </div>
+                    <!-- END -->
+                    <!-- Motor 1 info-->
+                    <div class="row text-center mt-4">
+                        <div class="col-6 border-right first-row">
+                            <div class="h4 font-weight-bold mb-0">10A</div><span class="small text-gray">Current</span>
+                        </div>
+                        <div class="col-6">
+                            <div class="h4 font-weight-bold mb-0">380V</div><span class="small text-gray">Voltage</span>
+                        </div>
+
+                        <div class="col-6 border-right">
+                            <div class="h4 font-weight-bold mb-0">40Hz</div><span class="small text-gray">Frequency</span>
+                        </div>
+                        <div class="col-6">
+                            <div class="h4 font-weight-bold mb-0">1200</div><span class="small text-gray">RPM</span>
+
+                        </div>
+                    </div>
+                    <!-- END -->
+                </div>
+
+            </div>
+            <!--Second block end-->
+            <!--Third block-->
+            <div class="col-xl-4 col-lg-6 mb-3">
+                <div class="bg-white rounded-lg p-5 shadow">
+                    <h2 class=" font-weight-bold text-center mb-4">Motor 3</h2>
+
+                    <!-- Motor 1 -->
+                    <div class="progress mx-auto" data-value='1.2'>
+                        <span class="progress-left">
+                            <span class="progress-bar border-info"></span>
+                        </span>
+                        <span class="progress-right">
+                            <span class="progress-bar border-info"></span>
+                        </span>
+                        <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                            <div class="h2 font-weight-bold">1.2 <span class="small">kW</span></div>
+                        </div>
+                    </div>
+                    <!-- END -->
+                    <!-- Motor 1 info-->
+                    <div class="row text-center mt-4">
+                        <div class="col-6 border-right first-row">
+                            <div class="h4 font-weight-bold mb-0">10A</div><span class="small text-gray">Current</span>
+                        </div>
+                        <div class="col-6">
+                            <div class="h4 font-weight-bold mb-0">380V</div><span class="small text-gray">Voltage</span>
+                        </div>
+
+                        <div class="col-6 border-right">
+                            <div class="h4 font-weight-bold mb-0">40Hz</div><span class="small text-gray">Frequency</span>
+                        </div>
+                        <div class="col-6">
+                            <div class="h4 font-weight-bold mb-0">1200</div><span class="small text-gray">RPM</span>
+
+                        </div>
+                    </div>
+                    <!-- END -->
+                </div>
+
+            </div>
+            <!--Third block end-->
+
+        </div>
+    </div>
+</body>
+</html>

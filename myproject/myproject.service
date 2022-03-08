@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve myproject
+After=network.target
+
+[Service]
+User=pi
+Group=www-data
+WorkingDirectory=/home/pi/Strato_Pi/myproject
+Environment="PATH=/home/pi/Strato_Pi/myproject/myprojectenv/bin"
+ExecStart=/home/pi/Strato_Pi/myproject/myprojectenv/bin/uwsgi --ini myproject.ini
+
+[Install]
+WantedBy=multi-user.target
