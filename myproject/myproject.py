@@ -1,4 +1,10 @@
 # https://medium.com/swlh/deploy-flask-applications-with-uwsgi-and-nginx-on-ubuntu-18-04-2a47f378c3d2
+# Backend stuff
+
+from Backend.onlyfans import tempstat
+from Backend.modbus import control as ct
+from Backend.params import *
+
 import time
 import random
 # import raspi cpu params
@@ -43,7 +49,7 @@ def api():
     return jsonify({
         "motor0": {
             "current": cpu_temp(),
-            "voltage": cpu_temp(),
+            "voltage": round(ct(1, READ, MAINS_VOLTAGE, 1)[0]/10.0, 2),
             "frequency": cpu_temp(),
             "speed": cpu_temp()
         },
@@ -87,4 +93,4 @@ def camera():
     return render_template('cam.html')
 
 if __name__ == '__main__':
-    app.run(port='0.0.0.0')
+    app.run(host='0.0.0.0')
