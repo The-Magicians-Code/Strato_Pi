@@ -36,6 +36,11 @@ MOTOR_THERMAL_STATE = 9630
 LOGIC_OUTPUTS = 5212
 REF_SWITCH = 8411
 
-#Switch Controls
+# Switch Controls
 W_TERMINAL = 96
 W_MODBUS = 97
+
+# Motors
+MOTOR_1 = 1
+MOTOR_2 = 2
+MOTOR_3 = 3
