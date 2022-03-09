@@ -91,18 +91,18 @@ def control():
         time.sleep(3)
         logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 8501, output_value=0x0006)) #Shutdown režiim, peatab mootori
         
-        #logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 8501, output_value=0x0006)) #Shutdown režiim, vajalik sagedusmuunduri initsaliseerimiseks
-        #time.sleep(3)
-        #logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 8501, output_value=0x000F)) #Enable operation režiim, paneb mootori pöörlema päripäeva
-        #logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 8502, output_value=1000)) #Seadistab mootori sageduseks 10 Hz, all on veel näiteid erinevatest seadesuurustest
-        #time.sleep(3)
+        logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 8501, output_value=0x0006)) #Shutdown režiim, vajalik sagedusmuunduri initsaliseerimiseks
+        time.sleep(3)
+        logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 8501, output_value=0x000F)) #Enable operation režiim, paneb mootori pöörlema päripäeva
+        logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 8502, output_value=1000)) #Seadistab mootori sageduseks 10 Hz, all on veel näiteid erinevatest seadesuurustest
+        time.sleep(3)
 
-        #logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 8501, output_value=0x0006)) #Shutdown režiim, vajalik sagedusmuunduri pöörlemissuuna muutmiseks (tuleks katsetada, kas on üldse vaja mootor seiskada?)
-        #time.sleep(3)
-        #logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 8501, output_value=0x080F)) #Enable operation režiim, paneb mootori pöörlema vastupäeva
-        #logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 8502, output_value=40)) #Seadistab mootori sageduseks 4 Hz
-        #time.sleep(3)
-        #logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 8501, output_value=0x0006)) #Shutdown režiim, peatab mootori
+        logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 8501, output_value=0x0006)) #Shutdown režiim, vajalik sagedusmuunduri pöörlemissuuna muutmiseks (tuleks katsetada, kas on üldse vaja mootor seiskada?)
+        time.sleep(3)
+        logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 8501, output_value=0x080F)) #Enable operation režiim, paneb mootori pöörlema vastupäeva
+        logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 8502, output_value=40)) #Seadistab mootori sageduseks 4 Hz
+        time.sleep(3)
+        logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 8501, output_value=0x0006)) #Shutdown režiim, peatab mootori
         
         #Juhtida saab ka seadistades mootori pöörlemiskiirust või % nimimomendist
         #logger.info(master.execute(1, cst.WRITE_SINGLE_REGISTER, 8602, output_value=200)) #Seab mootori kiiruseks 200 rpm

@@ -48,23 +48,23 @@ def video_feed():
 def api():
     return jsonify({
         "motor0": {
-            "current": cpu_temp(),
-            "voltage": round(ct(1, READ, MAINS_VOLTAGE, 1)[0]/10.0, 2),
-            "frequency": cpu_temp(),
-            "speed": cpu_temp()
+            "current": round(ct(MOTOR_1, READ, MOTOR_CURRENT, 1)[0]/10.0, 2),
+            "voltage": round(ct(MOTOR_1, READ, MAINS_VOLTAGE, 1)[0]/10.0, 2),
+            "frequency": round(ct(MOTOR_1, READ, OUTPUT_FREQ, 1)[0]/10.0, 2),
+            "speed": round(ct(MOTOR_1, READ, OUTPUT_VEL, 1)[0])
         },
         "motor1": {
-            "current": cpu_temp(),
-            "voltage": cpu_temp(),
-            "frequency": cpu_temp(),
-            "speed": cpu_temp()
+            "current": round(ct(MOTOR_2, READ, MOTOR_CURRENT, 1)[0]/10.0, 2),
+            "voltage": round(ct(MOTOR_2, READ, MAINS_VOLTAGE, 1)[0]/10.0, 2),
+            "frequency": round(ct(MOTOR_2, READ, OUTPUT_FREQ, 1)[0]/10.0, 2),
+            "speed": round(ct(MOTOR_2, READ, OUTPUT_VEL, 1)[0])
         },
         "motor2": {
-            "current": cpu_temp(),
-            "voltage": cpu_temp(),
-            "frequency": cpu_temp(),
-            "speed": cpu_temp()
-        }       
+            "current": round(ct(MOTOR_3, READ, MOTOR_CURRENT, 1)[0]/10.0, 2),
+            "voltage": round(ct(MOTOR_3, READ, MAINS_VOLTAGE, 1)[0]/10.0, 2),
+            "frequency": round(ct(MOTOR_3, READ, OUTPUT_FREQ, 1)[0]/10.0, 2),
+            "speed": round(ct(MOTOR_3, READ, OUTPUT_VEL, 1)[0])
+        }
     })
 
 @app.route('/api', methods=['POST'])
