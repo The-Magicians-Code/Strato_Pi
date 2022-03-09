@@ -21,8 +21,8 @@ def cpu_temp():
 
 # USB camera
 #camera = cv2.VideoCapture(0)#'/dev/video0')
-path = '/home/pi/Videos/info.mp4'
-#path = '/dev/video0'
+#path = '/home/pi/Videos/info.mp4'
+path = '/dev/video0'
 
 def gen_frames():
     camera = cv2.VideoCapture(path)
