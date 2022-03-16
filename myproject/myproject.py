@@ -49,6 +49,7 @@ def video_feed():
 def api():
     return jsonify({
         "motor0": {
+            "power": round(ct(MOTOR_1, READ, MOTOR_POWER, 1)[0]/10.0, 2)
             "current": round(ct(MOTOR_1, READ, MOTOR_CURRENT, 1)[0]/10.0, 2),
             "voltage": round(ct(MOTOR_1, READ, MAINS_VOLTAGE, 1)[0]/10.0, 2),
             "frequency": round(abs(t.c_int16(ct(MOTOR_1, READ, OUTPUT_FREQ, 1)[0]).value)/10.0, 2),
