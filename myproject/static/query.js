@@ -1,10 +1,10 @@
 function getInfo() {
     let data = fetch("/api")
         .then(resp => resp.json())
-        .then(d => writeInfo2(d));
+        .then(d => writeInfo(d));
 }
-
-function writeInfo(data) {
+/*
+function writeInfo2(data) {
     console.log(data)
     let parameters = ["current", "voltage", "frequency", "speed"];
     let keys = ["motor1", "motor2", "motor3"];
@@ -14,11 +14,12 @@ function writeInfo(data) {
             document.getElementById(param + i.toString()).innerText = data.motor1.current;
         }
     }
-}
+}*/
 
-function writeInfo2(data) {
+function writeInfo(data) {
     console.log(data)
     for (let i = 0; i < 3; i++) {
+        document.getElementById("power"+i).innerText = data["motor" + i.toString()].power;
         document.getElementById("current"+i).innerText = data["motor" + i.toString()].current;
         document.getElementById("voltage"+i).innerText = data["motor" + i.toString()].voltage;
         document.getElementById("speed"+i).innerText = data["motor" + i.toString()].speed;
