@@ -67,9 +67,7 @@
     left: 0;
 }
 
-.first-row{
-    margin-bottom: 15px;
-}
+
 
 body {
     background: #ff7e5f;
@@ -97,4 +95,25 @@ nav-text {
 h2 {
     font-size: 26px;
     font-weight:500;
+}
+
+.select__item {
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 15px;
+    transition: background 0.3s;
+}
+
+.select__item--selected {
+    background: #ff976c;
+    color: #fff;
+}
+
+.select__item--selected span.small {
+    color: #fff;
+}
+
+span.subtext {
+    max-width: 150px;
 }

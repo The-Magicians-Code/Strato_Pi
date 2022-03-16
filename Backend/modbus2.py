@@ -59,19 +59,24 @@ def control(slave_number, operation, reg_address, control_code):
     
 # Example usage for function
 print(control(1, READ, 8411, 1))
-control(1, WRITE, 8411, 97)
+control(1, WRITE, 8411, 96)
 print(control(2, READ, 8411, 1))
-control(2, WRITE, 8411, 97)
+control(2, WRITE, 8411, 96)
 print(control(3, READ, 8411, 1))
-control(3, WRITE, 8411, 97)
+control(3, WRITE, 8411, 96)
 
 #print(control(2, READ, 5212, 1))
-#control(2, WRITE, 5212, 0b01)
+
+#Korraga lulita ainult 1 ja 3 voi 2 ja 3  
+control(1, WRITE, 5212, 0b00)#0b10 voi 0b00
+control(2, WRITE, 5212, 0b00)#0b10 voi 0b00
+control(3, WRITE, 5212, 0b00)#0b10 voi 0b00
 #print(control(2, READ, 5212, 1))
-#control(3, WRITE, 8601, 0x0006)
-#control(3, WRITE, 8601, 0x000F)
+#control(3, WRITE, 8602, 0x0006)
+#control(3, WRITE, 8602, 0x000F)
 
 
 #time.sleep(10)
+
 #control(1, WRITE, 8601, 0x0006)
 #control(3, WRITE, 8601, 0x0006)

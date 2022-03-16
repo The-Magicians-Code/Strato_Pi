@@ -1,4 +1,10 @@
 # https://medium.com/swlh/deploy-flask-applications-with-uwsgi-and-nginx-on-ubuntu-18-04-2a47f378c3d2
+# Backend stuff
+
+from Backend.onlyfans import tempstat
+from Backend.modbus import control as ct
+from Backend.params import *
+
 import time
 import random
 # import raspi cpu params
@@ -7,6 +13,7 @@ import random
 from flask import Flask, render_template, jsonify, request, Response
 import json
 import cv2
+import ctypes as t
 
 app = Flask(__name__)
 
@@ -15,8 +22,8 @@ def cpu_temp():
 
 # USB camera
 #camera = cv2.VideoCapture(0)#'/dev/video0')
-path = '/home/pi/Videos/info.mp4'
-#path = '/dev/video0'
+#path = '/home/pi/Videos/info.mp4'
+path = '/dev/video0'
 
 def gen_frames():
     camera = cv2.VideoCapture(path)
@@ -42,23 +49,26 @@ def video_feed():
 def api():
     return jsonify({
         "motor0": {
-            "current": cpu_temp(),
-            "voltage": cpu_temp(),
-            "frequency": cpu_temp(),
-            "speed": cpu_temp()
+            "power": abs(t.c_int16(ct(MOTOR_1, READ, MOTOR_POWER, 1)[0]).value),
+            "current": round(ct(MOTOR_1, READ, MOTOR_CURRENT, 1)[0]/10.0, 2),
+            "voltage": round(ct(MOTOR_1, READ, MAINS_VOLTAGE, 1)[0]/10.0, 2),
+            "frequency": round(abs(t.c_int16(ct(MOTOR_1, READ, OUTPUT_FREQ, 1)[0]).value)/10.0, 2),
+            "speed": round(abs(t.c_int16(ct(MOTOR_1, READ, OUTPUT_VEL, 1)[0]).value))
         },
         "motor1": {
-            "current": cpu_temp(),
-            "voltage": cpu_temp(),
-            "frequency": cpu_temp(),
-            "speed": cpu_temp()
+            "power": abs(t.c_int16(ct(MOTOR_2, READ, MOTOR_POWER, 1)[0]).value),
+            "current": round(ct(MOTOR_2, READ, MOTOR_CURRENT, 1)[0]/10.0, 2),
+            "voltage": round(ct(MOTOR_2, READ, MAINS_VOLTAGE, 1)[0]/10.0, 2),
+            "frequency": round(abs(t.c_int16(ct(MOTOR_2, READ, OUTPUT_FREQ, 1)[0]).value)/10.0, 2),
+            "speed": round(abs(t.c_int16(ct(MOTOR_2, READ, OUTPUT_VEL, 1)[0]).value))
         },
         "motor2": {
-            "current": cpu_temp(),
-            "voltage": cpu_temp(),
-            "frequency": cpu_temp(),
-            "speed": cpu_temp()
-        }       
+            "power": abs(t.c_int16(ct(MOTOR_3, READ, MOTOR_POWER, 1)[0]).value),
+            "current": round(ct(MOTOR_3, READ, MOTOR_CURRENT, 1)[0]/10.0, 2),
+            "voltage": round(ct(MOTOR_3, READ, MAINS_VOLTAGE, 1)[0]/10.0, 2),
+            "frequency": round(abs(t.c_int16(ct(MOTOR_3, READ, OUTPUT_FREQ, 1)[0]).value)/10.0, 2),
+            "speed": round(abs(t.c_int16(ct(MOTOR_3, READ, OUTPUT_VEL, 1)[0]).value))
+        }
     })
 
 @app.route('/api', methods=['POST'])
@@ -87,4 +97,4 @@ def camera():
     return render_template('cam.html')
 
 if __name__ == '__main__':
-    app.run(port='0.0.0.0')
+    app.run(host='0.0.0.0')
