@@ -56,14 +56,14 @@ def api():
             "speed": round(abs(t.c_int16(ct(MOTOR_1, READ, OUTPUT_VEL, 1)[0]).value))
         },
         "motor1": {
-            "power": round(ct(MOTOR_2, READ, MOTOR_POWER, 1)[0]*100.0, 2)
+            "power": round(ct(MOTOR_2, READ, MOTOR_POWER, 1)[0]*100.0, 2),
             "current": round(ct(MOTOR_2, READ, MOTOR_CURRENT, 1)[0]/10.0, 2),
             "voltage": round(ct(MOTOR_2, READ, MAINS_VOLTAGE, 1)[0]/10.0, 2),
             "frequency": round(abs(t.c_int16(ct(MOTOR_2, READ, OUTPUT_FREQ, 1)[0]).value)/10.0, 2),
             "speed": round(abs(t.c_int16(ct(MOTOR_2, READ, OUTPUT_VEL, 1)[0]).value))
         },
         "motor2": {
-            "power": round(ct(MOTOR_3, READ, MOTOR_POWER, 1)[0]*100.0, 2)
+            "power": round(ct(MOTOR_3, READ, MOTOR_POWER, 1)[0]*100.0, 2),
             "current": round(ct(MOTOR_3, READ, MOTOR_CURRENT, 1)[0]/10.0, 2),
             "voltage": round(ct(MOTOR_3, READ, MAINS_VOLTAGE, 1)[0]/10.0, 2),
             "frequency": round(abs(t.c_int16(ct(MOTOR_3, READ, OUTPUT_FREQ, 1)[0]).value)/10.0, 2),
