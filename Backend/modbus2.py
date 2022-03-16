@@ -59,15 +59,15 @@ def control(slave_number, operation, reg_address, control_code):
     
 # Example usage for function
 print(control(1, READ, 8411, 1))
-control(1, WRITE, 8411, 96)
+control(1, WRITE, 8411, 97)
 print(control(2, READ, 8411, 1))
-control(2, WRITE, 8411, 96)
+control(2, WRITE, 8411, 97)
 print(control(3, READ, 8411, 1))
-control(3, WRITE, 8411, 96)
+control(3, WRITE, 8411, 97)
 
 #print(control(2, READ, 5212, 1))
-control(1, WRITE, 5212, 0b00)
-control(2, WRITE, 5212, 0b00)
+control(1, WRITE, 5212, 0b10)
+control(2, WRITE, 5212, 0b10)
 control(3, WRITE, 5212, 0b00)
 #print(control(2, READ, 5212, 1))
 #control(3, WRITE, 8602, 0x0006)
