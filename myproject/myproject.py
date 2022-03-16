@@ -13,6 +13,7 @@ import random
 from flask import Flask, render_template, jsonify, request, Response
 import json
 import cv2
+import ctypes as t
 
 app = Flask(__name__)
 
@@ -50,20 +51,20 @@ def api():
         "motor0": {
             "current": round(ct(MOTOR_1, READ, MOTOR_CURRENT, 1)[0]/10.0, 2),
             "voltage": round(ct(MOTOR_1, READ, MAINS_VOLTAGE, 1)[0]/10.0, 2),
-            "frequency": round(ct(MOTOR_1, READ, OUTPUT_FREQ, 1)[0]/10.0, 2),
-            "speed": round(ct(MOTOR_1, READ, OUTPUT_VEL, 1)[0])
+            "frequency": round(t.c_int16(ct(MOTOR_1, READ, OUTPUT_FREQ, 1)[0]).value/10.0, 2),
+            "speed": round(t.c_int16(ct(MOTOR_1, READ, OUTPUT_VEL, 1)[0]).value)
         },
         "motor1": {
             "current": round(ct(MOTOR_2, READ, MOTOR_CURRENT, 1)[0]/10.0, 2),
             "voltage": round(ct(MOTOR_2, READ, MAINS_VOLTAGE, 1)[0]/10.0, 2),
-            "frequency": round(ct(MOTOR_2, READ, OUTPUT_FREQ, 1)[0]/10.0, 2),
-            "speed": round(ct(MOTOR_2, READ, OUTPUT_VEL, 1)[0])
+            "frequency": round(t.c_int16(ct(MOTOR_2, READ, OUTPUT_FREQ, 1)[0]).value/10.0, 2),
+            "speed": round(t.c_int16(ct(MOTOR_2, READ, OUTPUT_VEL, 1)[0]).value)
         },
         "motor2": {
             "current": round(ct(MOTOR_3, READ, MOTOR_CURRENT, 1)[0]/10.0, 2),
             "voltage": round(ct(MOTOR_3, READ, MAINS_VOLTAGE, 1)[0]/10.0, 2),
-            "frequency": round(ct(MOTOR_3, READ, OUTPUT_FREQ, 1)[0]/10.0, 2),
-            "speed": round(ct(MOTOR_3, READ, OUTPUT_VEL, 1)[0])
+            "frequency": round(t.c_int16(ct(MOTOR_3, READ, OUTPUT_FREQ, 1)[0]).value/10.0, 2),
+            "speed": round(t.c_int16(ct(MOTOR_3, READ, OUTPUT_VEL, 1)[0]).value)
         }
     })
 
