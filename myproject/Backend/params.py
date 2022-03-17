@@ -4,6 +4,7 @@ import serial
 import modbus_tk
 import modbus_tk.defines as cst
 from modbus_tk import modbus_rtu
+from modbus_tk.exceptions import ModbusInvalidResponseError
 
 # Setup modbus master/slave communication
 WRITE = cst.WRITE_SINGLE_REGISTER

@@ -18,8 +18,12 @@ master.set_verbose(True)
 
 def control(slave_number, operation, reg_address, control_code, delay=0):
     if operation == READ:
-        value = master.execute(slave_number, READ, reg_address, control_code)
-        return value
+        try:
+            value = master.execute(slave_number, READ, reg_address, control_code)
+            return value
+        except ModbusInvalidResponseError:
+            return (0, )
+
     else:
         master.execute(slave_number, WRITE, reg_address, output_value=control_code)
         time.sleep(delay)
