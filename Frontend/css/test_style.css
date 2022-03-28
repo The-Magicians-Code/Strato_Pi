@@ -117,3 +117,46 @@ h2 {
 span.subtext {
     max-width: 150px;
 }
+
+.button-custom {
+    background-color: #fff;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    border-color: #ff976c;
+    box-sizing: border-box;
+    color: #ff976c;
+    cursor: pointer;
+    flex: 0 0 auto;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5rem;
+    padding: 7px 30px;
+    margin: 10px 0;
+    text-align: center;
+    text-decoration: none #fff solid;
+    text-decoration-thickness: auto;
+    transition-duration: .2s;
+    transition-property: background-color,border-color,color,fill,stroke;
+    transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+}
+
+.button-custom:hover {
+    background-color: #ff976c;
+    color: #fff;
+}
+
+.button-custom:focus {
+    box-shadow: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+    .button-custom {
+        padding: .75rem 1.5rem;
+    }
+}

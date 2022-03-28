@@ -1,7 +1,7 @@
 class CustomSelect {
     constructor(originalSelect) {
 
-        //Create an grid with div objects
+        //Create a grid with div objects
         this.originalSelect = originalSelect;
         this.customSelect = document.createElement("div");
         this.customSelect.classList.add("select", "row", "text-center", "mt-4");
