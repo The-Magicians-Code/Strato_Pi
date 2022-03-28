@@ -160,3 +160,40 @@ span.subtext {
         padding: .75rem 1.5rem;
     }
 }
+
+.stop {
+    background-color: red;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    border-color: red;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    flex: 0 0 auto;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5rem;
+    padding: 20px 70px;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none #fff solid;
+    text-decoration-thickness: auto;
+    transition-duration: .2s;
+    transition-property: background-color,border-color,color,fill,stroke;
+    transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+}
+
+.stop:hover {
+    background-color: #c80000;
+    color: #fff;
+}
+
+.stop:focus {
+    box-shadow: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
