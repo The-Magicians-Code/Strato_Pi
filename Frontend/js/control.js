@@ -91,9 +91,12 @@ class Slider1 {
             pathColor: "#ddd",
             rangeColor: "#0dcaf0",
             value: 0,
-            tooltipFormat: "changeTooltip",
-            change: "traceChange",
-        }))
+            tooltipFormat: "changeTooltip1",
+            change: function (val) {
+                var output = `{"id":"slider1" "value":"${val.value}", "unit":"${changeTooltip1($('#slider1').roundSlider("getValue"))}"}`;
+                console.log(output.replace('undefined ', ''))
+            }
+        }));
 
 
     }
@@ -118,8 +121,11 @@ class Slider2 {
             pathColor: "#ddd",
             rangeColor: "#0dcaf0",
             value: 0,
-            tooltipFormat: "changeTooltip",
-            change: "traceChange",
+            tooltipFormat: "changeTooltip2",
+            change: function (val) {
+                var output = `{"id":"slider2" "value":"${val.value}", "unit":"${changeTooltip2($('#slider2').roundSlider("getValue"))}"}`;
+                console.log(output.replace('undefined ', ''))
+            }
         }))
 
 
@@ -146,8 +152,11 @@ class Slider3 {
             pathColor: "#ddd",
             rangeColor: "#0dcaf0",
             value: 0,
-            tooltipFormat: "changeTooltip",
-            change: "traceChange",
+            tooltipFormat: "changeTooltip3",
+            change: function (val) {
+                var output = `{"id":"slider3" "value":"${val.value}", "unit":"${changeTooltip3($('#slider3').roundSlider("getValue"))}"}`;
+                console.log(output.replace('undefined ', ''))
+            }
         }))
 
 
@@ -159,28 +168,29 @@ selection1.forEach(el => addEventListener('click', (event) => {
     const index1 = $("select[id='parameter1'] option:selected").index();
     if (index1 === 0) {
         let slider1 = new Slider1(10, 0.1);
-        window.changeTooltip = function (e) {
-            return e.value + "A";
+        window.changeTooltip1 = function (e) {
+            return e.value + " A";
         }
+
     } else if (index1 === 1) {
         let slider1 = new Slider1(380, 1);
-        window.changeTooltip = function (e) {
-            return e.value + "V";
+        window.changeTooltip1 = function (e) {
+            return e.value + " V";
         }
     } else if (index1 === 2) {
         let slider1 = new Slider1(100, 1);
-        window.changeTooltip = function (e) {
-            return e.value + "%";
+        window.changeTooltip1 = function (e) {
+            return e.value + " %";
         }
     } else if (index1 === 3) {
         let slider1 = new Slider1(50, 1);
-        window.changeTooltip = function (e) {
-            return e.value + "Hz";
+        window.changeTooltip1 = function (e) {
+            return e.value + " Hz";
         }
     } else if (index1 === 4) {
         let slider1 = new Slider1(1450, 1);
-        window.changeTooltip = function (e) {
-            return e.value + "RPM";
+        window.changeTooltip1 = function (e) {
+            return e.value + " RPM";
         }
     };
 }));
@@ -190,28 +200,28 @@ selection2.forEach(el => addEventListener('click', (event) => {
     const index2 = $("select[id='parameter2'] option:selected").index();
     if (index2 === 0) {
         let slider2 = new Slider2(10, 0.1);
-        window.changeTooltip = function (e) {
-            return e.value + "A";
+        window.changeTooltip2 = function (e) {
+            return e.value + " A";
         }
     } else if (index2 === 1) {
         let slider2 = new Slider2(380, 1);
-        window.changeTooltip = function (e) {
-            return e.value + "V";
+        window.changeTooltip2 = function (e) {
+            return e.value + " V";
         }
     } else if (index2 === 2) {
         let slider2 = new Slider2(100, 1);
-        window.changeTooltip = function (e) {
-            return e.value + "%";
+        window.changeTooltip2 = function (e) {
+            return e.value + " %";
         }
     } else if (index2 === 3) {
         let slider2 = new Slider2(50, 1);
-        window.changeTooltip = function (e) {
-            return e.value + "Hz";
+        window.changeTooltip2 = function (e) {
+            return e.value + " Hz";
         }
     } else if (index2 === 4) {
         let slider2 = new Slider2(1450, 1);
-        window.changeTooltip = function (e) {
-            return e.value + "RPM";
+        window.changeTooltip2 = function (e) {
+            return e.value + " RPM";
         }
     };
 }));
@@ -221,28 +231,28 @@ selection3.forEach(el => addEventListener('click', (event) => {
     const index3 = $("select[id='parameter3'] option:selected").index();
     if (index3 === 0) {
         let slider3 = new Slider3(10, 0.1);
-        window.changeTooltip = function (e) {
-            return e.value + "A";
+        window.changeTooltip3 = function (e) {
+            return e.value + " A";
         }
     } else if (index3 === 1) {
         let slider3 = new Slider3(380, 1);
-        window.changeTooltip = function (e) {
-            return e.value + "V";
+        window.changeTooltip3 = function (e) {
+            return e.value + " V";
         }
     } else if (index3 === 2) {
         let slider3 = new Slider3(100, 1);
-        window.changeTooltip = function (e) {
-            return e.value + "%";
+        window.changeTooltip3 = function (e) {
+            return e.value + " %";
         }
     } else if (index3 === 3) {
         let slider3 = new Slider3(50, 1);
-        window.changeTooltip = function (e) {
-            return e.value + "Hz";
+        window.changeTooltip3 = function (e) {
+            return e.value + " Hz";
         }
     } else if (index3 === 4) {
         let slider3 = new Slider3(1450, 1);
-        window.changeTooltip = function (e) {
-            return e.value + "RPM";
+        window.changeTooltip3 = function (e) {
+            return e.value + " RPM";
         }
     };
 }));
