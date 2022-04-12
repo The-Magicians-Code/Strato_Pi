@@ -1,1 +1,0 @@
-Siia v6ite panna koodi mida perse keerata
