@@ -142,8 +142,8 @@ def sagedus_api():
     d = dict(json.loads(request.data.decode("utf-8")))
     for i in d:
         print(i, d[i])
-
-    ct(MOTOR_1, WRITE, SET_FREQ, int(d["value"])*10)
+    f = float(d["value"])*10
+    ct(MOTOR_1, WRITE, SET_FREQ, int(f))
 
     return "ok"
 
