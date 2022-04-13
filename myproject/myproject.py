@@ -78,6 +78,7 @@ def api_submit():
 
     d = dict(json.loads(request.data.decode("utf-8")))
     print(d["motor"], d["value"])
+
     return "ok"
 
 @app.route('/test', methods=['POST'])
@@ -88,7 +89,12 @@ def buttons_test():
     d = dict(json.loads(request.data.decode("utf-8")))
     print(d["name"])
 
-    ct()
+    name = d["name"][-2:]
+    motor_num = int(name[0])
+    command = int(name[1])
+    print(motor_num, command)
+
+    #ct()
     return "ok"
 
 @app.route('/')
