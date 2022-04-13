@@ -184,7 +184,7 @@
                     <h2 class="font-weight-bold text-center mb-4">Load 1</h2>
 
                     <!-- Motor 1 -->
-                    <div class="mx-auto slider1" id="slider1" onmouseup="called(elt)">
+                    <div class="mx-auto slider1" id="slider1" onmouseup="called(this)">
                     </div>
                     <!-- END -->
                     <!-- Motor 1 info-->
@@ -247,7 +247,7 @@
                     <h2 class="font-weight-bold text-center mb-4">Load 2</h2>
 
                     <!-- Motor 2 -->
-                    <div class="mx-auto slider2" id="slider2" onmouseup="called(elt)">
+                    <div class="mx-auto slider2" id="slider2" onmouseup="called(this)">
                     </div>
                     <!-- END -->
                     <!-- Motor 2 info-->
@@ -303,7 +303,7 @@
                     <h2 class=" font-weight-bold text-center mb-4">Main motor</h2>
 
                     <!-- Motor 3 -->
-                    <div class="mx-auto slider3" id="slider3" onmouseup="called(elt)">
+                    <div class="mx-auto slider3" id="slider3" onmouseup="called(this)">
                     </div>
                     <!-- END -->
                     <!-- Motor 3 info-->
@@ -361,8 +361,10 @@
                         body: JSON.stringify({name})
                     })
                 }
+            </script>
+            <script>
                 function called(elt) {
-                    var output = `{"id":"slider1", "value":"${elt.value}", "unit":"${changeTooltip1($('#slider1').roundSlider("getValue"))}"}`;
+                    var output = `{"id": "${elt.id}", "value":"${elt.value}", "unit":"${changeTooltip1($('#slider1').roundSlider("getValue"))}"}`;
                     var out = output.replace('undefined ', '');
                     console.log(out)
                     fetch("/motor_control", {
@@ -371,7 +373,6 @@
                     })
                 }
             </script>
-
         </div>
     </div>
 </body>

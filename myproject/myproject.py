@@ -132,6 +132,8 @@ def motors_api():
     for i in d:
         print(i, d[i])
 
+    return "ok"
+
 @app.route('/')
 def home():
     return render_template('overview.html')
