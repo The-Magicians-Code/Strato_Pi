@@ -134,6 +134,19 @@ def motors_api():
 
     return "ok"
 
+@app.route('/sagedus', methods=['POST'])
+def sagedus_api():
+    if request.data:
+        print('Data:' + str(request.data))
+
+    d = dict(json.loads(request.data.decode("utf-8")))
+    for i in d:
+        print(i, d[i])
+
+    ct(MOTOR_1, WRITE, SET_FREQ, int(d["value"])*10)
+
+    return "ok"
+
 @app.route('/')
 def home():
     return render_template('overview.html')
