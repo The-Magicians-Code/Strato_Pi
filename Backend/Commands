@@ -1,0 +1,21 @@
+(nupu nimi - käsud, mida vaja saata)
+
+Iga mootori jaoks:
+
+Juhtimine Modbus-i kaudu - control(mootori nr, WRITE, 8411, 97)
+
+Juhtimine paneelilt - control(mootori nr, WRITE, 8411, 96)
+
+Shotdown/reset režiim - control(mootori nr, WRITE, 8501, 0x0006)
+
+Fault reset - control(mootori nr, WRITE, 8501, 0x0080)
+
+Päripäeva - control(mootori nr, WRITE, 8501, 0x000F)
+
+Vastupäeva - control(mootori nr, WRITE, 8501, 0x080F)
+
+
+Veel eraldi kaks nuppu:
+
+M1/M2 - control(1, WRITE, 5212, 0b10) ja control(3, WRITE, 5212, 0b10)
+M1||M2 - control(2, WRITE, 5212, 0b10) ja control(3, WRITE, 5212, 0b10)
