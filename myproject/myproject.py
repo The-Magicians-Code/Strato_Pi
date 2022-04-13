@@ -113,7 +113,7 @@ def buttons_test():
         ct(MOTOR_2, WRITE, LOGIC_OUTPUTS, 0b10)
         ct(MOTOR_3, WRITE, LOGIC_OUTPUTS, 0b10)
     if command == 9:
-        ct(motors[motor_num-1], WRITE, CTR_W_FREQ, 0x0006)
+        ct(motors[motor_num-1], WRITE, CTR_W_FREQ, 0x0002)
 
 
     return "ok"
