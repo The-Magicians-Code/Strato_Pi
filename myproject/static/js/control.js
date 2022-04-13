@@ -93,13 +93,9 @@ class Slider1 {
             value: 0,
             tooltipFormat: "changeTooltip1",
             change: function (val) {
-                var output = `{"id":"slider1" "value":"${val.value}", "unit":"${changeTooltip1($('#slider1').roundSlider("getValue"))}"}`;
+                var output = `{"id":"slider1", "value":"${val.value}", "unit":"${changeTooltip1($('#slider1').roundSlider("getValue"))}"}`;
                 var out = output.replace('undefined ', '');
                 console.log(out)
-                fetch("/motor_control", {
-                    method: "POST",
-                    body: out
-                })
             }
         }));
 
@@ -128,13 +124,9 @@ class Slider2 {
             value: 0,
             tooltipFormat: "changeTooltip2",
             change: function (val) {
-                var output = `{"id":"slider2" "value":"${val.value}", "unit":"${changeTooltip2($('#slider2').roundSlider("getValue"))}"}`;
+                var output = `{"id":"slider2", "value":"${val.value}", "unit":"${changeTooltip2($('#slider2').roundSlider("getValue"))}"}`;
                 var out = output.replace('undefined ', '');
                 console.log(out)
-                fetch("/motor_control", {
-                    method: "POST",
-                    body: out
-                })
             }
         }))
 
@@ -164,13 +156,9 @@ class Slider3 {
             value: 0,
             tooltipFormat: "changeTooltip3",
             change: function (val) {
-                var output = `{"id":"slider3" "value":"${val.value}", "unit":"${changeTooltip3($('#slider3').roundSlider("getValue"))}"}`;
+                var output = `{"id":"slider3", "value":"${val.value}", "unit":"${changeTooltip3($('#slider3').roundSlider("getValue"))}"}`;
                 var out = output.replace('undefined ', '');
                 console.log(out)
-                fetch("/motor_control", {
-                    method: "POST",
-                    body: out
-                })
             }
         }))
 

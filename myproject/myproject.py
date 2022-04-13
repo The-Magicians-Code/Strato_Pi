@@ -82,7 +82,7 @@ def api_submit():
     return "ok"
 
 @app.route('/button_control', methods=['POST'])
-def buttons_test():
+def buttons_api():
     if request.data:
         print('Data:' + str(request.data))
 
@@ -124,7 +124,7 @@ def buttons_test():
     return "ok"
 
 @app.route('/motor_control', methods=['POST'])
-def api_submit():
+def motors_api():
     if request.data:
         print('Data:' + str(request.data))
 
