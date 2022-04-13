@@ -3,18 +3,6 @@ function getInfo() {
         .then(resp => resp.json())
         .then(d => writeInfo(d));
 }
-/*
-function writeInfo2(data) {
-    console.log(data)
-    let parameters = ["current", "voltage", "frequency", "speed"];
-    let keys = ["motor1", "motor2", "motor3"];
-    for (let param in parameters) {
-        for (let i = 0; i < 3; i++) {
-            console.log(param + i.toString());
-            document.getElementById(param + i.toString()).innerText = data.motor1.current;
-        }
-    }
-}*/
 
 function writeInfo(data) {
     console.log(data)

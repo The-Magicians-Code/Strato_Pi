@@ -1,9 +1,5 @@
 function loadval() {
-    for (let i = 1; i < 3; i++)
-        console.log(document.getElementsByName("slider1")[0].value)
-    
-    console.log(document.getElementsByClassName("rs-tooltip rs-edit")[0].innerHTML)
-    fetch(`/api`, {
+    fetch("/api", {
         method: "POST",
         body: JSON.stringify({
             "motor": 1,
