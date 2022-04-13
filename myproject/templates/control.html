@@ -356,7 +356,7 @@
             <script>
                 function toggled(elt) {
                     let name = elt.id;
-                    fetch("/test", {
+                    fetch("/button_control", {
                         method: "POST",
                         body: JSON.stringify({name})
                     })

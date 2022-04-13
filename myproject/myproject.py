@@ -81,7 +81,7 @@ def api_submit():
 
     return "ok"
 
-@app.route('/test', methods=['POST'])
+@app.route('/button_control', methods=['POST'])
 def buttons_test():
     if request.data:
         print('Data:' + str(request.data))
@@ -121,8 +121,16 @@ def buttons_test():
     if command == 9:
         ct(motors[motor_num-1], WRITE, CTR_W_FREQ, 0x0002)
 
-
     return "ok"
+
+@app.route('/motor_control', methods=['POST'])
+def api_submit():
+    if request.data:
+        print('Data:' + str(request.data))
+
+    d = dict(json.loads(request.data.decode("utf-8")))
+    for i in d:
+        print(i, d[i])
 
 @app.route('/')
 def home():
