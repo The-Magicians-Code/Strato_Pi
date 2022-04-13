@@ -1,7 +1,7 @@
 class CustomSelect {
     constructor(originalSelect) {
 
-        //Create an grid with div objects
+        //Create a grid with div objects
         this.originalSelect = originalSelect;
         this.customSelect = document.createElement("div");
         this.customSelect.classList.add("select", "row", "text-center", "mt-4");
@@ -20,9 +20,6 @@ class CustomSelect {
 
 
             //take item value and paste as a text
-            var e = document.querySelector("select");
-            var value = e.options[e.selectedIndex].value;
-            var text = e.options[e.selectedIndex].text;
             const itemSpan = document.createElement("span");
             itemSpan.classList.add("small", "text-gray", "subtext");
             itemSpan.textContent = optionElement.value;
@@ -75,67 +72,187 @@ document.querySelectorAll(".custom-select").forEach(selectElement => {
     new CustomSelect(selectElement);
 });
 
-$("#slider1").roundSlider({
-    sliderType: "min-range",
-    radius: 120,
-    width: 20,
-    circleShape: "pie",
-    startAngle: 315,
-    lineCap: "round",
-    max: 0.75,
-    step: 0.01,
+class Slider1 {
+    constructor(_max_value, _step) {
+        const Arr_slider1 = Array.from($('.slider1'));
 
-    svgMode: true,
-    borderWidth: 0,
-    pathColor: "#ddd",
-    rangeColor: "#0dcaf0",
-    value: 0,
-    tooltipFormat: "changeTooltip",
-});
+        Arr_slider1.forEach(el => $(el).roundSlider({
+            sliderType: "min-range",
+            radius: 120,
+            width: 20,
+            circleShape: "pie",
+            startAngle: 315,
+            lineCap: "round",
+            max: _max_value,
+            step: _step,
 
-$("#slider2").roundSlider({
-    sliderType: "min-range",
-    radius: 120,
-    width: 20,
-    circleShape: "pie",
-    startAngle: 315,
-    lineCap: "round",
-    max: 0.75,
-    step: 0.01,
+            svgMode: true,
+            borderWidth: 0,
+            pathColor: "#ddd",
+            rangeColor: "#0dcaf0",
+            value: 0,
+            tooltipFormat: "changeTooltip1",
+            change: function (val) {
+                var output = `{"id":"slider1" "value":"${val.value}", "unit":"${changeTooltip1($('#slider1').roundSlider("getValue"))}"}`;
+                console.log(output.replace('undefined ', ''))
+            }
+        }));
 
-    svgMode: true,
-    borderWidth: 0,
-    pathColor: "#ddd",
-    rangeColor: "#0dcaf0",
-    value: 0,
-    tooltipFormat: "changeTooltip",
-});
 
-$("#slider3").roundSlider({
-    sliderType: "min-range",
-    radius: 120,
-    width: 20,
-    circleShape: "pie",
-    startAngle: 315,
-    lineCap: "round",
-    max: 1.5,
-    step: 0.01,
-
-    svgMode: true,
-    borderWidth: 0,
-    pathColor: "#ddd",
-    rangeColor: "#0dcaf0",
-    value: 0,
-    tooltipFormat: "changeTooltip",
-});
-
-function changeTooltip(e) {
-    if (document.getElementById("parameter1").selectedIndex == 0) {
-        var val = e.value;
-        return val + " A";
-    } else {
-        var val = e.value;
-        return val + " C";
     }
-
 }
+
+class Slider2 {
+    constructor(_max_value, _step) {
+        const Arr_slider2 = Array.from($('.slider2'));
+
+        Arr_slider2.forEach(el => $(el).roundSlider({
+            sliderType: "min-range",
+            radius: 120,
+            width: 20,
+            circleShape: "pie",
+            startAngle: 315,
+            lineCap: "round",
+            max: _max_value,
+            step: _step,
+
+            svgMode: true,
+            borderWidth: 0,
+            pathColor: "#ddd",
+            rangeColor: "#0dcaf0",
+            value: 0,
+            tooltipFormat: "changeTooltip2",
+            change: function (val) {
+                var output = `{"id":"slider2" "value":"${val.value}", "unit":"${changeTooltip2($('#slider2').roundSlider("getValue"))}"}`;
+                console.log(output.replace('undefined ', ''))
+            }
+        }))
+
+
+    }
+}
+
+class Slider3 {
+    constructor(_max_value, _step) {
+
+        const Arr_slider3 = Array.from($('.slider3'));
+
+        Arr_slider3.forEach(el => $(el).roundSlider({
+            sliderType: "min-range",
+            radius: 120,
+            width: 20,
+            circleShape: "pie",
+            startAngle: 315,
+            lineCap: "round",
+            max: _max_value,
+            step: _step,
+
+            svgMode: true,
+            borderWidth: 0,
+            pathColor: "#ddd",
+            rangeColor: "#0dcaf0",
+            value: 0,
+            tooltipFormat: "changeTooltip3",
+            change: function (val) {
+                var output = `{"id":"slider3" "value":"${val.value}", "unit":"${changeTooltip3($('#slider3').roundSlider("getValue"))}"}`;
+                console.log(output.replace('undefined ', ''))
+            }
+        }))
+
+
+    }
+}
+//Slider selection depending on selected value
+const selection1 = Array.from(document.getElementById("parameter1").children);
+selection1.forEach(el => addEventListener('click', (event) => {
+    const index1 = $("select[id='parameter1'] option:selected").index();
+    if (index1 === 0) {
+        let slider1 = new Slider1(10, 0.1);
+        window.changeTooltip1 = function (e) {
+            return e.value + " A";
+        }
+
+    } else if (index1 === 1) {
+        let slider1 = new Slider1(380, 1);
+        window.changeTooltip1 = function (e) {
+            return e.value + " V";
+        }
+    } else if (index1 === 2) {
+        let slider1 = new Slider1(100, 1);
+        window.changeTooltip1 = function (e) {
+            return e.value + " %";
+        }
+    } else if (index1 === 3) {
+        let slider1 = new Slider1(50, 1);
+        window.changeTooltip1 = function (e) {
+            return e.value + " Hz";
+        }
+    } else if (index1 === 4) {
+        let slider1 = new Slider1(1450, 1);
+        window.changeTooltip1 = function (e) {
+            return e.value + " RPM";
+        }
+    };
+}));
+
+const selection2 = Array.from(document.getElementById("parameter2").children);
+selection2.forEach(el => addEventListener('click', (event) => {
+    const index2 = $("select[id='parameter2'] option:selected").index();
+    if (index2 === 0) {
+        let slider2 = new Slider2(10, 0.1);
+        window.changeTooltip2 = function (e) {
+            return e.value + " A";
+        }
+    } else if (index2 === 1) {
+        let slider2 = new Slider2(380, 1);
+        window.changeTooltip2 = function (e) {
+            return e.value + " V";
+        }
+    } else if (index2 === 2) {
+        let slider2 = new Slider2(100, 1);
+        window.changeTooltip2 = function (e) {
+            return e.value + " %";
+        }
+    } else if (index2 === 3) {
+        let slider2 = new Slider2(50, 1);
+        window.changeTooltip2 = function (e) {
+            return e.value + " Hz";
+        }
+    } else if (index2 === 4) {
+        let slider2 = new Slider2(1450, 1);
+        window.changeTooltip2 = function (e) {
+            return e.value + " RPM";
+        }
+    };
+}));
+
+const selection3 = Array.from(document.getElementById("parameter3").children);
+selection3.forEach(el => addEventListener('click', (event) => {
+    const index3 = $("select[id='parameter3'] option:selected").index();
+    if (index3 === 0) {
+        let slider3 = new Slider3(10, 0.1);
+        window.changeTooltip3 = function (e) {
+            return e.value + " A";
+        }
+    } else if (index3 === 1) {
+        let slider3 = new Slider3(380, 1);
+        window.changeTooltip3 = function (e) {
+            return e.value + " V";
+        }
+    } else if (index3 === 2) {
+        let slider3 = new Slider3(100, 1);
+        window.changeTooltip3 = function (e) {
+            return e.value + " %";
+        }
+    } else if (index3 === 3) {
+        let slider3 = new Slider3(50, 1);
+        window.changeTooltip3 = function (e) {
+            return e.value + " Hz";
+        }
+    } else if (index3 === 4) {
+        let slider3 = new Slider3(1450, 1);
+        window.changeTooltip3 = function (e) {
+            return e.value + " RPM";
+        }
+    };
+}));

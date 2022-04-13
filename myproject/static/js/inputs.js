@@ -12,20 +12,6 @@ function loadval() {
     })
 }
 
-function loadval2() {
-    for (let i = 1; i < 3; i++)
-        console.log(document.getElementsByName("slider1")[1].value)
-    
-    console.log(document.getElementsByClassName("rs-tooltip rs-edit")[1].innerHTML)
-    fetch(`/api`, {
-        method: "POST",
-        body: JSON.stringify({
-            "motor": 2,
-            "value": document.getElementsByName("slider1")[1].value
-        })
-    })
-}
-
 let slider1 = document.getElementById("slider1");
 /*slider1.addEventListener("mouseup", (e) => {
     waitReading();
