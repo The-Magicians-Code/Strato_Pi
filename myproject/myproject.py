@@ -87,6 +87,8 @@ def buttons_test():
 
     d = dict(json.loads(request.data.decode("utf-8")))
     print(d["name"])
+
+    ct()
     return "ok"
 
 @app.route('/')
