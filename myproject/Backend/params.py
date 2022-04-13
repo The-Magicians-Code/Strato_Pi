@@ -45,3 +45,5 @@ W_MODBUS = 97
 MOTOR_1 = 1
 MOTOR_2 = 2
 MOTOR_3 = 3
+
+motors = [MOTOR_1, MOTOR_2, MOTOR_3]

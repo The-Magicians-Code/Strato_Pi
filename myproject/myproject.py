@@ -92,9 +92,30 @@ def buttons_test():
     name = d["name"][-2:]
     motor_num = int(name[0])
     command = int(name[1])
-    print(motor_num, command)
+    print(motor_num)#, command)
 
-    #ct()
+    if command == 1:
+        ct(motors[motor_num-1], WRITE, REF_SWITCH, W_MODBUS)
+    if command == 2:
+        ct(motors[motor_num-1], WRITE, REF_SWITCH, W_TERMINAL)
+    if command == 3:
+        ct(motors[motor_num-1], WRITE, CTR_W_FREQ, 0x0006)
+    if command == 4:
+        ct(motors[motor_num-1], WRITE, CTR_W_FREQ, 0x0080)
+    if command == 5:
+        ct(motors[motor_num-1], WRITE, CTR_W_FREQ, 0x000F)
+    if command == 6:
+        ct(motors[motor_num-1], WRITE, CTR_W_FREQ, 0x080F)
+    if command == 7:
+        ct(MOTOR_1, WRITE, LOGIC_OUTPUTS, 0b10)
+        ct(MOTOR_3, WRITE, LOGIC_OUTPUTS, 0b10)
+    if command == 8:
+        ct(MOTOR_2, WRITE, LOGIC_OUTPUTS, 0b10)
+        ct(MOTOR_3, WRITE, LOGIC_OUTPUTS, 0b10)
+    if command == 9:
+        ct(motors[motor_num-1], WRITE, CTR_W_FREQ, 0x0006)
+
+
     return "ok"
 
 @app.route('/')
