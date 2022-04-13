@@ -80,6 +80,15 @@ def api_submit():
     print(d["motor"], d["value"])
     return "ok"
 
+@app.route('/test', methods=['POST'])
+def buttons_test():
+    if request.data:
+        print('Data:' + str(request.data))
+
+    d = dict(json.loads(request.data.decode("utf-8")))
+    print(d["name"])
+    return "ok"
+
 @app.route('/')
 def home():
     return render_template('overview.html')
