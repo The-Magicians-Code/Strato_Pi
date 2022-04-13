@@ -107,9 +107,15 @@ def buttons_test():
     if command == 6:
         ct(motors[motor_num-1], WRITE, CTR_W_FREQ, 0x080F)
     if command == 7:
+        ct(MOTOR_1, WRITE, LOGIC_OUTPUTS, 0b00)
+        ct(MOTOR_2, WRITE, LOGIC_OUTPUTS, 0b00)
+        ct(MOTOR_3, WRITE, LOGIC_OUTPUTS, 0b00)
         ct(MOTOR_1, WRITE, LOGIC_OUTPUTS, 0b10)
         ct(MOTOR_3, WRITE, LOGIC_OUTPUTS, 0b10)
     if command == 8:
+        ct(MOTOR_1, WRITE, LOGIC_OUTPUTS, 0b00)
+        ct(MOTOR_2, WRITE, LOGIC_OUTPUTS, 0b00)
+        ct(MOTOR_3, WRITE, LOGIC_OUTPUTS, 0b00)
         ct(MOTOR_2, WRITE, LOGIC_OUTPUTS, 0b10)
         ct(MOTOR_3, WRITE, LOGIC_OUTPUTS, 0b10)
     if command == 9:

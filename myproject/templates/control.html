@@ -46,7 +46,6 @@
             </div>
         </nav>
     </div>
-
     <div class="container py-5">
         <div class="row">
             <!--First block-->
@@ -55,73 +54,126 @@
                     <h2 class="font-weight-bold text-center mb-4">Load 1</h2>
 
                     <!-- Motor 1 -->
-                    <div class="mx-auto" id="slider1">
+                    <div class="progress mx-auto" data-min="0" data-max="0.75" data-value="0.5">
+                        <span class="progress-left">
+                            <span class="progress-bar border-info"></span>
+                        </span>
+                        <span class="progress-right">
+                            <span class="progress-bar border-info"></span>
+                        </span>
+                        <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                            <div class="h2 font-weight-bold"><span id="power0">0</span><span class="small">%</span></div>
+                        </div>
                     </div>
                     <!-- END -->
                     <!-- Motor 1 info-->
-                    <form action="">
-                        <select id="parameter1" class="custom-select">
-                            <option value="Current">10A</option>
-                            <option value="Voltage">380V</option>
-                            <option value="Moment">100%</option>
-                            <option value="Frequency">50Hz</option>
-                            <option value="Rotation speed">1450 RPM</option>
-                        </select>
-                    </form>
+                    <div class="row text-center mt-4">
+                        <div class="col-6 border-right first-row">
+                            <div class="h4 font-weight-bold mb-0"><span id="current0">0</span>A</div><span class="small text-gray">Current</span>
+                        </div>
+                        <div class="col-6">
+                            <div class="h4 font-weight-bold mb-0"><span id="voltage0">0</span>V</div><span class="small text-gray">Voltage</span>
+                        </div>
+
+                        <div class="col-6 border-right">
+                            <div class="h4 font-weight-bold mb-0"><span id="frequency0">0</span>Hz</div><span class="small text-gray">Frequency</span>
+                        </div>
+                        <div class="col-6">
+                            <div class="h4 font-weight-bold mb-0"><span id="speed0">0</span></div><span class="small text-gray">RPM</span>
+
+                        </div>
+                    </div>
+                    <!-- END -->
                 </div>
 
             </div>
             <!--first block end-->
+
             <!--Second block-->
             <div class="col-xl-4 col-lg-6 mb-3">
                 <div class="bg-white rounded-lg p-5 shadow">
                     <h2 class="font-weight-bold text-center mb-4">Load 2</h2>
 
                     <!-- Motor 2 -->
-                    <div class="mx-auto" id="slider2">
+                    <div class="progress mx-auto" data-value='0.7'>
+                        <span class="progress-left">
+                            <span class="progress-bar border-info"></span>
+                        </span>
+                        <span class="progress-right">
+                            <span class="progress-bar border-info"></span>
+                        </span>
+                        <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                            <div class="h2 font-weight-bold"><span id="power1">0</span><span class="small">%</span></div>
+                        </div>
                     </div>
                     <!-- END -->
                     <!-- Motor 2 info-->
-                    <form action="">
-                        <select id="parameter2" class="custom-select">
-                            <option value="Current">10A</option>
-                            <option value="Voltage">380V</option>
-                            <option value="Moment">100%</option>
-                            <option value="Frequency">50Hz</option>
-                            <option value="Rotation speed">1450 RPM</option>
-                        </select>
-                    </form>
+                    <div class="row text-center mt-4">
+                        <div class="col-6 border-right first-row">
+                            <div class="h4 font-weight-bold mb-0"><span id="current1">0</span>A</div><span class="small text-gray">Current</span>
+                        </div>
+                        <div class="col-6">
+                            <div class="h4 font-weight-bold mb-0"><span id="voltage1">0</span>V</div><span class="small text-gray">Voltage</span>
+                        </div>
+
+                        <div class="col-6 border-right">
+                            <div class="h4 font-weight-bold mb-0"><span id="frequency1">0</span>Hz</div><span class="small text-gray">Frequency</span>
+                        </div>
+                        <div class="col-6">
+                            <div class="h4 font-weight-bold mb-0"><span id="speed1">0</span></div><span class="small text-gray">RPM</span>
+
+                        </div>
+                    </div>
                     <!-- END -->
                 </div>
 
             </div>
             <!--Second block end-->
+
             <!--Third block-->
             <div class="col-xl-4 col-lg-6 mb-3">
                 <div class="bg-white rounded-lg p-5 shadow">
                     <h2 class=" font-weight-bold text-center mb-4">Main motor</h2>
 
                     <!-- Motor 3 -->
-                    <div class="mx-auto" id="slider3">
+                    <div class="progress mx-auto" data-value='1.2'>
+                        <span class="progress-left">
+                            <span class="progress-bar border-info"></span>
+                        </span>
+                        <span class="progress-right">
+                            <span class="progress-bar border-info"></span>
+                        </span>
+                        <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                            <div class="h2 font-weight-bold"><span id="power2">0</span><span class="small">%</span></div>
+                        </div>
                     </div>
                     <!-- END -->
                     <!-- Motor 3 info-->
-                    <form action="">
-                        <select name="parameter1" class="custom-select">
-                            <option value="Current">10A</option>
-                            <option value="Voltage">380V</option>
-                            <option value="Moment">100%</option>
-                            <option value="Frequency">50Hz</option>
-                            <option value="Rotation speed">1450 RPM</option>
-                        </select>
-                    </form>
+                    <div class="row text-center mt-4">
+                        <div class="col-6 border-right first-row">
+                            <div class="h4 font-weight-bold mb-0"><span id="current2">0</span>A</div><span class="small text-gray">Current</span>
+                        </div>
+                        <div class="col-6">
+                            <div class="h4 font-weight-bold mb-0"><span id="voltage2">0</span>V</div><span class="small text-gray">Voltage</span>
+                        </div>
+
+                        <div class="col-6 border-right">
+                            <div class="h4 font-weight-bold mb-0"><span id="frequency2">0</span>Hz</div><span class="small text-gray">Frequency</span>
+                        </div>
+                        <div class="col-6">
+                            <div class="h4 font-weight-bold mb-0"><span id="speed2">0</span></div><span class="small text-gray">RPM</span>
+
+                        </div>
+                    </div>
                     <!-- END -->
                 </div>
 
             </div>
             <!--Third block end-->
+
         </div>
     </div>
+    
     <!--OVERVIEW END-->
 
     <div class="container py-5">
