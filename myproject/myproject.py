@@ -14,11 +14,6 @@ import ctypes as t
 
 app = Flask(__name__)
 
-def cpu_temp():
-    return round(random.random()*100, 2)
-
-
-
 def gen_frames():
     # USB camera path
     path = '/dev/video0'
@@ -26,6 +21,14 @@ def gen_frames():
     while True:
         # Capture frame-by-frame
         success, frame = camera.read()  # read the camera frames
+
+        hsldark  = cv2.cvtColor(frame, cv2.COLOR_BGR2HLS)
+        Lchanneld = hsldark[:,:,1]
+        lvalueld = cv2.mean(Lchanneld)[0]
+
+        if lvalueld < 50:
+            path = '/home/pi/Videos/info.mp4'
+            camera = cv2.VideoCapture(path)
 
         if not success and path == '/dev/video0':
             path = '/home/pi/Videos/info.mp4'
@@ -148,6 +151,25 @@ def freq_api():
 
     # Send command
     ct(motors[motor_num], WRITE, SET_FREQ, int(value))
+
+    return "ok"
+
+@app.route('/speed', methods=['POST'])
+def freq_api():
+    if request.data:
+        print('Data:' + str(request.data))
+
+    d = dict(json.loads(request.data.decode("utf-8")))
+    for i in d:
+        print(i, d[i])
+
+    value = float(d["value"])
+
+    name = d["id"][-1]
+    motor_num = int(name[0])
+
+    # Send command
+    ct(motors[motor_num], WRITE, SET_SPEED, int(value))
 
     return "ok"
 

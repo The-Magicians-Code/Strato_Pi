@@ -51,7 +51,7 @@
                     <h2 class="font-weight-bold text-center mb-4">Load 1</h2>
 
                     <!-- Motor 1 -->
-                    <div class="progress mx-auto" data-min="0" data-max="0.75" data-value="0.5" id="p0">
+                    <div class="progress mx-auto" data-value="0">
                         <span class="progress-left">
                             <span class="progress-bar border-info"></span>
                         </span>
@@ -59,7 +59,7 @@
                             <span class="progress-bar border-info"></span>
                         </span>
                         <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-                            <div class="h2 font-weight-bold"><span id="power0">75</span><span class="small">%</span></div>
+                            <div class="h2 font-weight-bold"><span id="power0">0</span><span class="small">%</span></div>
                         </div>
                     </div>
 
@@ -101,7 +101,7 @@
                     <h2 class="font-weight-bold text-center mb-4">Load 2</h2>
 
                     <!-- Motor 2 -->
-                    <div class="progress mx-auto" data-value="0.7" id="p1">
+                    <div class="progress mx-auto" data-value="0">
                         <span class="progress-left">
                             <span class="progress-bar border-info"></span>
                         </span>
@@ -142,7 +142,7 @@
                     <h2 class=" font-weight-bold text-center mb-4">Main motor</h2>
 
                     <!-- Motor 3 -->
-                    <div class="progress mx-auto" data-value="1.2" id="p2">
+                    <div class="progress mx-auto" data-value="0">
                         <span class="progress-left">
                             <span class="progress-bar border-info"></span>
                         </span>
@@ -198,7 +198,7 @@
                     <!--Buttons-->
                     <div class="button-block row text-center" mt-3>
                         <div class="col-6 text-center">
-                            <button class="button-custom" type="button" id="Button01" onclick="toggled(this)">Juhtumine Modbusilt</button>
+                            <button class="button-custom" type="button" id="Button01" onclick="toggled(this)">Juhtimine Modbusilt</button>
                         </div>
 
                         <div class="col-6 text-center">
@@ -222,11 +222,11 @@
                         </div>
 
                         <div class="col-6 text-center">
-                            <button class="button-custom" type="button" id="Button07" onclick="toggled(this)">Button7</button>
+                            <button class="button-custom" type="button" id="Button07" onclick="toggled(this)">M1 / M2</button>
                         </div>
 
                         <div class="col-6 text-center">
-                            <button class="button-custom" type="button" id="Button08" onclick="toggled(this)">Button8</button>
+                            <button class="button-custom" type="button" id="Button08" onclick="toggled(this)">M1 || M2</button>
                         </div>
 
                         <div class="col-lg-12 text-center">
@@ -252,7 +252,7 @@
                     <!--Buttons-->
                     <div class="button-block row text-center" mt-4>
                         <div class="col-6 text-center">
-                            <button class="button-custom" type="button" id="Button11" onclick="toggled(this)">Juhtumine Modbusilt</button>
+                            <button class="button-custom" type="button" id="Button11" onclick="toggled(this)">Juhtimine Modbusilt</button>
                         </div>
 
                         <div class="col-6 text-center">
@@ -332,6 +332,7 @@
             </div>
             <!--Third block end-->
             <script>
+                // Parse button commands to JSON and send to backend
                 function toggled(elt) {
                     let name = elt.id;
                     fetch("/button_control", {
@@ -340,9 +341,9 @@
                     })
                 }
 
+                // Parse frequency command to JSON and send it to backend
                 function called(elt) {
                     var out_val = document.getElementById(elt.id + "_data").innerHTML = elt.value;
-
                     var output = `{"id": "${elt.id}", "value":"${elt.value}", "unit":"Hz"}`;
                     var out = output.replace('undefined ', '');
                     fetch("/frequency", {
@@ -350,6 +351,8 @@
                         body: out
                     })
                 }
+
+                // Configure power readings
                 for (let i = 0; i < 3; i++)
                 $(".progress")[i].setAttribute("data-value", document.getElementById("power" + i.toString()).innerHTML / 100);
             </script>
