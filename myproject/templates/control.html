@@ -63,14 +63,6 @@
                         </div>
                     </div>
 
-                    <script>
-                        function power(idx) {
-                            let p = document.getElementById(idx).value;
-                            console.log(p)
-                            return p;
-                        }
-                    </script>
-
                     <!-- END -->
                     <!-- Motor 1 info-->
                     <div class="row text-center mt-4">
@@ -191,18 +183,23 @@
 
                     <!-- Motor 1 -->
                     <div class="slidecontainer">
-                        <input type="range" min="0" max="50" step="0.1" value="0" class="slider" id="S0" onclick="called(this)">
-                        <p>Frequency: <span id="S0_data"></span></p>
+                        <input type="range" min="0" max="50" step="0.1" value="0" class="slider" id="F0" onclick="called(this, 'Hz', '/frequency')">
+                        <p>Frequency: <span id="F0_data">0</span></p>
+                    </div>
+                    
+                    <div class="slidecontainer">
+                        <input type="range" min="0" max="1450" step="1" value="0" class="slider" id="S0" onclick="called(this, 'RPM', '/speed')">
+                        <p>Speed: <span id="S0_data">0</span></p>
                     </div>
 
                     <!--Buttons-->
                     <div class="button-block row text-center" mt-3>
                         <div class="col-6 text-center">
-                            <button class="button-custom" type="button" id="Button01" onclick="toggled(this)">Juhtimine Modbusilt</button>
+                            <button class="button-custom" type="button" id="Button01" onclick="toggled(this)">Control with Modbus</button>
                         </div>
 
                         <div class="col-6 text-center">
-                            <button class="button-custom" type="button" id="Button02" onclick="toggled(this)">Juhtimine paneelilt</button>
+                            <button class="button-custom" type="button" id="Button02" onclick="toggled(this)">Control from panel</button>
                         </div>
 
                         <div class="col-6 text-center">
@@ -214,11 +211,11 @@
                         </div>
 
                         <div class="col-6 text-center">
-                            <button class="button-custom" type="button" id="Button05" onclick="toggled(this)">Päripäeva</button>
+                            <button class="button-custom" type="button" id="Button05" onclick="toggled(this)">Clockwise</button>
                         </div>
 
                         <div class="col-6 text-center">
-                            <button class="button-custom" type="button" id="Button06" onclick="toggled(this)">Vastupäeva</button>
+                            <button class="button-custom" type="button" id="Button06" onclick="toggled(this)">Counter-Clockwise</button>
                         </div>
 
                         <div class="col-6 text-center">
@@ -245,18 +242,23 @@
 
                     <!-- Motor 2 -->
                     <div class="slidecontainer">
-                        <input type="range" min="0" max="50" step="0.1" value="0" class="slider" id="S1" onclick="called(this)">
-                        <p>Frequency: <span id="S1_data"></span></p>
+                        <input type="range" min="0" max="50" step="0.1" value="0" class="slider" id="F1" onclick="called(this, 'Hz', '/frequency')">
+                        <p>Frequency: <span id="F1_data">0</span></p>
+                    </div>
+
+                    <div class="slidecontainer">
+                        <input type="range" min="0" max="1450" step="1" value="0" class="slider" id="S1" onclick="called(this, 'RPM', '/speed')">
+                        <p>Speed: <span id="S1_data">0</span></p>
                     </div>
 
                     <!--Buttons-->
                     <div class="button-block row text-center" mt-4>
                         <div class="col-6 text-center">
-                            <button class="button-custom" type="button" id="Button11" onclick="toggled(this)">Juhtimine Modbusilt</button>
+                            <button class="button-custom" type="button" id="Button11" onclick="toggled(this)">Control with Modbus</button>
                         </div>
 
                         <div class="col-6 text-center">
-                            <button class="button-custom" type="button" id="Button12" onclick="toggled(this)">Juhtimine paneelilt</button>
+                            <button class="button-custom" type="button" id="Button12" onclick="toggled(this)">Control from panel</button>
                         </div>
 
                         <div class="col-6 text-center">
@@ -268,11 +270,11 @@
                         </div>
 
                         <div class="col-6 text-center">
-                            <button class="button-custom" type="button" id="Button15" onclick="toggled(this)">Päripäeva</button>
+                            <button class="button-custom" type="button" id="Button15" onclick="toggled(this)">Clockwise</button>
                         </div>
 
                         <div class="col-6 text-center">
-                            <button class="button-custom" type="button" id="Button16" onclick="toggled(this)">Vastupäeva</button>
+                            <button class="button-custom" type="button" id="Button16" onclick="toggled(this)">Counter-Clockwise</button>
                         </div>
 
                         <div class="col-lg-12 text-center">
@@ -292,18 +294,23 @@
 
                     <!-- Motor 3 -->
                     <div class="slidecontainer">
-                        <input type="range" min="0" max="50" step="0.1" value="0" class="slider" id="S2" onclick="called(this)">
-                        <p>Frequency: <span id="S2_data"></span></p>
+                        <input type="range" min="0" max="50" step="0.1" value="0" class="slider" id="F2" onclick="called(this, 'Hz', '/frequency')">
+                        <p>Frequency: <span id="F2_data">0</span></p>
+                    </div>
+
+                    <div class="slidecontainer">
+                        <input type="range" min="0" max="1450" step="1" value="0" class="slider" id="S2" onclick="called(this, 'RPM', '/speed')">
+                        <p>Speed: <span id="S2_data">0</span></p>
                     </div>
 
                     <!--Buttons-->
                     <div class="button-block row text-center" mt-4>
                         <div class="col-6 text-center">
-                            <button class="button-custom" type="button" id="Button21" onclick="toggled(this)">Juhtimine Modbusilt</button>
+                            <button class="button-custom" type="button" id="Button21" onclick="toggled(this)">Control with Modbus</button>
                         </div>
 
                         <div class="col-6 text-center">
-                            <button class="button-custom" type="button" id="Button22" onclick="toggled(this)">Juhtimine paneelilt</button>
+                            <button class="button-custom" type="button" id="Button22" onclick="toggled(this)">Control from panel</button>
                         </div>
 
                         <div class="col-6 text-center">
@@ -311,15 +318,15 @@
                         </div>
 
                         <div class="col-6 text-center">
-                            <button class="button-custom" type="button" id="Button24" onclick="toggled(this)">Fault reset</button>
+                            <button class="button-custom" type="button" id="Button24" onclick="toggled(this)">Fault Reset</button>
                         </div>
 
                         <div class="col-6 text-center">
-                            <button class="button-custom" type="button" id="Button25" onclick="toggled(this)">Päripäeva</button>
+                            <button class="button-custom" type="button" id="Button25" onclick="toggled(this)">Clockwise</button>
                         </div>
 
                         <div class="col-6 text-center">
-                            <button class="button-custom" type="button" id="Button26" onclick="toggled(this)">Vastupäeva</button>
+                            <button class="button-custom" type="button" id="Button26" onclick="toggled(this)">Counter-Clockwise</button>
                         </div>
 
                         <div class="col-lg-12 text-center">
@@ -341,12 +348,12 @@
                     })
                 }
 
-                // Parse frequency command to JSON and send it to backend
-                function called(elt) {
+                // Parse frequency/speed command to JSON and send it to backend
+                function called(elt, unit, fetch_id) {
                     var out_val = document.getElementById(elt.id + "_data").innerHTML = elt.value;
-                    var output = `{"id": "${elt.id}", "value":"${elt.value}", "unit":"Hz"}`;
+                    var output = `{"id": "${elt.id}", "value":"${elt.value}", "unit": "${unit}"}`;
                     var out = output.replace('undefined ', '');
-                    fetch("/frequency", {
+                    fetch(fetch_id.toString(), {
                         method: "POST",
                         body: out
                     })

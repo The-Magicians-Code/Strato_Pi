@@ -16,7 +16,7 @@ app = Flask(__name__)
 
 def gen_frames():
     # USB camera
-    camera = cv2.VideoCapture('/dev/video')
+    camera = cv2.VideoCapture('/dev/video0')
     switched = False
     while True:
         # Capture frame-by-frame
@@ -155,13 +155,12 @@ def speed_api():
     for i in d:
         print(i, d[i])
 
-    value = float(d["value"])
-
+    value = int(d["value"])
     name = d["id"][-1]
     motor_num = int(name[0])
 
     # Send command
-    ct(motors[motor_num], WRITE, SET_SPEED, int(value))
+    ct(motors[motor_num], WRITE, SET_SPEED, value)
 
     return "ok"
 
