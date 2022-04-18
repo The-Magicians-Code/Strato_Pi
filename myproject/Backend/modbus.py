@@ -25,8 +25,11 @@ def control(slave_number, operation, reg_address, control_code, delay=0):
             return (0, )
 
     else:
-        master.execute(slave_number, WRITE, reg_address, output_value=control_code)
-        time.sleep(delay)
+        try:
+            master.execute(slave_number, WRITE, reg_address, output_value=control_code)
+            time.sleep(delay)
+        except ModbusInvalidResponseError:
+            return 0
     
 # Example usage for function
 #print(control(1, READ, MAINS_VOLTAGE, 1))

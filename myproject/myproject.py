@@ -18,10 +18,8 @@ app = Flask(__name__)
 def cpu_temp():
     return round(random.random()*100, 2)
 
-# USB camera
-#camera = cv2.VideoCapture(0)#'/dev/video0')
-#path = '/home/pi/Videos/info.mp4'
-path = '/dev/video0'
+# USB camera path
+path = '/dev/video'
 
 def gen_frames():
     camera = cv2.VideoCapture(path)
@@ -29,7 +27,9 @@ def gen_frames():
         # Capture frame-by-frame
         success, frame = camera.read()  # read the camera frames
 
-        if not success:
+        if not success and path == '/dev/video0':
+            camera = cv2.VideoCapture('/home/pi/Videos/info.mp4')
+        elif not success:
             break
         else:
             ret, buffer = cv2.imencode('.jpg', frame)

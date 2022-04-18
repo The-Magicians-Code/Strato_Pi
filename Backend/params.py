@@ -4,6 +4,7 @@ import serial
 import modbus_tk
 import modbus_tk.defines as cst
 from modbus_tk import modbus_rtu
+from modbus_tk.exceptions import ModbusInvalidResponseError
 
 # Setup modbus master/slave communication
 WRITE = cst.WRITE_SINGLE_REGISTER
@@ -44,3 +45,5 @@ W_MODBUS = 97
 MOTOR_1 = 1
 MOTOR_2 = 2
 MOTOR_3 = 3
+
+motors = [MOTOR_1, MOTOR_2, MOTOR_3]
