@@ -7,8 +7,6 @@ from Backend.params import *
 
 import time
 import random
-# import raspi cpu params
-#from gpiozero import CPUTemperature
 # Flask for web-dev
 from flask import Flask, render_template, jsonify, request, Response
 import json
@@ -147,11 +145,11 @@ def sagedus_api():
 
     return "ok"
 
-@app.route('/')
-def home():
-    return render_template('overview.html')
+# @app.route('/')
+# def home():
+#     return render_template('overview.html')
 
-@app.route('/sys_control')
+@app.route('/')
 def control():
     return render_template('control.html')
 
