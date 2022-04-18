@@ -3,10 +3,6 @@
 from Backend.onlyfans import tempstat
 from Backend.modbus import control as ct
 from Backend.params import *
-
-import time
-import random
-# Flask for web-dev
 from flask import Flask, render_template, jsonify, request, Response
 import json
 import cv2
