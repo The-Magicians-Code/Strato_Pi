@@ -19,7 +19,7 @@ def cpu_temp():
     return round(random.random()*100, 2)
 
 # USB camera path
-path = '/dev/video'
+path = '/dev/video0'
 
 def gen_frames():
     camera = cv2.VideoCapture(path)
@@ -29,7 +29,7 @@ def gen_frames():
 
         if not success and path == '/dev/video0':
             camera = cv2.VideoCapture('/home/pi/Videos/info.mp4')
-        elif not success:
+        if not success:
             break
         else:
             ret, buffer = cv2.imencode('.jpg', frame)
@@ -144,10 +144,6 @@ def sagedus_api():
     ct(MOTOR_1, WRITE, SET_FREQ, int(f))
 
     return "ok"
-
-# @app.route('/')
-# def home():
-#     return render_template('overview.html')
 
 @app.route('/')
 def control():
