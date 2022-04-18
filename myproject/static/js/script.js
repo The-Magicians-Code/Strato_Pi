@@ -1,8 +1,8 @@
 $(function() {
 
   $(".progress").each(function() {
-
     var value = $(this).attr('data-value');
+
     var left = $(this).find('.progress-left .progress-bar');
     var right = $(this).find('.progress-right .progress-bar');
 
@@ -14,7 +14,6 @@ $(function() {
         left.css('transform', 'rotate(' + percentageToDegrees(value - 0.75) + 'deg)')
       }
     }
-
   })
 
   function percentageToDegrees(percentage) {
