@@ -1,6 +1,5 @@
 # https://medium.com/swlh/deploy-flask-applications-with-uwsgi-and-nginx-on-ubuntu-18-04-2a47f378c3d2
 # Backend stuff
-
 from Backend.onlyfans import tempstat
 from Backend.modbus import control as ct
 from Backend.params import *
@@ -18,17 +17,19 @@ app = Flask(__name__)
 def cpu_temp():
     return round(random.random()*100, 2)
 
-# USB camera path
-path = '/dev/video0'
+
 
 def gen_frames():
+    # USB camera path
+    path = '/dev/video0'
     camera = cv2.VideoCapture(path)
     while True:
         # Capture frame-by-frame
         success, frame = camera.read()  # read the camera frames
 
         if not success and path == '/dev/video0':
-            camera = cv2.VideoCapture('/home/pi/Videos/info.mp4')
+            path = '/home/pi/Videos/info.mp4'
+            camera = cv2.VideoCapture(path)
         if not success:
             break
         else:
@@ -90,20 +91,19 @@ def buttons_api():
     name = d["name"][-2:]
     motor_num = int(name[0])
     command = int(name[1])
-    print(motor_num)#, command)
 
     if command == 1:
-        ct(motors[motor_num-1], WRITE, REF_SWITCH, W_MODBUS)
+        ct(motors[motor_num], WRITE, REF_SWITCH, W_MODBUS)
     if command == 2:
-        ct(motors[motor_num-1], WRITE, REF_SWITCH, W_TERMINAL)
+        ct(motors[motor_num], WRITE, REF_SWITCH, W_TERMINAL)
     if command == 3:
-        ct(motors[motor_num-1], WRITE, CTR_W_FREQ, 0x0006)
+        ct(motors[motor_num], WRITE, CTR_W_FREQ, 0x0006)
     if command == 4:
-        ct(motors[motor_num-1], WRITE, CTR_W_FREQ, 0x0080)
+        ct(motors[motor_num], WRITE, CTR_W_FREQ, 0x0080)
     if command == 5:
-        ct(motors[motor_num-1], WRITE, CTR_W_FREQ, 0x000F)
+        ct(motors[motor_num], WRITE, CTR_W_FREQ, 0x000F)
     if command == 6:
-        ct(motors[motor_num-1], WRITE, CTR_W_FREQ, 0x080F)
+        ct(motors[motor_num], WRITE, CTR_W_FREQ, 0x080F)
     if command == 7:
         ct(MOTOR_1, WRITE, LOGIC_OUTPUTS, 0b00)
         ct(MOTOR_2, WRITE, LOGIC_OUTPUTS, 0b00)
@@ -117,7 +117,7 @@ def buttons_api():
         ct(MOTOR_2, WRITE, LOGIC_OUTPUTS, 0b10)
         ct(MOTOR_3, WRITE, LOGIC_OUTPUTS, 0b10)
     if command == 9:
-        ct(motors[motor_num-1], WRITE, CTR_W_FREQ, 0x0002)
+        ct(motors[motor_num], WRITE, CTR_W_FREQ, 0x0002)
 
     return "ok"
 
@@ -132,16 +132,22 @@ def motors_api():
 
     return "ok"
 
-@app.route('/sagedus', methods=['POST'])
-def sagedus_api():
+@app.route('/frequency', methods=['POST'])
+def freq_api():
     if request.data:
         print('Data:' + str(request.data))
 
     d = dict(json.loads(request.data.decode("utf-8")))
     for i in d:
         print(i, d[i])
-    f = float(d["value"])*10
-    ct(MOTOR_1, WRITE, SET_FREQ, int(f))
+
+    value = float(d["value"])*10
+
+    name = d["id"][-1]
+    motor_num = int(name[0])
+
+    # Send command
+    ct(motors[motor_num], WRITE, SET_FREQ, int(value))
 
     return "ok"
 
