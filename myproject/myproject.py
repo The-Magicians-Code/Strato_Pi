@@ -15,25 +15,17 @@ import ctypes as t
 app = Flask(__name__)
 
 def gen_frames():
-    # USB camera path
-    path = '/dev/video0'
-    camera = cv2.VideoCapture(path)
+    # USB camera
+    camera = cv2.VideoCapture('/dev/video')
+    switched = False
     while True:
         # Capture frame-by-frame
         success, frame = camera.read()  # read the camera frames
 
-        hsldark  = cv2.cvtColor(frame, cv2.COLOR_BGR2HLS)
-        Lchanneld = hsldark[:,:,1]
-        lvalueld = cv2.mean(Lchanneld)[0]
-
-        if lvalueld < 50:
-            path = '/home/pi/Videos/info.mp4'
-            camera = cv2.VideoCapture(path)
-
-        if not success and path == '/dev/video0':
-            path = '/home/pi/Videos/info.mp4'
-            camera = cv2.VideoCapture(path)
-        if not success:
+        if not success and not switched:
+            camera = cv2.VideoCapture('/home/pi/Videos/info.mp4')
+            switched = True
+        elif not success:
             break
         else:
             ret, buffer = cv2.imencode('.jpg', frame)
@@ -155,7 +147,7 @@ def freq_api():
     return "ok"
 
 @app.route('/speed', methods=['POST'])
-def freq_api():
+def speed_api():
     if request.data:
         print('Data:' + str(request.data))
 
