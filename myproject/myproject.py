@@ -14,13 +14,18 @@ def gen_frames():
     # USB camera
     camera = cv2.VideoCapture('/dev/video0')
     switched = False
+    v = 1
     while True:
         # Capture frame-by-frame
         success, frame = camera.read()  # read the camera frames
-
-        if not success and not switched:
+        #print(v)
+        if success and not switched:
+            hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+            v = hsv[...,2].mean()
+        if (not success and not switched) or (v < 0.8):
             camera = cv2.VideoCapture('/home/pi/Videos/info.mp4')
             switched = True
+            v = 1.0
         elif not success:
             break
         else:
