@@ -14,7 +14,7 @@ def gen_frames():
     path = '/dev/video0'
     # USB camera
     camera = cv2.VideoCapture(path)
-    v = 1.0
+    brightness = 1.0
     while True:
         # Capture frame-by-frame
         success, frame = camera.read()  # read the camera frames
@@ -22,24 +22,19 @@ def gen_frames():
         if success and path == '/dev/video0':
             # Check the brightness of the image
             hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-            v = hsv[...,2].mean()
-        elif (not success and path == '/dev/video0') or (v < 0.8):
-            # Change stream to a video
+            brightness = round(hsv[...,2].mean(), 2)
+        if brightness < 0.8 or (not success and path == '/dev/video0'):
             path = '/home/pi/Videos/info.mp4'
             camera = cv2.VideoCapture(path)
-            #v = 1.0
-        elif (not success and path == '/home/pi/Videos/info.mp4'):
-            # Try changing back to camera
+            brightness = 1.0
+        if not success and path == '/home/pi/Videos/info.mp4':
             path = '/dev/video0'
             camera = cv2.VideoCapture(path)
-        if not success:
-            break
-        else:
+        if success:
             ret, buffer = cv2.imencode('.jpg', frame)
             frame = buffer.tobytes()
-
             yield (b'--frame\r\n'
-                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')  # concat frame one by one and show result
+                    b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')  # concat frame one by one and show result
 
 @app.route('/video_feed')
 def video_feed():
