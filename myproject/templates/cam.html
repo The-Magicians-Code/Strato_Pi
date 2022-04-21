@@ -61,12 +61,28 @@
                             element.removeChild(element.lastChild);
                         }
 
-                        vid = document.createElement("video");
+                        var vid = document.createElement("video");
+                        vid.addEventListener('ended', rst, false);
                         vid.src = "static/info.mp4";
                         vid.type = "video/mp4";
                         element.appendChild(vid);
                         vid.load();
                         vid.play();
+                        
+                    }
+
+                    function rst() {
+                        const element = document.getElementById("box0");
+                        console.log("ended")
+
+                        while (element.firstChild) {
+                            element.removeChild(element.lastChild);
+                        }
+
+                        stream = document.createElement("img");
+                        stream.src = "{{url_for('video_feed')}}";
+                        stream.width = "100%";
+                        element.appendChild(stream);
                     }
                 </script>
             </div>
