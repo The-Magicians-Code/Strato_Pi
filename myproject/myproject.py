@@ -14,7 +14,7 @@ def gen_frames():
     path = '/dev/video0'
     # USB camera
     camera = cv2.VideoCapture(path)
-    v = 1
+    v = 1.0
     while True:
         # Capture frame-by-frame
         success, frame = camera.read()  # read the camera frames
@@ -23,15 +23,19 @@ def gen_frames():
             # Check the brightness of the image
             hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
             v = hsv[...,2].mean()
+            print("Measuring")
         elif (not success and path == '/dev/video0') or (v < 0.8):
             # Change stream to a video
             path = '/home/pi/Videos/info.mp4'
             camera = cv2.VideoCapture(path)
+            #v = 1.0
+            print("Changed")
         elif (not success and path == '/home/pi/Videos/info.mp4'):
             # Try changing back to camera
             path = '/dev/video0'
             camera = cv2.VideoCapture(path)
-        elif not success:
+            print("Original")
+        if not success:
             break
         else:
             ret, buffer = cv2.imencode('.jpg', frame)

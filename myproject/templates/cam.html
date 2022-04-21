@@ -51,8 +51,7 @@
             <!--First block-->
             <div class="col-xl-12 col-lg-12 mb-12">
                 <div id="box0" class="bg-white rounded-lg p-5 shadow">
-                    <!--<h2 class="font-weight-bold text-center mb-4">Here will be camera</h2>-->
-                    <img src="{{url_for('video_feed')}}" width="100%">
+                    
                 </div>
                 <script>
                     function fun() {
@@ -79,11 +78,11 @@
                             element.removeChild(element.lastChild);
                         }
 
-                        stream = document.createElement("img");
-                        stream.src = "{{url_for('video_feed')}}";
-                        stream.width = "100%";
+                        stream = document.createElement("div");
+                        stream.innerHTML = '<img src="{{url_for("video_feed")}}" width="100%">';
                         element.appendChild(stream);
                     }
+                    rst()
                 </script>
             </div>
         </div>
