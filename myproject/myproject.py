@@ -24,10 +24,10 @@ def gen_frames():
             hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
             brightness = round(hsv[...,2].mean(), 2)
         if brightness < 0.8 or (not success and path == '/dev/video0'):
-            path = '/home/pi/Videos/info.mp4'
+            path = '/home/pi/Strato_Pi/myproject/static/offline.mp4'
             camera = cv2.VideoCapture(path)
             brightness = 1.0
-        if not success and path == '/home/pi/Videos/info.mp4':
+        if not success and path == '/home/pi/Strato_Pi/myproject/static/offline.mp4':
             path = '/dev/video0'
             camera = cv2.VideoCapture(path)
         if success:
