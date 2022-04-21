@@ -23,26 +23,23 @@ def gen_frames():
             # Check the brightness of the image
             hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
             v = hsv[...,2].mean()
-            print("Measuring")
         elif (not success and path == '/dev/video0') or (v < 0.8):
             # Change stream to a video
             path = '/home/pi/Videos/info.mp4'
             camera = cv2.VideoCapture(path)
             #v = 1.0
-            print("Changed")
         elif (not success and path == '/home/pi/Videos/info.mp4'):
             # Try changing back to camera
             path = '/dev/video0'
             camera = cv2.VideoCapture(path)
-            print("Original")
         if not success:
             break
         else:
             ret, buffer = cv2.imencode('.jpg', frame)
             frame = buffer.tobytes()
+
             yield (b'--frame\r\n'
                    b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')  # concat frame one by one and show result
-
 
 @app.route('/video_feed')
 def video_feed():

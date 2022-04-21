@@ -5,7 +5,7 @@ function getInfo() {
 }
 
 function writeInfo(data) {
-    console.log(data)
+    // console.log(data)
     for (let i = 0; i < 3; i++) {
         document.getElementById("power"+i).innerText = data["motor" + i.toString()].power;
         document.getElementById("current"+i).innerText = data["motor" + i.toString()].current;
