@@ -6,7 +6,7 @@ System page consists of three categories:
 
 ## For developers
 1. Folders and items in [`myproject`](/myproject/) folder contain code that has been tested and prepared for release
-  meaning that they're being deployed to the server each time the `./reinit.sh` is being run
+  meaning that they're being deployed to the server each time the [`./reinit.sh`](/myproject/reinit.sh) is being run
 2. Folders `Frontend` and `Backend` outside the `myproject` folder are meant for preproduction code 
   uploads and testing, back-end and front-end devs upload their code there, which on @The-Magicians-Code's
   approval make into the production environment (`myproject` folder), which he then integrates into the
