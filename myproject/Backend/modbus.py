@@ -16,19 +16,23 @@ master = modbus_rtu.RtuMaster(
 master.set_timeout(5.0)
 master.set_verbose(True)
 
-def control(slave_number, operation, reg_address, control_code, delay=0):
+def control(slave_number, operation, reg_address, control_code, delay=0, debug=False):
     if operation == READ:
         try:
             value = master.execute(slave_number, READ, reg_address, control_code)
             return value
         except ModbusInvalidResponseError:
+            if debug:
+                print("Motor panel not configured or control with modbus not enabled on web")
             return (0, )
-
     else:
         try:
-            master.execute(slave_number, WRITE, reg_address, output_value=control_code)
+            value = master.execute(slave_number, WRITE, reg_address, output_value=control_code)
             time.sleep(delay)
+            return value
         except ModbusInvalidResponseError:
+            if debug:
+                print("Problem with the writing procedure")
             return 0
     
 # Example usage for function

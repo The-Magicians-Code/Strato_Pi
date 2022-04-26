@@ -1,6 +1,6 @@
 # https://medium.com/swlh/deploy-flask-applications-with-uwsgi-and-nginx-on-ubuntu-18-04-2a47f378c3d2
 # Backend stuff
-from Backend.onlyfans import tempstat
+from Backend.onlyfans import tempstat as temps
 from Backend.modbus import control as ct
 from Backend.params import *
 from flask import Flask, render_template, jsonify, request, Response
@@ -14,6 +14,8 @@ def gen_frames():
     path = '/dev/video0'
     # USB camera
     camera = cv2.VideoCapture(path)
+    camera.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))
+    camera.set(cv2.CAP_PROP_FPS, 30)
     brightness = 1.0
     while True:
         # Capture frame-by-frame
@@ -23,13 +25,20 @@ def gen_frames():
             # Check the brightness of the image
             hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
             brightness = round(hsv[...,2].mean(), 2)
+
         if brightness < 0.8 or (not success and path == '/dev/video0'):
             path = '/home/pi/Strato_Pi/myproject/static/offline.mp4'
             camera = cv2.VideoCapture(path)
+            camera.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))
+            camera.set(cv2.CAP_PROP_FPS, 25)
             brightness = 1.0
+
         if not success and path == '/home/pi/Strato_Pi/myproject/static/offline.mp4':
             path = '/dev/video0'
             camera = cv2.VideoCapture(path)
+            camera.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))
+            camera.set(cv2.CAP_PROP_FPS, 30)
+
         if success:
             ret, buffer = cv2.imencode('.jpg', frame)
             frame = buffer.tobytes()
@@ -144,8 +153,8 @@ def freq_api():
     motor_num = int(name[0])
 
     # Send command
-    ct(motors[motor_num], WRITE, SET_FREQ, int(value))
-
+    k = ct(motors[motor_num], WRITE, SET_FREQ, int(value), debug=True)
+    print(k)
     return "ok"
 
 @app.route('/speed', methods=['POST'])
