@@ -1,6 +1,6 @@
 # Remotely controllable Motor Load Machine from the internet, using Raspberry Pi 4
 Link:
-[koormusmasin.info](koormusmasin.info)
+[koormusmasin.info](http://koormusmasin.info)
 
 System page consists of three categories:
 - System control
