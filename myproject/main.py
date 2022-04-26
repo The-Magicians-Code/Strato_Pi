@@ -153,7 +153,7 @@ def freq_api():
     motor_num = int(name[0])
 
     # Send command
-    k = ct(motors[motor_num], WRITE, SET_FREQ, int(value), debug=True)
+    k = ct(motors[motor_num], WRITE, SET_FREQ, int(value))
     print(k)
     return "ok"
 
