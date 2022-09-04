@@ -15,4 +15,4 @@ System page consists of three categories:
 
 Contact [The-Magicians-Code](https://github.com/The-Magicians-Code) for further details or questions
 
-> All code in this repository is functional and in sync with the device, further documentation is still being added
+> All code in this repository is functional (but might blow up upon being wrongly used), further documentation is still being added
