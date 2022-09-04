@@ -11,7 +11,9 @@ System page consists of three categories:
 2. Folders [`Frontend`](Frontend/) and [`Backend`](Backend/) outside the `myproject` folder are meant for pre-production code 
   uploads and testing, back-end and front-end devs upload their code there, which on [The-Magicians-Code](https://github.com/The-Magicians-Code)'s
   approval make into the production environment, which he then integrates into the server. He is the maintainer of this repo
-  and is responsible for the successful development of this project
+  and is responsible for the successful development of this project  
+
+3. Strato Pi drivers are [found here](https://github.com/sfera-labs?q=strato-pi&type=all&language=&sort=)
 
 Contact [The-Magicians-Code](https://github.com/The-Magicians-Code) for further details or questions
 
