@@ -17,6 +17,19 @@ master.set_timeout(5.0)
 master.set_verbose(True)
 
 def control(slave_number, operation, reg_address, control_code, delay=0, debug=False):
+    """
+    The modbus motor control function
+    
+    ARGS:
+    - slave_number (int): Motor number
+    - operation (int): READ or WRITE as int from parameters file
+    - reg_address (int): Command register number
+    - control_code (hex/int): Value to be written or read from the motor
+    Optional:
+    * delay (int): Used when writing to the motor register, (motor movement command had slight delays)
+    * debug (bool): Use when you've blown something up, as usual
+    """
+    
     if operation == READ:
         try:
             value = master.execute(slave_number, READ, reg_address, control_code)
