@@ -1,4 +1,6 @@
 #!/bin/bash
+# Restart the web services with this script after making changes to the anything
+
 # Colours
 red="0;31"
 yel="1;33"
