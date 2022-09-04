@@ -1,3 +1,4 @@
+# Modbus.py exclusively relies on this file, no pressure
 # This file contains modbus control parameters
 import time
 import serial
