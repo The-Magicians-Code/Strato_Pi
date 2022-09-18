@@ -2,7 +2,7 @@
 
 System page consists of three categories:
 - System control
-- Documentation and help
+- Documentation
 - Live feed
 
 ## For developers
