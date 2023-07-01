@@ -1,5 +1,4 @@
-# Remotely controllable Motor Load Machine from the internet, using Raspberry Pi 4
-
+## Full-Stack application for controlling motor load machine using StratoPi
 System page consists of three categories:
 - System control
 - Documentation
