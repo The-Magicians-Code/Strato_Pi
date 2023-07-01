@@ -1,4 +1,4 @@
-## Full-Stack application for controlling motor load machine using StratoPi
+## Full-Stack application for controlling motor load machine with StratoPi
 System page consists of three categories:
 - System control
 - Documentation
