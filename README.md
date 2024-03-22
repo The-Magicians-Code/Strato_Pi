@@ -14,6 +14,6 @@ System page consists of three categories:
 
 3. Strato Pi drivers are [found here](https://github.com/sfera-labs?q=strato-pi&type=all&language=&sort=)
 
-Contact [The-Magicians-Code](https://github.com/The-Magicians-Code) for further details or questions
+Contact [Tanel Treuberg](https://github.com/The-Magicians-Code) for further details or questions
 
 > All code in this repository is functional (but might blow up upon being wrongly used), further documentation is still being added
